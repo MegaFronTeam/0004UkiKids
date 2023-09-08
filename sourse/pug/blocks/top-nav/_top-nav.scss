@@ -1,0 +1,51 @@
+.top-nav {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__container {
+		padding: 20px 15px;
+		border-radius: 5px;
+		background: rgba(32, 67, 143, 0.06);
+	}
+	&__row{
+		align-items: center;
+		// --bs-gutter-x: #{rem()};
+		// @include media-breakpoint-up(md) {
+			// --bs-gutter-y: var(--bs-gutter-x);
+		// }
+	}
+	&__btn {
+		padding-left: rem(20);
+		padding-right: rem(20);
+		font-weight: 700;
+		font-size: rem(20);
+		.iconC {
+			margin-left: 12px;
+		}
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__slide{
+		height: auto;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	
+	@include media-breakpoint-up(xs) {}
+	// 
+	@include media-breakpoint-between(md, xl) {}
+	// 
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-down(xs) {}
+}
+
+

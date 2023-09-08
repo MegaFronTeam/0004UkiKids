@@ -1,0 +1,45 @@
+// start .sUsefulInfo
+.sUsefulInfo {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(24)};
+	
+	&__row{
+		display: flex;
+		margin-bottom: 32px;
+		// justify-content: space-between;
+		flex-wrap: wrap;
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		width: 145px;
+		text-align: center;
+	}
+	&__img-wrap {
+		width: 112px;
+		margin: 0 auto;
+		margin-bottom: 8px;
+		padding: 12px 32px;
+		border-radius: 15px;
+		background: rgba(174, 191, 6, 0.42);
+	}
+	&__title {
+		line-height: 1.2;
+		color: $body-color;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sUsefulInfo

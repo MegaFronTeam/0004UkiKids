@@ -1,0 +1,50 @@
+mixin product-item(img, title, price, oldPrice, tags)
+	+b.ARTICLE.product-item
+		+e.img-wrap(href="#")
+			+img(`img/prod-${img}.jpg`)
+			+e.top
+				if tags
+					+e.tags-row.UL
+						+e.tags-item--new New
+						+e.tags-item--sale Sale
+						+e.tags-item--text Тестовый
+				+e.bookmark.BUTTON.btn
+					+icon('heart')
+		+e.caption
+			+e.title!= title
+			+e.bottom
+				+e.price!= price
+				if oldPrice
+					+e.old-price!= oldPrice
+				+e.btn(href='#')
+					+icon('bag')
+	// /.product-item
+
+mixin sCatalog(data)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sCatalog
+				p Выкупаем проблемные автомобили в день обращения
+
+			+e.row.row
+				- const wrapClass="col-3"
+				+e.col(class= wrapClass)
+					+product-item(`1`,``,``,``) 
+				+e.col(class= wrapClass)
+					+product-item(`2`,``,``,``) 
+				+e.col(class= wrapClass)
+					+product-item(`3`,``,``,``) 
+				+e.col(class= wrapClass)
+					+product-item(`4`,``,``,``) 
+				+e.col(class= wrapClass)
+					+product-item(`5`,``,``,``) 
+				+e.col(class= wrapClass)
+					+product-item(`6`,``,``,``) 
+				+e.col(class= wrapClass)
+					+product-item(`7`,``,``,``) 
+				+e.col(class= wrapClass)
+					+product-item(`8`,``,``,``) 
+
+	// end sCatalog

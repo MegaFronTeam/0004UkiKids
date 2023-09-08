@@ -1,0 +1,82 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+e.slider.swiper.sBanners__slider--js
+				.swiper-wrapper
+					.swiper-slide
+						+b.slide-item
+							+e.text
+								+e.header ВЫГОДНЫЕ ПОКУПКИ #[span для малышей и не только!]
+								+e.btn.btn(href="#") ПОСМОТРЕТЬ ВСЮ КОЛЛЕКЦИЮ
+									+icon('slider-arrow')
+					.swiper-slide
+						+b.slide-item
+							+e.text
+								+e.header ВЫГОДНЫЕ ПОКУПКИ #[span для малышей и не только!]
+								+e.btn.btn(href="#") ПОСМОТРЕТЬ ВСЮ КОЛЛЕКЦИЮ
+									+icon('slider-arrow')
+					.swiper-slide
+						+b.slide-item
+							+e.text
+								+e.header ВЫГОДНЫЕ ПОКУПКИ #[span для малышей и не только!]
+								+e.btn.btn(href="#") ПОСМОТРЕТЬ ВСЮ КОЛЛЕКЦИЮ
+									+icon('slider-arrow')
+					.swiper-slide
+						+b.slide-item
+							+e.text
+								+e.header ВЫГОДНЫЕ ПОКУПКИ #[span для малышей и не только!]
+								+e.btn.btn(href="#") ПОСМОТРЕТЬ ВСЮ КОЛЛЕКЦИЮ
+									+icon('slider-arrow')
+				.swiper-pagination
+				.swiper-button-prev
+				.swiper-button-next
+			+e.brand-slider.swiper.breadcrumb-slider--js
+				+e.brands-row.swiper-wrapper.UL
+					+e.brands-item.swiper-slide.LI
+						+e.brands-link(href="#")
+							+img('img/brand-1.png')
+							+e.brand-name Liberty KIDS
+					+e.brands-item.swiper-slide.LI
+						+e.brands-link(href="#")
+							+img('img/brand-2.png')
+							+e.brand-name Lucky Child 
+					+e.brands-item.swiper-slide.LI
+						+e.brands-link(href="#")
+							+img('img/brand-3.png')
+							+e.brand-name Веселый малыш 
+					+e.brands-item.swiper-slide.LI
+						+e.brands-link(href="#")
+							+img('img/brand-4.png')
+							+e.brand-name ZEBRA 
+					+e.brands-item.swiper-slide.LI
+						+e.brands-link(href="#")
+							+img('img/brand-5.png')
+							+e.brand-name j-kids 
+					+e.brands-item.swiper-slide.LI
+						+e.brands-link(href="#")
+							+img('img/brand-6.png')
+							+e.brand-name Zukka 
+					+e.brands-item.swiper-slide.LI
+						+e.brands-link(href="#")
+							+img('img/brand-7.png')
+							+e.brand-name ПромТекс
+			.row
+				.col-sm-6
+					+e.category(href="#")
+						+img('img/category-1.jpg')
+						+e.category-name КОМБИНЕЗОНЫ
+				.col-sm-6
+					+e.category(href="#")
+						+img('img/category-2.jpg')
+						+e.category-name КОСТЮМЫ
+				.col-sm-6
+					+e.category(href="#")
+						+img('img/category-3.jpg')
+						+e.category-name КУРТКИ, ПАРКИ, ПАЛЬТО
+				.col-sm-6
+					+e.category(href="#")
+						+img('img/category-4.jpg')
+						+e.category-name ТРИКОТАЖ, СОФТШЕЛЛ
+
+	// end headerBlock

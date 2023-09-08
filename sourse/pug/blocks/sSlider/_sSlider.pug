@@ -1,0 +1,28 @@
+mixin sSlider(header)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2= header
+			+e.slider-wrap
+				.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+product-item('1','Тестовый товар','5 600 р.','7 900 р.','tags')
+						.swiper-slide
+							+product-item('2','Комбинезон “МОНТИ”','2 780 р.','','')
+						.swiper-slide
+							+product-item('3','Комбинезон унисекс "ЛУКАС"','5 600 р.','7 900 р.','tags')
+						.swiper-slide
+							+product-item('4','Комбинезон “МОНТИ”','7 400 р.','','tags')
+						.swiper-slide
+							+product-item('1','Тестовый товар','5 600 р.','7 900 р.','tags')
+						.swiper-slide
+							+product-item('2','Комбинезон “МОНТИ”','2 780 р.','','')
+						.swiper-slide
+							+product-item('3','Комбинезон унисекс "ЛУКАС"','5 600 р.','7 900 р.','tags')
+						.swiper-slide
+							+product-item('4','Комбинезон “МОНТИ”','7 400 р.','','tags')
+				.swiper-button-prev
+				.swiper-button-next
+	// end sSlider

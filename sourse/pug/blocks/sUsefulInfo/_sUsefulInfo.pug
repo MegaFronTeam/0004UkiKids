@@ -1,0 +1,22 @@
+mixin infoItem(img, title)
+	.col
+		+e.item(href="#")
+			+e.img-wrap
+				+img(`img/info-${img}.png`)
+			+e.title= title
+
+mixin sUsefulInfo(data)
+	// start sUsefulInfo
+	+b.SECTION.sUsefulInfo.section#sUsefulInfo&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 полезная информация
+			+e.row.row
+				+infoItem('1','Отзывы')
+				+infoItem('2','Технические особенности')
+				+infoItem('3','Подробно об ассортименте')
+				+infoItem('4','Таблица размеров')
+				+infoItem('5','Пользовательское соглашение')
+				+infoItem('6','Доставка и возврат')
+				+infoItem('7','Условия сотрудничества')
+	// end sUsefulInfo

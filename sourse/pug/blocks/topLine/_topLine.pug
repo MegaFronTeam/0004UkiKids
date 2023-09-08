@@ -1,0 +1,40 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section#topLine&attributes(attributes)
+		.container
+			+e.menu-row
+				+b.top-menu.UL
+					+e.item.LI
+						+e.link(href="#") О компании
+					+e.item.LI
+						+e.link(href="#") Возможности магазина
+					+e.item.LI
+						+e.link(href="#") Оплата и доставка
+					+e.item.LI
+						+e.link(href="#") Напишите нам
+				+e.btn(href='#') ОПТОВИКАМ
+			+e.info-row
+				+e.logo(href="#")
+					+img('img/logo.png')
+				+e.name ДЕТСКАЯ ОДЕЖДА ОТ&nbsp;РОССИЙСКОГО ПРОИЗВОДИТЕЛЯ #[span ОДЕЖДА ДЛЯ ДЕТЕЙ И ПОДРОСТКОВ]
+				+e.contacts
+					+e.tel(href="tel:+78002006160") 8 (800) 200-61-60
+					+e.schedule с 9:00 до 17:00 (пн-пт)
+					+e.callback(href='#') Заказать звонок
+				+e.navbar.UL
+					+e.navbar-item.LI
+						+e.navbar-link(href='#')
+							+icon('location')
+					+e.navbar-item.LI
+						+e.navbar-link(href='#')
+							+icon('truck')
+					+e.navbar-item.LI
+						+e.navbar-link(href='#')
+							+icon('heart')
+					+e.navbar-item.LI
+						+e.navbar-link(href='#')
+							+icon('bag')
+					+e.navbar-item.LI
+						+e.navbar-link(href='#')
+							+icon('profile')
+	// end topLine

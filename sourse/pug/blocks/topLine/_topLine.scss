@@ -1,0 +1,147 @@
+
+// start .topLine
+.topLine {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+		
+	}
+	&__menu-row {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 10px 0;
+		font-size: 14px;
+		color: $gray-800;
+		border-bottom: 1px solid rgba(32, 67, 143, 0.08);
+	}
+	&__btn {
+		padding: 8px 12px;
+		text-transform: uppercase;
+		color: $gray-800;
+		border-radius: 5px;
+		background: $green;
+	}
+	&__info-row {
+		display: flex;
+		align-items: center;
+		padding: 16px 0;
+	}
+	&__logo {
+		display: block;
+		width: 160px;
+		margin-right: rem(36);
+	}
+	&__name {
+		margin-right: 120px;
+		max-width: 275px;
+		color: #253251;
+		font-size: 14px;
+		font-weight: 700;
+		span {
+			display: block;
+			color: $primary;
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
+	&__contacts {
+		padding-left: 24px;
+		margin-right: auto;
+	}
+	&__tel {
+		position: relative;
+		font-size:rem(20);
+		font-weight: 700;
+		&::before {
+			position: absolute;
+			content: url('../img/telephone.svg');
+			top: 0;
+			left: -24px;
+		}
+	}
+	&__schedule {
+		color: $gray-800;
+		font-size: 12px;
+	}
+	&__callback {
+		color: $primary;
+		// font-family: Roboto;
+		text-decoration-line: underline;
+	}
+	&__navbar {
+		display: flex;
+		margin-bottom: 0;
+		list-style-type: none;
+	}
+	&__navbar-item {
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+	&__navbar-link {
+		color: #777777;
+		.icon {
+			font-size: 24px;
+		}
+		.icon-bag, .icon-profile {
+			fill: none;
+			stroke: #777777;
+			stroke-width: 1.5;
+		}
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__slide{
+		height: auto;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.topLine
+
+.top-menu {
+	display: flex;
+	margin-right: 28px;
+	margin-bottom: 0;
+	list-style-type: none;
+	&__item {
+		&:not(:last-child) {
+			margin-right: rem(40);
+		}
+	}
+	&__link {
+		color: inherit;
+	}
+}
