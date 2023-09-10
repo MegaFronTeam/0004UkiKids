@@ -62,6 +62,20 @@ function eventHandler() {
 
 	});
 
+	const blogSlider = new Swiper('.sBlog__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+		},
+		navigation: {
+			nextEl: '.sBlog__container .swiper-button-next',
+			prevEl: '.sBlog__container .swiper-button-prev',
+		},
+	});
+
 	const prodSliders = document.querySelectorAll('.sSlider__container');
 	prodSliders.forEach((el) => {
 		const prodSlider = new Swiper( el.querySelector('.swiper'), {
@@ -86,6 +100,19 @@ function eventHandler() {
 		})
 	})
 };
+
+const upBtn = document.querySelector('.up-btn');
+window.addEventListener('scroll', function(event) {
+	if (window.pageYOffset >= 100) {
+	 upBtn.style.display = 'block'
+	} else {
+	 upBtn.style.display = 'none'
+	}
+ }, { passive: true });
+
+ upBtn.addEventListener('click', function(event) {
+	 window.scrollTo({ top: 0, behavior: 'smooth' });
+ })
 
 if (document.readyState !== 'loading') {
 	eventHandler();

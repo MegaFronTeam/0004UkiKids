@@ -546,3 +546,19 @@ iframe {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.up-btn {
+	position: fixed;
+	bottom: 80px;
+	right: 23px;
+	color: transparent;
+	stroke-width: 1px;
+	stroke: rgba(32, 67, 143, 0.08);
+	transition: stroke .3s ease-in-out;
+	border: none;
+	&:hover, &:active, &:focus {
+		color: transparent;
+		stroke: rgb(32, 67, 143);
+		background-color: transparent;
+	}
+}

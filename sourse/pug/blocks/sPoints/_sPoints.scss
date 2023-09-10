@@ -1,0 +1,41 @@
+// start .sPoints
+.sPoints {
+	// --sPT: #{rem()};
+	--sPB: #{rem(48)};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(16)};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		text-align: center;
+	}
+	&__item{
+		img {
+			width: 64px;
+			margin-bottom: 8px;
+		}
+	}
+	&__title {
+		margin: 0 auto;
+		max-width: 190px;
+		color: $primary;
+		font-size: 16px;
+		line-height: 1.2;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPoints

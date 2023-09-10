@@ -12,8 +12,18 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
 }
-.iconC-telegram {
-	$h: 16;
+.iconC-mastercard {
+	$h: 21;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(28 / #{$h} *1em );
+}
+.iconC-mir {
+	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(69 / #{$h} *1em );
+}
+.iconC-visa {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(59 / #{$h} *1em );
 }

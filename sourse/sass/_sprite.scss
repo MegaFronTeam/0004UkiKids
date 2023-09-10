@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.icon-arrow-up {
+	$h: 53;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(52 / #{$h} *1em );
+}
 .icon-arrows {
 	$h: 17;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -67,6 +72,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
 }
+.icon-tiktok {
+	$h: 25;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-truck {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -78,12 +88,17 @@
 	width: calc(16 / #{$h} *1em );
 }
 .icon-vk {
-	$h: 24;
+	$h: 25;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(24 / #{$h} *1em );
+	width: calc(30 / #{$h} *1em );
 }
 .icon-whatsapp {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-youtube {
+	$h: 25;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(30 / #{$h} *1em );
 }

@@ -1,9 +1,68 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-12.col-sm-4.col-lg-auto
+					+e.nav.NAV
+						+e.nav-title ИНТЕРНЕТ МАГАЗИН
+						+e.nav-list.UL
+							+e.nav-item.LI
+								+e.nav-link(href="#") Как сделать заказ
+							+e.nav-item.LI
+								+e.nav-link(href="#") Оплата товара
+							+e.nav-item.LI
+								+e.nav-link(href="#") Доставка товара
+							+e.nav-item.LI
+								+e.nav-link(href="#") Возврат товара
+							+e.nav-item.LI
+								+e.nav-link(href="#") Клубная карта
+							+e.nav-item.LI
+								+e.nav-link(href="#") Подарочный сертификат
+							+e.nav-item.LI
+								+e.nav-link(href="#") Отзывы
+				.col-12.col-sm-4.col-lg-auto
+					+e.nav.NAV
+						+e.nav-title ИНФОРМАЦИЯ
+						+e.nav-list.UL
+							+e.nav-item.LI
+								+e.nav-link(href="#") Особенности моделей
+							+e.nav-item.LI
+								+e.nav-link(href="#") Таблица размеров
+							+e.nav-item.LI
+								+e.nav-link(href="#") Температурный режим
+							+e.nav-item.LI
+								+e.nav-link(href="#") Уход
+				.col-12.col-sm-4.col-lg-auto
+					+e.nav.NAV
+						+e.nav-title КОМПАНИЯ
+						+e.nav-list.UL
+							+e.nav-item.LI
+								+e.nav-link(href="#") О нас
+							+e.nav-item.LI
+								+e.nav-link(href="#") Видео о компании
+							+e.nav-item.LI
+								+e.nav-link(href="#") Партнёрам
+							+e.nav-item.LI
+								+e.nav-link(href="#") Вакансии
+							+e.nav-item.LI
+								+e.nav-link(href="#") Публичная оферта
+							+e.nav-item.LI
+								+e.nav-link(href="#") Политика конфидециальности
+				+e.contact.col-12.col-lg-auto
+					+e.talk
+						+e.tel(href="tel:+78002006160") 8 (800) 200-61-60
+						+e.callback(href="#") Заказать обратный звонок
+					+e.feedback(href="mailto:sale@uki-kids.ru") Обратная связь sale@uki-kids.ru
+					+e.social
+						+e.social-text Мы в социальных сетях:
+						+soc
+					+e.payment-list.UL
+						+e.payment-item.LI
+							+iconC('mir')
+						+e.payment-item.LI
+							+iconC('visa')
+						+e.payment-item.LI
+							+iconC('mastercard')
+			+e.bottom
+				+e.copyright Copyright © 2022 - 2023 ИНН:&nbsp;000000000 ОГРН:&nbsp;000000000
+				+e.counters место под счетчики

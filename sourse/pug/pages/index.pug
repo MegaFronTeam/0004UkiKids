@@ -12,6 +12,8 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sSlider/_sSlider.pug
 include ../blocks/sUsefulInfo/_sUsefulInfo.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sPoints/_sPoints.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -30,6 +32,8 @@ block pagecontent
 		+sAbout
 		+sSlider('сегодня покупают')
 		+sUsefulInfo
+		+sBlog
+		+sPoints
 		//- +sCatalog
 		//- +sForm()
 		//- +sContact()
