@@ -27,8 +27,8 @@
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
+	--h: #{em(1.5)};
+	--color: #777777;
 	--position: calc(var(--h) * 2);
 	&.on span {
 		--color: transparent;
@@ -87,6 +87,7 @@
 		// height: calc(var(--vh, 1vh) * 100);
 		// height: 100vh;
 		width: 280px;
+		height: calc(100% - 76px);
 		top: 0;
 		// left: 0;
 		right: 0;

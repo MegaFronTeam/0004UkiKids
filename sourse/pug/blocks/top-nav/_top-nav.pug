@@ -26,13 +26,21 @@ mixin top-nav()
 					.col-auto
 						+e.btn.BUTTON.btn.btn-primary Каталог товаров
 							+iconC('arrow-down')
-					.col.order-lg-0.order-last
+					.col-auto.col-lg.order-lg-0.order-last
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
-								+menu-toggle()
 								+mnu()
+								.topLine__menu-row.d-lg-none
+									+b.top-menu.UL
+										+e.item.LI
+											+e.link(href="#") О компании
+										+e.item.LI
+											+e.link(href="#") Возможности магазина
+										+e.item.LI
+											+e.link(href="#") Оплата и доставка
+										+e.item.LI
+											+e.link(href="#") Напишите нам
+									.topLine__btn(href='#') ОПТОВИКАМ
 					.col
 						+search
-					.col-auto.d-lg-none
-						+menu-toggle()
 	// end top-nav

@@ -24,27 +24,109 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
-			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
+			+e.container
+				+e.filter-wrap
+					+e.filter-close.btn.BUTTON.d-lg-none.sCatalog__filter-btn--js
+						span
+					+ddGroup()
+						+ddGroupItem('КАТЕГОРИИ','active')
+							+e.filter-list.UL
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Комбинезоны
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Костюмы
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Куртки
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Парки
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Плащи
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Ветровки
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Пальто
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Брюки
+								+e.filter-item.LI
+									.sCatalog__filter-link(href="#") Флюсовая поддева
+						+ddGroupItem('ПОЛ','active')
+							+in-c('checkbox', 'Девочка', 'sex')
+							+in-c('checkbox', 'Мальчик', 'sex')
+						+ddGroupItem('РАЗМЕРЫ', 'active')
+							.sCatalog__filter-grid
+								+in-c('checkbox', '74', 'size')
+								+in-c('checkbox', '80', 'size')
+								+in-c('checkbox', '86', 'size')
+								+in-c('checkbox', '92', 'size')
+								+in-c('checkbox', '98', 'size')
+								+in-c('checkbox', '104', 'size')
+								+in-c('checkbox', '110', 'size')
+								+in-c('checkbox', '116', 'size')
+								+in-c('checkbox', '122', 'size')
+								+in-c('checkbox', '128', 'size')
+								+in-c('checkbox', '134', 'size')
+								+in-c('checkbox', '140', 'size')
+						+ddGroupItem('СЕЗОН','active')
+							+in-c('checkbox', 'Зима', 'season')
+							+in-c('checkbox', 'Весна-осень', 'season')
+						+ddGroupItem('ЦВЕТА','active')
+							.sCatalog__filter-color
+								+in-c('checkbox', '', 'color').--blue
+								+in-c('checkbox', '', 'color').--green
+								+in-c('checkbox', '', 'color').--red
+								+in-c('checkbox', '', 'color').--cyan
+								+in-c('checkbox', '', 'color').--violet
+								+in-c('checkbox', '', 'color').--salad
+								+in-c('checkbox', '', 'color').--yellow
+								+in-c('checkbox', '', 'color').--pink
+								+in-c('checkbox', '', 'color').--indigo
+				+e.row.row
+					+breadcrumb('Главная','Страница категорий','Категории')
+					+e.sorting-row
+						+b.section-title
+							h1 Каталог
+						+e.sort.d-none.d-sm-flex
+							+e.sort-title Сортировка: 
+							+e.sort-wrap
+								+e.sort-btn--js.btn.BUTTON Новинки
+									+img('img/caret-down.svg')
+								+e.sort-dropdown.UL
+									+e.sort-item.LI По&nbsp;цене
+									+e.sort-item.LI По&nbsp;популярности
+									+e.sort-item.LI По&nbsp;рейтингу
+						+e.filter-btn--js.btn.BUTTON.d-lg-none
+							+icon('filters')
+						+e.view-btns.d-none.d-md-flex
+							+e.view-btn.btn.BUTTON
+								+icon('list')
+							+e.view-btn.btn.BUTTON
+								+icon('grid')
+					- const wrapClass="col-sm-6 col-md-4"
+					+e.col(class= wrapClass)
+						+product-item('1','Тестовый товар','5 600 р.','7 900 р.','tags')
+					+e.col(class= wrapClass)
+						+product-item('2','Комбинезон “МОНТИ”','2 780 р.','','')
+					+e.col(class= wrapClass)
+						+product-item('3','Комбинезон унисекс "ЛУКАС"','5 600 р.','7 900 р.','tags')
+					+e.col(class= wrapClass)
+						+product-item('4','Комбинезон “МОНТИ”','7 400 р.','','tags')
+					+e.col(class= wrapClass)
+						+product-item('1','Тестовый товар','5 600 р.','7 900 р.','tags')
+					+e.col(class= wrapClass)
+						+product-item('2','Комбинезон “МОНТИ”','2 780 р.','','')
+					+e.col(class= wrapClass)
+						+product-item('3','Комбинезон унисекс "ЛУКАС"','5 600 р.','7 900 р.','tags')
+					+e.col(class= wrapClass)
+						+product-item('4','Комбинезон “МОНТИ”','7 400 р.','','tags')
+					+e.col(class= wrapClass)
+						+product-item('2','Комбинезон “МОНТИ”','2 780 р.','','')
+					+b.pagination
+						+e.show
+							+e.title Показывать на странице:
+							+btn('12','button')
+							+btn('24','button')
+							+btn('36','button')
+							+btn('48','button')
+						+pugin
 
 	// end sCatalog

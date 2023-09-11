@@ -114,6 +114,24 @@ window.addEventListener('scroll', function(event) {
 	 window.scrollTo({ top: 0, behavior: 'smooth' });
  })
 
+ const sortingBtn = document.querySelector('.sCatalog__sort-btn--js');
+ const sortingBody = document.querySelector('.sCatalog__sort-dropdown');
+ if (sortingBtn) {
+	 sortingBtn.addEventListener('click', () => {
+			sortingBody.classList.toggle('active');
+	 });
+	 document.addEventListener('click', (e) => {
+		if ((!e.target.classList.contains('sCatalog__sort-btn')) && (!e.target.classList.contains('sCatalog__sort-dropdown'))  && window.innerWidth > 768) {
+			sortingBody.classList.remove('active');
+		}
+	})
+ }
+
+$(document).on("click", '.sCatalog__filter-btn--js', function () {
+	$('.sCatalog__filter-wrap').toggleClass('active');
+	$('body').toggleClass('fixed2');
+})
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {

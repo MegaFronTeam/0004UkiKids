@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Каталог</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<!-- start sCatalog-->
+				<div class="sCatalog section">
+					<div class="container">
+						<div class="sCatalog__container">
+							<div class="sCatalog__filter-wrap">
+								<button class="sCatalog__filter-close btn d-lg-none sCatalog__filter-btn sCatalog__filter-btn--js"><span></span>
+								</button>
+								<div class="dd-group dd-group-js">
+									<div class="dd-group__item active">
+										<div class="dd-group__head dd-head-js">КАТЕГОРИИ
+										</div>
+										<div class="dd-group__content dd-content-js active">
+											<ul class="dd-group__filter-list">
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Комбинезоны</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Костюмы</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Куртки</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Парки</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Плащи</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Ветровки</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Пальто</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Брюки</div>
+												</li>
+												<li class="dd-group__filter-item">
+													<div class="sCatalog__filter-link" href="#">Флюсовая поддева</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="dd-group__item active">
+										<div class="dd-group__head dd-head-js">ПОЛ
+										</div>
+										<div class="dd-group__content dd-content-js active">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="sex" type="checkbox"/><span class="custom-input__text form-check-label">Девочка</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="sex" type="checkbox"/><span class="custom-input__text form-check-label">Мальчик</span>
+											</label>
+										</div>
+									</div>
+									<div class="dd-group__item active">
+										<div class="dd-group__head dd-head-js">РАЗМЕРЫ
+										</div>
+										<div class="dd-group__content dd-content-js active">
+											<div class="sCatalog__filter-grid">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">74</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">80</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">86</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">92</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">98</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">104</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">110</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">116</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">122</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">128</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">134</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">140</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="dd-group__item active">
+										<div class="dd-group__head dd-head-js">СЕЗОН
+										</div>
+										<div class="dd-group__content dd-content-js active">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="season" type="checkbox"/><span class="custom-input__text form-check-label">Зима</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="season" type="checkbox"/><span class="custom-input__text form-check-label">Весна-осень</span>
+											</label>
+										</div>
+									</div>
+									<div class="dd-group__item active">
+										<div class="dd-group__head dd-head-js">ЦВЕТА
+										</div>
+										<div class="dd-group__content dd-content-js active">
+											<div class="sCatalog__filter-color">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--blue" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--green" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--red" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--cyan" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--violet" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--salad" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--yellow" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--pink" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--indigo" name="color" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__row row">
+								<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+									<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+										<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+												<meta itemprop="position" content="1"/></a></li>
+										<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Страница категорий</span>
+												<meta itemprop="position" content="2"/></a></li>
+										<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Категории</span>
+												<meta itemprop="position" content="3"/></a></li>
+									</ol>
+								</nav>
+								<div class="sCatalog__sorting-row">
+									<div class="section-title">
+										<h1>Каталог</h1>
+									</div>
+									<div class="sCatalog__sort d-none d-sm-flex">
+										<div class="sCatalog__sort-title">Сортировка: 
+										</div>
+										<div class="sCatalog__sort-wrap">
+											<button class="sCatalog__sort-btn sCatalog__sort-btn--js btn">Новинки<img src="img/caret-down.svg" alt="" loading="lazy"/>
+											</button>
+											<ul class="sCatalog__sort-dropdown">
+												<li class="sCatalog__sort-item">По&nbsp;цене
+												</li>
+												<li class="sCatalog__sort-item">По&nbsp;популярности
+												</li>
+												<li class="sCatalog__sort-item">По&nbsp;рейтингу
+												</li>
+											</ul>
+										</div>
+									</div>
+									<button class="sCatalog__filter-btn sCatalog__filter-btn--js btn d-lg-none">
+										<svg class="icon icon-filters ">
+											<use xlink:href="img/svg/sprite.svg#filters"></use>
+										</svg>
+									</button>
+									<div class="sCatalog__view-btns d-none d-md-flex">
+										<button class="sCatalog__view-btn btn">
+											<svg class="icon icon-list ">
+												<use xlink:href="img/svg/sprite.svg#list"></use>
+											</svg>
+										</button>
+										<button class="sCatalog__view-btn btn">
+											<svg class="icon icon-grid ">
+												<use xlink:href="img/svg/sprite.svg#grid"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<ul class="product-item__tags-row">
+													<li class="product-item__tags-item product-item__tags-item--new">New
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--sale">Sale
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+													</li>
+												</ul>
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Тестовый товар
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">5 600 р.
+												</div>
+												<div class="product-item__old-price">7 900 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Комбинезон “МОНТИ”
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">2 780 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-3.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<ul class="product-item__tags-row">
+													<li class="product-item__tags-item product-item__tags-item--new">New
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--sale">Sale
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+													</li>
+												</ul>
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Комбинезон унисекс "ЛУКАС"
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">5 600 р.
+												</div>
+												<div class="product-item__old-price">7 900 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-4.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<ul class="product-item__tags-row">
+													<li class="product-item__tags-item product-item__tags-item--new">New
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--sale">Sale
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+													</li>
+												</ul>
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Комбинезон “МОНТИ”
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">7 400 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<ul class="product-item__tags-row">
+													<li class="product-item__tags-item product-item__tags-item--new">New
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--sale">Sale
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+													</li>
+												</ul>
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Тестовый товар
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">5 600 р.
+												</div>
+												<div class="product-item__old-price">7 900 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Комбинезон “МОНТИ”
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">2 780 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-3.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<ul class="product-item__tags-row">
+													<li class="product-item__tags-item product-item__tags-item--new">New
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--sale">Sale
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+													</li>
+												</ul>
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Комбинезон унисекс "ЛУКАС"
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">5 600 р.
+												</div>
+												<div class="product-item__old-price">7 900 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-4.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<ul class="product-item__tags-row">
+													<li class="product-item__tags-item product-item__tags-item--new">New
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--sale">Sale
+													</li>
+													<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+													</li>
+												</ul>
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Комбинезон “МОНТИ”
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">7 400 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-sm-6 col-md-4">
+									<article class="product-item">
+										<a class="product-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
+											<div class="product-item__top">
+												<button class="product-item__bookmark btn">
+													<svg class="icon icon-heart ">
+														<use xlink:href="img/svg/sprite.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+										</a>
+										<div class="product-item__caption">
+											<div class="product-item__title">Комбинезон “МОНТИ”
+											</div>
+											<div class="product-item__bottom">
+												<div class="product-item__price">2 780 р.
+												</div>
+												<a class="product-item__btn" href="#">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="pagination">
+									<div class="pagination__show">
+										<div class="pagination__title">Показывать на странице:
+										</div>
+										<button class="pagination__btn" type="button">12
+										</button>
+										<button class="pagination__btn" type="button">24
+										</button>
+										<button class="pagination__btn" type="button">36
+										</button>
+										<button class="pagination__btn" type="button">48
+										</button>
+									</div>
+									<div class="pagination-wrapper">
+										<ul class="page-numbers">
+													<li><span class="prev page-numbers"><img src="img/svg/prev.svg" alt=""/></span>
+													</li>
+													<li><span class="prev page-numbers"><img src="img/svg/prev-double.svg" alt=""/></span>
+													</li>
+													<li><span class="page-numbers current"> 1</span>
+													</li>
+													<li><a class="page-numbers" href="#">1</a>
+													</li>
+													<li><a class="page-numbers" href="#">2</a>
+													</li>
+													<li><a class="page-numbers" href="#">3</a>
+													</li>
+													<li><a class="page-numbers" href="#">4</a>
+													</li>
+													<li><a class="next page-numbers" href="#"><img src="img/svg/next.svg" alt=""/></a>
+													</li>
+													<li><a class="next page-numbers" href="#"><img src="img/svg/next-double.svg" alt=""/></a>
+													</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sCatalog-->
+				<!-- start sSlider-->
+				<section class="sSlider section" id="sSlider">
+					<div class="sSlider__container container">
+						<div class="section-title text-center">
+							<h2>популярное в категории</h2>
+						</div>
+						<div class="sSlider__slider-wrap">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<ul class="product-item__tags-row">
+														<li class="product-item__tags-item product-item__tags-item--new">New
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--sale">Sale
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+														</li>
+													</ul>
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Тестовый товар
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">5 600 р.
+													</div>
+													<div class="product-item__old-price">7 900 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Комбинезон “МОНТИ”
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">2 780 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-3.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<ul class="product-item__tags-row">
+														<li class="product-item__tags-item product-item__tags-item--new">New
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--sale">Sale
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+														</li>
+													</ul>
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Комбинезон унисекс "ЛУКАС"
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">5 600 р.
+													</div>
+													<div class="product-item__old-price">7 900 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-4.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<ul class="product-item__tags-row">
+														<li class="product-item__tags-item product-item__tags-item--new">New
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--sale">Sale
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+														</li>
+													</ul>
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Комбинезон “МОНТИ”
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">7 400 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<ul class="product-item__tags-row">
+														<li class="product-item__tags-item product-item__tags-item--new">New
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--sale">Sale
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+														</li>
+													</ul>
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Тестовый товар
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">5 600 р.
+													</div>
+													<div class="product-item__old-price">7 900 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Комбинезон “МОНТИ”
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">2 780 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-3.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<ul class="product-item__tags-row">
+														<li class="product-item__tags-item product-item__tags-item--new">New
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--sale">Sale
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+														</li>
+													</ul>
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Комбинезон унисекс "ЛУКАС"
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">5 600 р.
+													</div>
+													<div class="product-item__old-price">7 900 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+									<div class="swiper-slide">
+										<article class="product-item">
+											<a class="product-item__img-wrap" href="#"><img src="img/prod-4.jpg" alt="" loading="lazy"/>
+												<div class="product-item__top">
+													<ul class="product-item__tags-row">
+														<li class="product-item__tags-item product-item__tags-item--new">New
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--sale">Sale
+														</li>
+														<li class="product-item__tags-item product-item__tags-item--text">Тестовый
+														</li>
+													</ul>
+													<button class="product-item__bookmark btn">
+														<svg class="icon icon-heart ">
+															<use xlink:href="img/svg/sprite.svg#heart"></use>
+														</svg>
+													</button>
+												</div>
+											</a>
+											<div class="product-item__caption">
+												<div class="product-item__title">Комбинезон “МОНТИ”
+												</div>
+												<div class="product-item__bottom">
+													<div class="product-item__price">7 400 р.
+													</div>
+													<a class="product-item__btn" href="#">
+														<svg class="icon icon-bag ">
+															<use xlink:href="img/svg/sprite.svg#bag"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</article>
+										<!-- /.product-item-->
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</section>
+				<!-- end sSlider-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

@@ -28,12 +28,24 @@
 	&__info-row {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
 		padding: 16px 0;
+		@include media-breakpoint-up(lg) {
+			justify-content: normal;
+		}
 	}
 	&__logo {
 		display: block;
-		width: 160px;
-		margin-right: rem(36);
+		width: 100px;
+		margin-right: rem(15);
+		img {
+			max-width: 100%;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-right: rem(36);
+			width: 160px;
+		}
 	}
 	&__name {
 		margin-right: 30px;
@@ -53,12 +65,17 @@
 	}
 	&__contacts {
 		padding-left: 24px;
-		margin-right: auto;
+		@include media-breakpoint-up(lg) {
+			margin-right: auto;
+		}
 	}
 	&__tel {
 		position: relative;
-		font-size:rem(20);
+		font-size:rem(14);
 		font-weight: 700;
+		@include media-breakpoint-up(sm) {
+			font-size:rem(20);
+		}
 		&::before {
 			position: absolute;
 			content: url('../img/telephone.svg');
@@ -76,9 +93,26 @@
 		text-decoration-line: underline;
 	}
 	&__navbar {
+		position: fixed;
+		bottom: 0;
+		left: 0;
 		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		padding-block: 20px;
 		margin-bottom: 0;
 		list-style-type: none;
+		background-color: rgba($white, .9);
+		z-index: 10;
+		box-shadow: 0 -1px 6px 0 rgba(0,0,0,.12);
+		@include media-breakpoint-up(lg) {
+			position: static;
+			justify-content: normal;
+			box-shadow: none;
+			width: auto;
+			background-color: none;
+		}
 	}
 	&__navbar-item {
 		&:not(:last-child) {
