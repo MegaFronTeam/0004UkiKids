@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/topLine/_topLine.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sRegistration/_sRegistration.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Оптовикам'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title, title)
+		+sRegistration
+		
+	+parts('footer')
+      
+
+
+
