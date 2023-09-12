@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Корзина</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<!-- start sCart-->
+				<section class="sCart section" id="sCart">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Страница категорий</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<div class="row">
+							<div class="col">
+								<div class="section-title">
+									<h1>Корзина</h1>
+									<a class="section-title__link" href="#">Очистить корзину
+									</a>
+								</div>
+								<ol class="sCart__list">
+									<li class="sCart__item">
+										<div class="sCart__item-name">
+											<div class="sCart__img-wrap"><img src="img/cart-1.jpg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCart__descr">
+												<div class="sCart__title">Ваш товар №1
+												</div>
+												<div class="sCart__color sCart__color--blue">Цвет:
+													<div class="sCart__circle">
+													</div>
+												</div>
+												<div class="sCart__size">Размер <span>98</span>
+												</div>
+											</div>
+										</div>
+										<div class="sCart__price">3 510 р.
+										</div>
+										<div class="addBlock">
+											<button class="addBlock__btn addBlock__btn--minus" type="button" disabled="disabled">
+											</button>
+											<input type="text" value="1" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+										<div class="sCart__cost">3 510 р.
+										</div>
+										<button class="sCart__remove-btn btn">
+											<svg class="icon icon-remove-btn ">
+												<use xlink:href="img/svg/sprite.svg#remove-btn"></use>
+											</svg>
+										</button>
+									</li>
+									<li class="sCart__item">
+										<div class="sCart__item-name">
+											<div class="sCart__img-wrap"><img src="img/cart-2.jpg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCart__descr">
+												<div class="sCart__title">Наименовение товара из ассортимента
+												</div>
+												<div class="sCart__color sCart__color--red">Цвет:
+													<div class="sCart__circle">
+													</div>
+												</div>
+												<div class="sCart__size">Размер <span>104</span>
+												</div>
+											</div>
+										</div>
+										<div class="sCart__price">3 510 р.
+										</div>
+										<div class="addBlock">
+											<button class="addBlock__btn addBlock__btn--minus" type="button" disabled="disabled">
+											</button>
+											<input type="text" value="1" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+										<div class="sCart__cost">3 510 р.
+										</div>
+										<button class="sCart__remove-btn btn">
+											<svg class="icon icon-remove-btn ">
+												<use xlink:href="img/svg/sprite.svg#remove-btn"></use>
+											</svg>
+										</button>
+									</li>
+									<li class="sCart__item">
+										<div class="sCart__item-name">
+											<div class="sCart__img-wrap"><img src="img/cart-3.jpg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCart__descr">
+												<div class="sCart__title">Ваш товар №1
+												</div>
+												<div class="sCart__color sCart__color--cyan">Цвет:
+													<div class="sCart__circle">
+													</div>
+												</div>
+												<div class="sCart__size">Размер <span>128</span>
+												</div>
+											</div>
+										</div>
+										<div class="sCart__price">3 510 р.
+										</div>
+										<div class="addBlock">
+											<button class="addBlock__btn addBlock__btn--minus" type="button" disabled="disabled">
+											</button>
+											<input type="text" value="1" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+										<div class="sCart__cost">3 510 р.
+										</div>
+										<button class="sCart__remove-btn btn">
+											<svg class="icon icon-remove-btn ">
+												<use xlink:href="img/svg/sprite.svg#remove-btn"></use>
+											</svg>
+										</button>
+									</li>
+								</ol>
+								<a class="sCart__return-link" href="#">
+									<svg class="icon icon-slider-arrow ">
+										<use xlink:href="img/svg/sprite.svg#slider-arrow"></use>
+									</svg>Продолжить покупки
+								</a>
+							</div>
+							<div class="col-3"></div>
+						</div>
+					</div>
+				</section>
+				<!-- end sCart-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

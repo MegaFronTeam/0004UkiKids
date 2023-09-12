@@ -27,6 +27,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
+.icon-card-arrow {
+	$h: 17;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
 .icon-check {
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -67,20 +72,40 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-next {
+	$h: 14;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(7 / #{$h} *1em );
+}
 .icon-profile {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-remove-btn {
+	$h: 34;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(34 / #{$h} *1em );
 }
 .icon-search {
 	$h: 17;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
 }
+.icon-share {
+	$h: 25;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-slider-arrow {
 	$h: 17;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-star {
+	$h: 17;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(17 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;

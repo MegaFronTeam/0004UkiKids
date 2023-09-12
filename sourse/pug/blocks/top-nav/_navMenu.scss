@@ -28,7 +28,7 @@
 
 .toggle-menu-mobile {
 	--h: #{em(1.5)};
-	--color: #777777;
+	--color: $gray-600;
 	--position: calc(var(--h) * 2);
 	&.on span {
 		--color: transparent;

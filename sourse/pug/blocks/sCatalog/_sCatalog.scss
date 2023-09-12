@@ -111,7 +111,7 @@
 				display: block;
 				height: 2px;
 				width: 24px;
-				background-color: #777;
+				background-color: $gray-600;
 				transform: rotate(45deg);
 			}
 			&::before {
@@ -302,6 +302,9 @@
 	}
 	&__slide{
 		height: auto;
+	}
+	&__display {
+		display: flex;
 	}
 
 	@include media-breakpoint-up(xl) {}
