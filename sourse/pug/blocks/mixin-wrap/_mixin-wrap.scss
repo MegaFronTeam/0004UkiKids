@@ -259,7 +259,7 @@
 	--bs-badge-font-size: #{rem(16)};
 
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	line-height: 1.5;
 	text-align: left;
 	white-space: initial;
@@ -267,6 +267,8 @@
 		--bs-badge-padding-y: #{rem(16.5)};
 		--bs-badge-padding-x: #{rem(18)};
 		--bs-badge-font-size: #{rem(18)};
+
+		align-items: center;
 	}
 	.iconC {
 		flex: 0 0 auto;

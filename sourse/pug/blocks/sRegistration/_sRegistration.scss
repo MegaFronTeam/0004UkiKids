@@ -4,17 +4,20 @@
 	--sPB: #{rem(34)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(78)};
+		--sPB: #{rem(57.200)};
 	}
 	.badge {
 		margin-bottom: rem(16);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(30);
+			margin-bottom: rem(31.600);
 		}
 	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(24)};
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(71.2)};
+		}
 	}
 	&__wrap {
 		&:not(:last-child) {
@@ -28,6 +31,7 @@
 			font-weight: 700;
 			margin-bottom: rem(10);
 			font-size: rem(16);
+			line-height: 1.25;
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(16);
 				font-size: rem(18);
@@ -37,12 +41,13 @@
 			list-style-type: none;
 			margin-bottom: rem(16);
 			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(20);
+				margin-bottom: rem(21.600);
 			}
 			li {
 				padding-left: rem(25);
 				position: relative;
 				font-size: rem(14);
+				line-height: 1.4;
 				@include media-breakpoint-up(lg) {
 					font-size: rem(16);
 				}
@@ -63,6 +68,7 @@
 			}
 		}
 		p {
+			line-height: 1.4;
 			margin-bottom: rem(16);
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(20);
@@ -73,6 +79,7 @@
 			color: $primary;
 			font-size: rem(14);
 			margin-bottom: 0;
+			line-height: 1.376;
 			@include media-breakpoint-up(lg) {
 				font-size: rem(16);
 				margin-bottom: 0;
@@ -82,13 +89,15 @@
 	.form-wrap {
 		@include media-breakpoint-up(lg) {
 			padding: rem(20);
+			max-width: rem(480);
+			margin-left: rem(9);
 		}
 		h2 {
 			font-weight: 700;
 			line-height: 1.21;
 			margin-bottom: rem(22);
 			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(40);
+				margin-bottom: rem(36.800);
 			}
 		}
 		h5 {

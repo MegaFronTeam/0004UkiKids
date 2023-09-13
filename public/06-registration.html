@@ -26,7 +26,7 @@
 			}
 		</script>
 	</head>
-	<body>
+	<body class="registration-page" data-bg="06-registration.jpg">
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
@@ -78,7 +78,7 @@
 										<svg class="iconC iconC-attention ">
 											<use xlink:href="img/svg/spriteC.svg#attention"></use>
 										</svg>
-										<p>Оформить заказ или задать вопросы можно в&nbsp;любое удобное для вас времяпо телефону: <a href="tel:88002006160">8 (800) 200-61-60</a> или по&nbsp;электронной почте: <a href="mailto:sale@uki-kids.ru">sale@uki-kids.ru.</a></p>
+										<div>Оформить заказ или задать вопросы можно в&nbsp;любое удобное для вас времяпо телефону: <a href="tel:88002006160">8 (800) 200-61-60</a> или по&nbsp;электронной почте: <a href="mailto:sale@uki-kids.ru">sale@uki-kids.ru.</a></div>
 									</div>
 								</div>
 							</div>
@@ -86,18 +86,79 @@
 								<div class="form-wrap">
 									<form>
 										<h2>Получение статуса оптового клиента</h2>
-										<h5>Персональные данные</h5>
-										<div class="form-wrap__input-wrap form-group">
-											<label><span class="form-wrap__input-title">ФИО</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="ФИО"/>
-											</label>
+										<div class="form-wrap__wrapper">
+											<h5>Персональные данные</h5>
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">ФИО <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-invalid" inputmode="text" name="text" type="text" placeholder="ФИО" required="required"/>
+													<div class="invalid-feedback">Заполните поле</div>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Эл. почта <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="email" name="email" type="email" placeholder="Эл. почта" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Телефон <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон" required="required" disabled="disabled"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Пароль <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Пароль" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
 										</div>
-										<!-- +e.input-wrap-->
-										<div class="form-wrap__policy">
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-											</label>
+										<div class="form-wrap__wrapper">
+											<h5>Данные о компании</h5>
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Наименование компании <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Наименование компании" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">ИНН <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="ИНН" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Город <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Город" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Адрес <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Адрес" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__policy">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/>
+													 Я согласен на обработку <a href="#">персональных данных</a>
+												</label>
+											</div>
+											<button class="form-wrap__btn btn btn-accent" type="submit">Отправить заявку
+											</button>
 										</div>
-										<button class="form-wrap__btn btn btn-accent" type="submit">Отправить заявку
-										</button>
+										<div class="form-wrap__socials"><span>Зарегистрироваться через</span>
+											<div class="soc">
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="iconC iconC-vk ">
+														<use xlink:href="img/svg/spriteC.svg#vk"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="iconC iconC-google ">
+														<use xlink:href="img/svg/spriteC.svg#google"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="iconC iconC-yandex ">
+														<use xlink:href="img/svg/spriteC.svg#yandex"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
 									</form>
 								</div>
 							</div>

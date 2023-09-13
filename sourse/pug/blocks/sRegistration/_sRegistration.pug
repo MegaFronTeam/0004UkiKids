@@ -24,12 +24,29 @@ mixin sRegistration(data)
 						p С&nbsp;поставкой товара мы&nbsp;предоставляем полный пакет документов: накладные на&nbsp;товар, оригинал договора на&nbsp;поставку и&nbsp;копию сертификата соответствия ГОСТу
 						.badge.badge-primary 
 							+iconC('attention')
-							p Оформить заказ или задать вопросы можно в&nbsp;любое удобное для вас времяпо телефону: #[a(href='tel:88002006160') 8 (800) 200-61-60] или по&nbsp;электронной почте: #[a(href='mailto:sale@uki-kids.ru') sale@uki-kids.ru.]
+							div Оформить заказ или задать вопросы можно в&nbsp;любое удобное для вас времяпо телефону: #[a(href='tel:88002006160') 8 (800) 200-61-60] или по&nbsp;электронной почте: #[a(href='mailto:sale@uki-kids.ru') sale@uki-kids.ru.]
 				.col-lg
 					+form-wrap
 						h2 Получение статуса оптового клиента
-						h5 Персональные данные
-						+input('ФИО', 'text', 'ФИО')
-						+policy
-						+e.btn.btn.btn-accent(type='submit') Отправить заявку
+						+e.wrapper
+							h5 Персональные данные
+							+input('ФИО', 'text', 'ФИО', t, t, true).is-invalid
+								.invalid-feedback Заполните поле
+							+input('Эл. почта', 'email', 'Эл. почта', t, t, true).is-valid
+							+input('Телефон', 'tel', 'Телефон', t, t, true)(disabled)
+							+input('Пароль', 'password', 'Пароль', t, t, true)
+						+e.wrapper
+							h5 Данные о компании
+							+input('Наименование компании', 'text', 'Наименование компании', t, t, true)
+							+input('ИНН', 'text', 'ИНН', t, t, true)
+							+input('Город', 'text', 'Город', t, t, true)
+							+input('Адрес', 'text', 'Адрес', t, t, true)
+							+policy
+							+e.btn.btn.btn-accent(type='submit') Отправить заявку
+						+e.socials
+							span Зарегистрироваться через
+							+soc()
+								+item-sos(): +iconC('vk')
+								+item-sos(): +iconC('google')
+								+item-sos(): +iconC('yandex')
 	// end sRegistration
