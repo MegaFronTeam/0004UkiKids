@@ -1,0 +1,122 @@
+// start .sCart
+.sCart {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		display: flex;
+		justify-content: space-between;
+		&__link {
+			color: #333;
+			font-size: 14px;
+			text-decoration-line: underline;
+		}
+	}
+	&__col{
+		
+	}
+	&__list {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style-type: none;
+	}
+	&__item{
+		display: grid;
+		grid-template-columns: 371px 1fr 118px 1fr 34px;
+		align-items: center;
+		column-gap: 30px;
+		padding-bottom: 10px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+			border-bottom: 1px solid rgba(32, 67, 143, 0.08);
+		}
+	}
+	&__item-name {
+		display: flex;
+	}
+	&__img-wrap {
+		border-radius: 15px;
+		margin-right: 20px;
+		width: 110px;
+		flex-shrink: 0;
+		height: 100%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__descr {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: rem(18);
+	}
+	&__title {
+		color: #333;
+		font-size: rem(20);
+		font-weight: 700;
+		line-height: 1.2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		line-clamp: 2;
+		box-orient: vertical;
+	}
+	&__color {
+		display: flex;
+		align-items: center;
+		&--blue {
+			.sCart__circle {
+				background-color: #094ABA;
+			}
+		}
+		&--red {
+			.sCart__circle {
+				background-color: #DF2B42;
+			}
+		}
+		&--cyan {
+			.sCart__circle {
+				background-color: #96D9E7;
+			}
+		}
+	}
+	&__circle {
+		margin: 0 10px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+	}
+	&__price {
+		justify-self: flex-end;
+		font-size: rem(18);
+	}
+	&__cost {
+		font-size: rem(18);
+	}
+	.addBlock {
+		font-size: rem(19);
+	}
+	&__remove-btn {
+		padding: 0;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCart

@@ -1,0 +1,41 @@
+mixin cartItem(img, title, color, size, price='3 510 р.', cost='3 510 р.')
+	+e.item.LI
+		+e.item-name
+			+e.img-wrap
+				+img(`img/cart-${img}.jpg`)
+			+e.descr
+				+e.title= title
+				div(class="sCart__color sCart__color--" + color)
+					| Цвет:
+					+e.circle
+				+e.size Размер 
+					span= size
+		+e.price= price
+		+b.addBlock
+			+e.btn--minus(type="button" disabled)
+			input(type="text" value="1"  inputmode='numeric')
+			+e.btn--plus(type="button")
+		+e.cost= cost
+		+e.remove-btn.btn.BUTTON
+			+icon('remove-btn')
+
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			+breadcrumb('Главная','Страница категорий','Корзина')
+			.row
+				.col
+					+b.section-title
+						h1 Корзина
+						+e.link(href="#") Очистить корзину
+					+e.list.OL
+						+cartItem('1', 'Ваш товар №1','blue','98')
+						+cartItem('2', 'Наименовение товара из ассортимента','red','104')
+						+cartItem('3', 'Ваш товар №1','cyan','128')
+					+e.return-link(href="#")
+						+icon('slider-arrow') 
+						| Продолжить покупки
+				.col-3
+
+	// end sCart

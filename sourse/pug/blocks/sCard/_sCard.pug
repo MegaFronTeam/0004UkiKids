@@ -1,0 +1,96 @@
+mixin sCard(data)
+	// start sCard
+	+b.SECTION.sCard.section#sCard&attributes(attributes)
+		.container
+			+breadcrumb('Главная','Страница категорий','Костюм из трикотажа')
+			+e.container
+				+e.img-container
+					+e.slider.swiper.d-none.d-sm-block
+						.swiper-wrapper
+							.swiper-slide
+								+e.preview-wrap
+									+img('img/prodcard-1.jpg')
+							.swiper-slide
+								+e.preview-wrap
+									+img('img/prod-1.jpg')
+							.swiper-slide
+								+e.preview-wrap
+									+img('img/prod-2.jpg')
+							.swiper-slide
+								+e.preview-wrap
+									+img('img/prod-3.jpg')
+							.swiper-slide
+								+e.preview-wrap
+									+img('img/prod-4.jpg')
+							.swiper-slide
+								+e.preview-wrap
+									+img('img/prod-1.jpg')
+					+e.prev.swiper-button-prev.d-none.d-sm-block
+						+icon('card-arrow')
+					+e.next.swiper-button-next.d-none.d-sm-block
+						+icon('card-arrow')
+					+e.thumbs-slider.swiper
+						.swiper-wrapper
+							.swiper-slide
+								+img('img/prodcard-1.jpg')
+							.swiper-slide
+								+img('img/prod-1.jpg')
+							.swiper-slide
+								+img('img/prod-2.jpg')
+							.swiper-slide
+								+img('img/prod-3.jpg')
+							.swiper-slide
+								+img('img/prod-4.jpg')
+							.swiper-slide
+								+img('img/prod-1.jpg')
+						.swiper-pagination.d-block.d-sm-none
+				+e.descr
+					+e.title Костюм из трикотажа
+					+e.rating 
+						+e.stars
+							+icon('star')
+							+icon('star')
+							+icon('star')
+							+icon('star')
+							+icon('star','empty')
+						+e.rating-comment #[span 5] отзывов
+					+e.details
+						+e.details-left #[span Коллекция:] Зима
+						+e.details-right
+							+e.number Артикул: 7733800025
+							+e.size-info(href="#") Таблица размера
+					+e.sizes
+						+e.option-title Размер:
+						+in-c('checkbox', '104', 'size')
+						+in-c('checkbox', '110', 'size')
+						+in-c('checkbox', '116', 'size')
+						+in-c('checkbox', '122', 'size')
+					+e.colors
+						+e.option-title Цвет:
+						+in-c('checkbox', '', 'color').--blue
+						+in-c('checkbox', '', 'color').--green
+						+in-c('checkbox', '', 'color').--red
+						+in-c('checkbox', '', 'color').--cyan
+						+in-c('checkbox', '', 'color').--violet
+						+in-c('checkbox', '', 'color').--salad
+					+e.action-row
+						+e.price
+							+e.old-price 7 900 р.
+							+e.current-price 5 600 р.
+						+addblock()
+						+e.action-btn.btn.BUTTON В КОРЗИНУ
+							+icon('bag')
+						+e.icon-links
+							+e.icon-link(href="#")
+								+icon('heart')
+							+e.icon-link(href="#")
+								+icon('share')
+					+ddGroup
+						+ddGroupItem('О товаре')
+						+ddGroupItem('Характеристики')
+						+ddGroupItem('Уход')
+						+ddGroupItem('Доставка и оплата')
+					+e.action-links
+						a(href="#") Оцените товар 
+						a(href="#") Оставить отзыв 
+	// end sCard

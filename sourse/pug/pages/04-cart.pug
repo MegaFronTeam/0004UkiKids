@@ -1,0 +1,37 @@
+extends ../layout/main.pug
+
+include ../blocks/topLine/_topLine.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCart/_sCart.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sCard/_sCard.pug
+//- include ../blocks/sSlider/_sSlider.pug
+//- include ../blocks/sUsefulInfo/_sUsefulInfo.pug
+//- include ../blocks/sBlog/_sBlog.pug
+//- include ../blocks/sPoints/_sPoints.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= "Корзина"
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sCart
+	+parts('footer')
+      
+
+
+

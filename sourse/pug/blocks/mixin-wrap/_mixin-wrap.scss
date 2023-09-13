@@ -38,21 +38,29 @@
 
 
 .addBlock{
-	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
-	display: flex;
 	position: relative;
+	padding: 10px 10px;
+	display: flex;
+	align-items: center;
 	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid rgba(32, 67, 143, 0.08);
+	background: #FFF;
+	color: #333;
+	@include media-breakpoint-up(xl) {
+		padding: 10px 20px;
+	}
 	input{
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height:100%;
+		width: 30px;
+		font-weight: 700;
 	}
 	&__btn{
 		color: inherit;
-		height: rem(45);
+		height: 100%;
 		position: relative;
 		border-radius: 23px;
 		background: none !important;
@@ -60,13 +68,17 @@
 		box-shadow: none !important;
 		outline: none !important;
 		background: transparent;
+		border: 1px solid rgba(32, 67, 143, 0.08);
+		&:disabled {
+			color: #D9D9D9;
+		}
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
+		width: rem(23);
 		&::before,
 		&::after{
 			content: '';
-			width: 10px;
+			width: 11px;
 			height: 2px; 
 			background-color: currentColor;
 			@include a-cent;
@@ -97,7 +109,7 @@
 	.icon{
 		font-size: rem(16);
 		border: none !important;
-		color: #777;
+		color: $gray-600;
 	}
 	&__buttons {
 		position: absolute;
@@ -173,6 +185,57 @@
 
 .swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
 	background-color: $green;
+}
+
+.pagination-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__display {
+		display: flex;
+		align-items: center;
+		color: #333;
+		font-size: 14px;
+	}
+	&__title {
+		margin-right: 10px;
+	}
+	&__btn {
+		padding: 0;
+		font-size: 14px;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&--active {
+			color: $primary;
+		}
+	}
+	.page-numbers {
+		display: flex;
+		margin-bottom: 0;
+		list-style-type: none;
+		li:not(:last-child) {
+			margin-right: 10px;
+		}
+		span, a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 1px solid rgba(32, 67, 143, 0.08);
+			color: #333;
+			&:hover {
+				color: $primary;
+			}
+		}
+		.current {
+			color: $white;
+			background-color: $primary;
+			border: 1px solid  $primary;
+		}
+	}
 }
 
 .page-head {

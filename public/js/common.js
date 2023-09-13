@@ -132,6 +132,28 @@ $(document).on("click", '.sCatalog__filter-btn--js', function () {
 	$('body').toggleClass('fixed2');
 })
 
+const cardSwiper = new Swiper('.sCard__slider', {
+	spaceBetween: 5,
+	slidesPerView: 4,
+	freeMode: true,
+	watchSlidesProgress: true,
+	direction: 'vertical',
+	navigation: {
+		nextEl: '.sCard__next',
+		prevEl: '.sCard__prev',
+	},
+}); 
+const thumbsCardSwiper = new Swiper('.sCard__thumbs-slider', {
+	spaceBetween: 10,
+	pagination: {
+    el: '.sCard .swiper-pagination',
+		clickable: true,
+  },
+	thumbs: {
+		swiper: cardSwiper,
+	}
+}); 
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
