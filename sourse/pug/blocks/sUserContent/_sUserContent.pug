@@ -1,0 +1,40 @@
+mixin sUserContent(activeBtn=1)
+	// start sUserContent
+	+b.sUserContent.section#sUserContent&attributes(attributes)
+		.container
+			+e.slider.swiper.def-swiper-js
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.btn(href='#' class=(activeBtn == 1) ? 'active' : '')
+							+icon('profile')
+							| Профиль
+					+e.slide.swiper-slide
+						+e.btn(href='#' class=(activeBtn == 2) ? 'active' : '')
+							+icon('orders')
+							| Заказы
+					+e.slide.swiper-slide
+						+e.btn(href='#' class=(activeBtn == 3) ? 'active' : '')
+							+icon('card')
+							| Доставка и оплата
+					+e.slide.swiper-slide
+						+e.btn(href='#' class=(activeBtn == 4) ? 'active' : '')
+							+icon('gallery')
+							| Фото и видеоматериалы
+					+e.slide.swiper-slide
+						+e.btn(href='#' class=(activeBtn == 5) ? 'active' : '')
+							+icon('document')
+							| Условия сотрудничества
+			mixin accInfo()
+				+b.account-info
+					+e.personality
+						+e.img-wrap: +img(`img/avatar.jpg`, 'bg')
+						h6 Алексей Пименов
+						a(href="mailto:pimenov.al@gmail.com") pimenov.al@gmail.com 
+					+e.link-wrap
+						+e.link(href='#') Lorem, ipsum.
+					+e.log-out
+						a(href="#")
+							| Выйти из аккаунта
+							+icon('login') 
+			block
+	// end sUserContent

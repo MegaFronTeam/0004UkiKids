@@ -154,6 +154,10 @@ const thumbsCardSwiper = new Swiper('.sCard__thumbs-slider', {
 	}
 }); 
 
+new Swiper('.def-swiper-js', {
+	slidesPerView: 'auto',
+}); 
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
