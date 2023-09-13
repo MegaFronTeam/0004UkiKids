@@ -355,6 +355,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
+$accent:    $green !default;
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -367,6 +368,7 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+  "accent":     $accent,
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
