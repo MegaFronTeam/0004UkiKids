@@ -19,11 +19,12 @@
 		border-bottom: 1px solid rgba(32, 67, 143, 0.08);
 	}
 	&__btn {
-		padding: 8px 12px;
+		// padding: 8px 12px;
 		text-transform: uppercase;
 		color: $gray-800;
-		border-radius: 5px;
-		background: $green;
+		// border-radius: 5px;
+		// background: $green;
+		border: none;
 	}
 	&__info-row {
 		display: flex;
@@ -88,8 +89,6 @@
 		font-size: 12px;
 	}
 	&__callback {
-		color: $primary;
-		// font-family: Roboto;
 		text-decoration-line: underline;
 	}
 	&__navbar {
@@ -103,8 +102,8 @@
 		padding-block: 20px;
 		margin-bottom: 0;
 		list-style-type: none;
-		background-color: rgba($white, .9);
-		z-index: 11;
+		background-color: $white;
+		z-index: 1000;
 		box-shadow: 0 -1px 6px 0 rgba(0,0,0,.12);
 		@include media-breakpoint-up(lg) {
 			position: static;
@@ -121,8 +120,17 @@
 	}
 	&__navbar-link {
 		color: $gray-600;
+		&:hover {
+			.icon {
+				color: $accent;
+			}
+			.icon-bag, .icon-profile {
+				stroke:  $accent;
+			}
+		}
 		.icon {
 			font-size: 24px;
+			@include mt;
 		}
 		.icon-bag, .icon-profile {
 			fill: none;
@@ -180,5 +188,8 @@
 	}
 	&__link {
 		color: inherit;
+		&:hover {
+			color: $link-hover-color;
+		}
 	}
 }

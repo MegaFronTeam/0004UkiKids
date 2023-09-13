@@ -42,6 +42,9 @@
 	}
 	&__nav-link {
 		color: #333;
+		&:hover {
+			color: $primary;
+		}
 	}
 	&__contact {
 		display: flex;
@@ -104,10 +107,16 @@
 		.icon {
 			height: 24px;
 			color: #8A8A8A;
+			@include mt;
 		}
 	}
 	.soc__item {
 		padding-inline: 2px;
+		&:hover {
+			.icon {
+				color: $primary;
+			}
+		}
 	}
 	&__social-text {
 		font-size: 12px;

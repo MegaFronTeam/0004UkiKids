@@ -9,7 +9,9 @@
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title{
-		
+		h2 {
+			text-transform: uppercase;
+		}
 	}
 	&__col{
 		

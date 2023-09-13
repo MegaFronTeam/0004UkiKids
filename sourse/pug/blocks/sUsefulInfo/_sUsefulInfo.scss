@@ -13,7 +13,9 @@
 		--bs-gutter-y: #{rem(16)};
 	}
 	.section-title{
-		
+		h2 {
+			text-transform: uppercase;
+		}
 	}
 	&__col{
 		
@@ -21,6 +23,11 @@
 	&__item{
 		width: 145px;
 		text-align: center;
+		&:hover {
+			.sUsefulInfo__title {
+				color: $primary;
+			}
+		}
 	}
 	&__img-wrap {
 		width: 112px;
@@ -33,6 +40,7 @@
 	&__title {
 		line-height: 1.2;
 		color: $body-color;
+		@include mt;
 	}
 
 	@include media-breakpoint-up(xl) {}

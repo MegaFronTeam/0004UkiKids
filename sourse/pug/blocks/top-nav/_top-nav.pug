@@ -26,7 +26,7 @@ mixin top-nav()
 					.col-auto
 						+e.btn.BUTTON.btn.btn-primary Каталог товаров
 							+iconC('arrow-down')
-					.col-auto.col-lg.order-lg-0.order-last
+					.col-auto.col-lg.order-lg-0.order-last.p-0.m-0
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
 								+mnu()
@@ -40,7 +40,7 @@ mixin top-nav()
 											+e.link(href="#") Оплата и доставка
 										+e.item.LI
 											+e.link(href="#") Напишите нам
-									.topLine__btn(href='#') ОПТОВИКАМ
+									.topLine__btn.btn.btn-accent(href='#') ОПТОВИКАМ
 					.col
 						+search
 	// end top-nav

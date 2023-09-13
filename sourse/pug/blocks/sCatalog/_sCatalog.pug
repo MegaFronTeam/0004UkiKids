@@ -1,6 +1,6 @@
 mixin product-item(img, title, price, oldPrice, tags)
 	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
+		+e.img-wrap
 			+img(`img/prod-${img}.jpg`)
 			+e.top
 				if tags
@@ -11,7 +11,7 @@ mixin product-item(img, title, price, oldPrice, tags)
 				+e.bookmark.BUTTON.btn
 					+icon('heart')
 		+e.caption
-			+e.title!= title
+			+e.title(href="#")!= title
 			+e.bottom
 				+e.price!= price
 				if oldPrice
