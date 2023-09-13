@@ -2,7 +2,7 @@
 .headerBlock {
 	--sPT: #{rem(24)};
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(48)};
+		--sPT: #{rem(44)};
 	}
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()}; 
