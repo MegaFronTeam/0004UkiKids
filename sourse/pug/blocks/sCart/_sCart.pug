@@ -25,7 +25,7 @@ mixin sCart(data)
 		.container
 			+breadcrumb('Главная','Страница категорий','Корзина')
 			.row
-				.col
+				+e.prod-col.col
 					+b.section-title
 						h1 Корзина
 						+e.link(href="#") Очистить корзину
@@ -34,8 +34,27 @@ mixin sCart(data)
 						+cartItem('2', 'Наименовение товара из ассортимента','red','104')
 						+cartItem('3', 'Ваш товар №1','cyan','128')
 					+e.return-link(href="#")
-						+icon('slider-arrow') 
+						+icon('next') 
 						| Продолжить покупки
-				.col-3
-
+				.col-lg-3
+					+e.summary
+						+e.summary-title В Вашей корзине:
+						+e.summary-list.DL
+							dt Товаров:
+							dd 3
+							dt Сумма:
+							dd 8 605 р.
+								+e.promocode.FORM
+									+input('Промокод')
+									button.btn 
+										+icon("checked")
+							dt Скидка:
+							dd 0
+							dt Итого: 
+							dd 8 605 р.
+						+e.term Без учёта стоимости доставки
+						+e.order-btn.btn.btn-outline-primary(href="#") ОФОРМИТЬ ЗАКАЗ
+					+e.term Способ доставки и оплаты вы сможете выбрать на странице оформления заказа
+					+e.main-btn.btn.btn-primary Условия оплаты
+					+e.main-btn.btn.btn-primary Условия доставки
 	// end sCart
