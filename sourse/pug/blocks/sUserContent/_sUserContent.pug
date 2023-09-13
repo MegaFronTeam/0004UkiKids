@@ -31,7 +31,18 @@ mixin sUserContent(activeBtn=1)
 						h6 Алексей Пименов
 						a(href="mailto:pimenov.al@gmail.com") pimenov.al@gmail.com 
 					+e.link-wrap
-						+e.link(href='#') Lorem, ipsum.
+						+e.link(href='#')
+							+e.icon-wrap.active
+								+iconC('sUserContent-icon-1')
+							| Уведомления
+						+e.link(href='#')
+							+e.icon-wrap
+								+iconC('sUserContent-icon-2')
+							| Настройки
+						+e.link(href='#')
+							+e.icon-wrap
+								+iconC('sUserContent-icon-3')
+							| Техподдержка
 					+e.log-out
 						a(href="#")
 							| Выйти из аккаунта
