@@ -25,13 +25,24 @@ block pagecontent
 	main
 		+page-head(title, title)
 		+sUserContent(1, true)
-			.row
-				.col-lg
+			+e.form-row.row
+				.col-lg-auto.order-last.order-lg-0
 					+accInfo()
-				.col-lg
-				.col-lg
+				.col-md-6.col-lg
+					+b.form-wrap
+						h5 Персональные данные
+						+input('Фамилия', 'text', 'Фамилия', t, t, true)(value='Пименов')
+						+input('Имя', 'text', 'Имя', t, t, true)(value='Алексей')
+						+input('Отчество', 'text', 'Отчество', t, t, true)(value='Александрович')
+						+input('Дата рождения', 'date', 'Дата рождения', t, t, true)(value='13.05.1977')
+						+input('Эл. почта', 'email', 'Эл. почта', t, t, true)(value='pimenov.al@gmail.com')
+						+input('Телефон', 'tel', 'Телефон')(value='+7 (932) 445 44 77')
+				.col-md-6.col-lg
+					+b.form-wrap
+						h5 Данные о компании
+						+input('Оптовый клиент', 'text', 'Оптовый клиент', t, t, true)(value='ИП Пименов Алексей Александрович')
+						+input('Наименование компании', 'text', 'Наименование компании', t, t, true)(value='ООО Наименование компании')
+						+input('ИНН', 'text', 'ИНН', t, t, true)(value='500100732259')
+						+input('Город', 'text', 'Город', t, t, true)(value='Москва')
+						+input('Фактический адрес магазина', 'text', 'Фактический адрес магазина', t, t, true)(value='8-я Вишневая, ул.')
 	+parts('footer')
-      
-
-
-

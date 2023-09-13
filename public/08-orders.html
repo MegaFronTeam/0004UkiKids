@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Личный кабинет</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="08-orders.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1 class="h2">Личный кабинет</h1>
+					</div>
+				</div>
+				<!-- start sUserContent-->
+				<div class="sUserContent section" id="sUserContent">
+					<div class="container">
+						<div class="sUserContent__slider swiper def-swiper-js">
+							<div class="swiper-wrapper">
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn active" href="#">
+										<svg class="icon icon-profile ">
+											<use xlink:href="img/svg/sprite.svg#profile"></use>
+										</svg>Профиль
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-orders ">
+											<use xlink:href="img/svg/sprite.svg#orders"></use>
+										</svg>Заказы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-card ">
+											<use xlink:href="img/svg/sprite.svg#card"></use>
+										</svg>Доставка и оплата
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-gallery ">
+											<use xlink:href="img/svg/sprite.svg#gallery"></use>
+										</svg>Фото и видеоматериалы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-document ">
+											<use xlink:href="img/svg/sprite.svg#document"></use>
+										</svg>Условия сотрудничества
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- start sOrders-->
+						<div class="sOrders section" id="sOrders">
+							<h4>Заказы</h4>
+							<div class="tabs">
+								<div class="tabs__caption">
+									<div class="tabs__btn active">Оптовые заказы</div>
+									<div class="tabs__btn">Заказы</div>
+								</div>
+								<div class="tabs__content active">
+									<table>
+										<thead>
+											<tr>
+												<th>№ заказа</th>
+												<th>Дата заказа</th>
+												<th>Сумма (₽) и кол-во </th>
+												<th>Статус </th>
+												<th>Детали заказа </th>
+												<th>Действия</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Заказ № 1725</td>
+												<td>27.06.2023</td>
+												<td>
+													<div class="sOrders__price">83550 ₽ <span>120 шт.</span>
+													</div>
+												</td>
+												<td>
+													<div class="sOrders__status">В корзине
+													</div>
+												</td>
+												<td><a href="#">Скачать XLX</a></td>
+												<td>
+													<div class="sOrders__action"> 
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs__content">2</div>
+							</div>
+						</div>
+						<!-- end sOrders-->
+					</div>
+				</div>
+				<!-- end sUserContent-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

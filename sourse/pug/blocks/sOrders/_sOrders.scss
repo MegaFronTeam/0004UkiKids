@@ -1,0 +1,77 @@
+// start .sOrders
+.sOrders {
+	--sPT: #{rem(18)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	h4 {
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
+	}
+	.tabs {
+		&__caption {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(20);
+			@include roww('20px', '', 'm');
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(40)};
+				margin-bottom: rem(30);
+			}
+		}
+		&__btn {
+			@include mt;
+			font-size: rem(16);
+			color: $gray-600;
+			padding-bottom: rem(8);
+			border-bottom: 1px solid transparent;
+			line-height: 1.38;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
+			&:hover, &.active {
+				color: $primary;
+				border-bottom-color: $primary;
+			}
+			&.active {
+				font-weight: 700;
+			}
+		}
+	}
+	table {
+		width: 100%;
+		th {
+			font-weight: 700;
+			color: #333;
+			padding-bottom: rem(38);
+			&:nth-child(1) {
+				width: rem(228);
+			}
+			&:nth-child(2) {
+				width: rem(228);
+			}
+			&:nth-child(3) {
+				width: rem(228);
+			}
+			&:nth-child(4) {
+				width: rem(188);
+			}
+			&:nth-child(5) {
+				width: rem(228);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOrders
