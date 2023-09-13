@@ -378,6 +378,10 @@
 	&__bookmark {
 		padding: 0;
 		margin-left: auto;
+		&:hover, &.active {
+			color: $red;
+			fill: $red;
+		}
 	}
 	&__caption{
 		flex-grow: 1;
@@ -397,6 +401,10 @@
 		line-clamp: 2;
 		box-orient: vertical;
 		font-size: rem(18);
+		color: $body-color;
+		&:hover {
+			color: $primary;
+		}
 		@include media-breakpoint-up(xl) {
 			font-size: rem(20);
 		}
@@ -423,11 +431,17 @@
 	}
 	&__btn {
 		margin-left: auto;
+		&:hover {
+			.icon {
+				stroke: $link-hover-color;
+			}
+		}
 		.icon {
 			font-size: 24px;
 			stroke: #333333;
 			stroke-width: 1.5;
 			fill: none;
+			@include mt;
 		}
 	}
 }

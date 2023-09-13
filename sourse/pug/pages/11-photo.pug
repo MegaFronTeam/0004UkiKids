@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/topLine/_topLine.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPhoto/_sPhoto.pug
+
+include ../blocks/sRegistration/_sRegistration.pug
+
+block variables
+	- let  mainPage= 'registration-page' 
+	- let  bg= '06-registration.jpg'
+
+block title
+	- let  title= 'Фото и видео'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Личный кабинет', 'Личный кабинет')
+		+sPhoto
+	+parts('footer')
+      
+
+
+

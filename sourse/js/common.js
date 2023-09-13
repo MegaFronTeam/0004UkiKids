@@ -54,7 +54,7 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 'auto',
-		freeMode: true,
+		// freeMode: true,
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.2,
 		slideToClickedSlide: true,

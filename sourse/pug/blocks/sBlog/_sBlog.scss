@@ -61,7 +61,7 @@
 			}
 		}
 		p {
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 			display: -webkit-box;
 			-webkit-line-clamp: 7;
 			-webkit-box-orient: vertical;  
@@ -92,7 +92,7 @@
 		color: $primary;
 		font-size: rem(18);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(20);
+			margin-bottom: rem(26);
 			font-size: rem(23);
 		}
 	}

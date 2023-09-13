@@ -5,6 +5,10 @@
 	--sPB: #{rem(32)};
 	// --sTPB: #{rem()};
 	background-color: #EDEDCA;
+	@include media-breakpoint-down(lg) {
+		--sPB: 108px;
+	}
+
 	&__row{
 		--bs-gutter-x: #{rem(20)};
 		// --bs-gutter-y: var(--bs-gutter-x);
@@ -42,6 +46,9 @@
 	}
 	&__nav-link {
 		color: #333;
+		&:hover {
+			color: $primary;
+		}
 	}
 	&__contact {
 		display: flex;
@@ -63,6 +70,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		margin-bottom: -8px;
 		@include media-breakpoint-up(sm) {
 			width: 50%;
 		}
@@ -95,7 +103,7 @@
 		}
 	}
 	&__social {
-		margin-bottom: 20px;
+		margin-bottom:15px;
 		color: #8A8A8A;
 		width: 50%;
 		@include media-breakpoint-up(lg) {
@@ -104,10 +112,16 @@
 		.icon {
 			height: 24px;
 			color: #8A8A8A;
+			@include mt;
 		}
 	}
 	.soc__item {
 		padding-inline: 2px;
+		&:hover {
+			.icon {
+				color: $primary;
+			}
+		}
 	}
 	&__social-text {
 		font-size: 12px;
@@ -134,7 +148,7 @@
 		margin-right: 10%;
 		color: rgba(37, 50, 81, 0.56);
 		font-size: 12px;
-		line-height: 1.2;
+		line-height: 1.8;
 		@include media-breakpoint-up(md) {
 			margin-right: 40%;
 		}

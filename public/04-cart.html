@@ -45,12 +45,14 @@
 							</ol>
 						</nav>
 						<div class="row">
-							<div class="col">
+							<div class="col-lg-9">
 								<div class="section-title">
 									<h1>Корзина</h1>
 									<a class="section-title__link" href="#">Очистить корзину
 									</a>
 								</div>
+							</div>
+							<div class="sCart__prod-col col">
 								<ol class="sCart__list">
 									<li class="sCart__item">
 										<div class="sCart__item-name">
@@ -150,12 +152,48 @@
 									</li>
 								</ol>
 								<a class="sCart__return-link" href="#">
-									<svg class="icon icon-slider-arrow ">
-										<use xlink:href="img/svg/sprite.svg#slider-arrow"></use>
+									<svg class="icon icon-next ">
+										<use xlink:href="img/svg/sprite.svg#next"></use>
 									</svg>Продолжить покупки
 								</a>
 							</div>
-							<div class="col-3"></div>
+							<div class="col-lg-3">
+								<div class="sCart__summary">
+									<div class="sCart__summary-title">В Вашей корзине:
+									</div>
+									<dl class="sCart__summary-list">
+										<dt>Товаров:</dt>
+										<dd>3</dd>
+										<dt>Сумма:</dt>
+										<dd>8 605 р.
+											<form class="sCart__promocode">
+												<div class="sCart__input-wrap form-group"><input class="sCart__input form-control" inputmode="text" name="text" type="text" placeholder="Промокод"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<button class="btn"> 
+													<svg class="icon icon-checked ">
+														<use xlink:href="img/svg/sprite.svg#checked"></use>
+													</svg>
+												</button>
+											</form>
+										</dd>
+										<dt>Скидка:</dt>
+										<dd>0</dd>
+										<dt>Итого: </dt>
+										<dd>8 605 р.</dd>
+									</dl>
+									<div class="sCart__term">Без учёта стоимости доставки
+									</div>
+									<a class="sCart__order-btn btn btn-outline-primary" href="#">ОФОРМИТЬ ЗАКАЗ
+									</a>
+								</div>
+								<div class="sCart__term">Способ доставки и оплаты вы сможете выбрать на странице оформления заказа
+								</div>
+								<div class="sCart__main-btn btn btn-primary">Условия оплаты
+								</div>
+								<div class="sCart__main-btn btn btn-primary">Условия доставки
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>

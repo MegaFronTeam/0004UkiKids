@@ -1,0 +1,28 @@
+mixin address(name, address="Фактический адрес: адрес, улица, здание/офис. Ориентир")
+	+e.address-item.LI&attributes(attributes)
+		+e.address-link.BUTTON.btn
+			+icon('geo')
+			| #{name}
+		+e.address=  address
+
+mixin sMap(data)
+	// start sMap
+	+b.SECTION.sMap.section#sMap&attributes(attributes)
+		.container
+			+breadcrumb('Главная','Страница категорий','Карта')
+			+b.section-title
+				h2 Карта
+				+input('Москва и Московская область','select')
+			+e.row.row
+				.col-12.col-lg-auto
+					+e.address-list.UL
+						+address('Ирбис').active
+						+address('Fashion kids')
+						+address('Мамонтёнок')
+						+address('Ribbi Tos')
+						+address('Бабочка')
+						+address('Glamour Kids')
+				.col-lg
+					+e.map-wrap
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad698a64bde719663129f7bdb736d91e183411a051b39c1bd4a121135bfdd3712&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
+	// end sMap

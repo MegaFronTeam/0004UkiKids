@@ -1,0 +1,25 @@
+mixin sPhoto(data)
+	// start sPhoto
+	+b.SECTION.sPhoto.section#sPhoto&attributes(attributes)
+		.container
+			+e.sorting-row
+				+b.section-title
+					h2 Фото и видеоматериалы
+				+e.sort.d-none.d-sm-flex
+					+e.sort-title Сортировка: 
+					+e.sort-wrap
+						+e.sort-btn--js.btn.BUTTON Тип файла
+							+img('img/caret-down.svg')
+						+e.sort-dropdown.UL
+							+e.sort-item.LI По&nbsp;цене
+							+e.sort-item.LI По&nbsp;популярности
+							+e.sort-item.LI По&nbsp;рейтингу
+				+e.filter-btn--js.btn.BUTTON.d-lg-none
+					+icon('filters')
+				+e.view-btns.d-none.d-md-flex
+					+e.view-btn.btn.BUTTON
+						+icon('list')
+					+e.view-btn.btn.BUTTON
+						+icon('grid')
+			+e.row.row
+	// end sPhoto

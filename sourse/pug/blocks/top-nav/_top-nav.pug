@@ -20,13 +20,13 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
+		.container.container--top-nav
 			+e.container
 				+e.row.row
 					.col-auto
 						+e.btn.BUTTON.btn.btn-primary Каталог товаров
 							+iconC('arrow-down')
-					.col-auto.col-lg.order-lg-0.order-last
+					+e.menu-col.col-auto.col-lg.order-lg-0.order-last
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
 								+mnu()
@@ -40,7 +40,7 @@ mixin top-nav()
 											+e.link(href="#") Оплата и доставка
 										+e.item.LI
 											+e.link(href="#") Напишите нам
-									.topLine__btn(href='#') ОПТОВИКАМ
-					.col
+									.topLine__btn.btn.btn-accent(href='#') ОПТОВИКАМ
+					+e.search-col.col-auto
 						+search
 	// end top-nav

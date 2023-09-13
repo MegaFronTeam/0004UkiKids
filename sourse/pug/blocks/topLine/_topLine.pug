@@ -1,7 +1,7 @@
 mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
-		.container
+		+e.container.container
 			+e.menu-row.d-none.d-lg-flex
 				+b.top-menu.UL
 					+e.item.LI
@@ -12,7 +12,7 @@ mixin topLine()
 						+e.link(href="#") Оплата и доставка
 					+e.item.LI
 						+e.link(href="#") Напишите нам
-				+e.btn(href='#') ОПТОВИКАМ
+				+e.btn.btn.btn-accent(href='#') ОПТОВИКАМ
 			+e.info-row
 				+e.logo(href="#")
 					+img('img/logo.png')

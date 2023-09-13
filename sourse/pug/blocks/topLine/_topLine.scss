@@ -4,6 +4,11 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
+	&__container {
+		@include media-breakpoint-up(xxl) {
+			max-width: 1204px;
+		}
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -19,18 +24,19 @@
 		border-bottom: 1px solid rgba(32, 67, 143, 0.08);
 	}
 	&__btn {
-		padding: 8px 12px;
+		padding: 7px 12px;
 		text-transform: uppercase;
 		color: $gray-800;
-		border-radius: 5px;
-		background: $green;
+		// border-radius: 5px;
+		// background: $green;
+		border: none;
 	}
 	&__info-row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		padding: 16px 0;
+		padding: 10px 0;
 		@include media-breakpoint-up(lg) {
 			justify-content: normal;
 		}
@@ -54,7 +60,7 @@
 		font-size: 14px;
 		font-weight: 700;
 		@include media-breakpoint-up(xl) {
-			margin-right: 120px;
+			margin-right: 111px;
 		}
 		span {
 			display: block;
@@ -88,8 +94,6 @@
 		font-size: 12px;
 	}
 	&__callback {
-		color: $primary;
-		// font-family: Roboto;
 		text-decoration-line: underline;
 	}
 	&__navbar {
@@ -103,8 +107,8 @@
 		padding-block: 20px;
 		margin-bottom: 0;
 		list-style-type: none;
-		background-color: rgba($white, .9);
-		z-index: 11;
+		background-color: $white;
+		z-index: 1000;
 		box-shadow: 0 -1px 6px 0 rgba(0,0,0,.12);
 		@include media-breakpoint-up(lg) {
 			position: static;
@@ -115,14 +119,25 @@
 		}
 	}
 	&__navbar-item {
-		&:not(:last-child) {
-			margin-right: 16px;
+		@include media-breakpoint-up(lg) {
+			&:not(:nth-last-child(-n+2)) {
+				margin-right: 16px;
+			}
 		}
 	}
 	&__navbar-link {
 		color: $gray-600;
+		&:hover {
+			.icon {
+				color: $accent;
+			}
+			.icon-bag, .icon-profile {
+				stroke:  $accent;
+			}
+		}
 		.icon {
 			font-size: 24px;
+			@include mt;
 		}
 		.icon-bag, .icon-profile {
 			fill: none;
@@ -180,5 +195,8 @@
 	}
 	&__link {
 		color: inherit;
+		&:hover {
+			color: $link-hover-color;
+		}
 	}
 }
