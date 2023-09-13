@@ -132,6 +132,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(30 / #{$h} *1em );
 }
+.icon-vk2 {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
+}
 .icon-whatsapp {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

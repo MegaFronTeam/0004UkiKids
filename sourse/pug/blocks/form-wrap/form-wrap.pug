@@ -3,8 +3,8 @@ mixin form-head()
 		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
 		block
 
-mixin input(placeholder,  t='text', label, inputmode= t, name= t)
-	mixin t(t='text',placeholder, name= t)
+mixin input(placeholder,  t='text', label, inputmode= t, name= t, isRequierd)
+	mixin t(t='text',placeholder, name= t, required)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
 		else if t== "select"
@@ -24,8 +24,15 @@ mixin input(placeholder,  t='text', label, inputmode= t, name= t)
 	+e.input-wrap.form-group
 		if label
 			label
-				+e.SPAN.input-title= label
-				+t(t,placeholder, name)&attributes(attributes)
+				+e.SPAN.input-title
+					= label
+					if isRequierd
+						| 
+						span.text-danger *
+				if isRequierd
+					+t(t,placeholder, name, isRequierd)(required)&attributes(attributes)
+				else
+					+t(t,placeholder, name, isRequierd)&attributes(attributes)
 				block
 		else
 			+t(t,placeholder, name)&attributes(attributes)
@@ -75,5 +82,5 @@ mixin add-file(n)
 
 mixin policy()
 	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+		+in-c()(checked) 
+			| Я согласен на обработку #[a(href="#") персональных данных]

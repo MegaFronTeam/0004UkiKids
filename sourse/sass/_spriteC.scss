@@ -22,6 +22,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.iconC-google {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
+}
 .iconC-mastercard {
 	$h: 21;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -36,4 +41,14 @@
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(59 / #{$h} *1em );
+}
+.iconC-vk {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
+}
+.iconC-yandex {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
 }
