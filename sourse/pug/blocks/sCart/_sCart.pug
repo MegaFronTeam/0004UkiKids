@@ -25,10 +25,11 @@ mixin sCart(data)
 		.container
 			+breadcrumb('Главная','Страница категорий','Корзина')
 			.row
-				+e.prod-col.col
+				.col-lg-9
 					+b.section-title
 						h1 Корзина
 						+e.link(href="#") Очистить корзину
+				+e.prod-col.col
 					+e.list.OL
 						+cartItem('1', 'Ваш товар №1','blue','98')
 						+cartItem('2', 'Наименовение товара из ассортимента','red','104')

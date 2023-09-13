@@ -3,7 +3,7 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	.container {
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(xxl) {
 			max-width: 1204px;
 		}
 	}
@@ -69,6 +69,7 @@
 		}
 	}
 	&__search-col {
+		margin-left: auto;
 		@include media-breakpoint-up(lg) {
 			width: 35%;
 		}

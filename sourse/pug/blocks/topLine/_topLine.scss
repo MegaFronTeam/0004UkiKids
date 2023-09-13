@@ -5,7 +5,9 @@
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	&__container {
-		max-width: 1204px;
+		@include media-breakpoint-up(xxl) {
+			max-width: 1204px;
+		}
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};

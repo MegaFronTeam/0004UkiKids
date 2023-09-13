@@ -1,10 +1,11 @@
 // start .sPoints
 .sPoints {
-	// --sPT: #{rem()};
+	--sPT: #{rem(50)};
 	--sPB: #{rem(48)};
 	// --sTPB: #{rem()};
 	
 	&__row{
+		margin-bottom: 24px;
 		--bs-gutter-x: #{rem(8)};
 		--bs-gutter-y: #{rem(16)};
 	}

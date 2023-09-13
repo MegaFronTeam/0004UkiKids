@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Фото и видео</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="registration-page" data-bg="06-registration.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1 class="h2">Личный кабинет</h1>
+					</div>
+				</div>
+				<!-- start sPhoto-->
+				<section class="sPhoto section" id="sPhoto">
+					<div class="container">
+						<div class="sPhoto__sorting-row">
+							<div class="section-title">
+								<h2>Фото и видеоматериалы</h2>
+							</div>
+							<div class="sPhoto__sort d-none d-sm-flex">
+								<div class="sPhoto__sort-title">Сортировка: 
+								</div>
+								<div class="sPhoto__sort-wrap">
+									<button class="sPhoto__sort-btn sPhoto__sort-btn--js btn">Тип файла<img src="img/caret-down.svg" alt="" loading="lazy"/>
+									</button>
+									<ul class="sPhoto__sort-dropdown">
+										<li class="sPhoto__sort-item">По&nbsp;цене
+										</li>
+										<li class="sPhoto__sort-item">По&nbsp;популярности
+										</li>
+										<li class="sPhoto__sort-item">По&nbsp;рейтингу
+										</li>
+									</ul>
+								</div>
+							</div>
+							<button class="sPhoto__filter-btn sPhoto__filter-btn--js btn d-lg-none">
+								<svg class="icon icon-filters ">
+									<use xlink:href="img/svg/sprite.svg#filters"></use>
+								</svg>
+							</button>
+							<div class="sPhoto__view-btns d-none d-md-flex">
+								<button class="sPhoto__view-btn btn">
+									<svg class="icon icon-list ">
+										<use xlink:href="img/svg/sprite.svg#list"></use>
+									</svg>
+								</button>
+								<button class="sPhoto__view-btn btn">
+									<svg class="icon icon-grid ">
+										<use xlink:href="img/svg/sprite.svg#grid"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="sPhoto__row row">
+						</div>
+					</div>
+				</section>
+				<!-- end sPhoto-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

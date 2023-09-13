@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Оптовикам</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="registration-page" data-bg="06-registration.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Оптовикам</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1 class="h2">Оптовикам</h1>
+					</div>
+				</div>
+				<!-- start sRegistration-->
+				<section class="sRegistration section" id="sRegistration">
+					<div class="container">
+						<div class="badge badge-primary"> 
+							<svg class="iconC iconC-check ">
+								<use xlink:href="img/svg/spriteC.svg#check"></use>
+							</svg>Регистрация прошла успешно. На&nbsp;вашу электронную почту отправленно письмо с&nbsp;ссылкой на&nbsp;активацию аккаунта
+						</div>
+						<div class="sRegistration__row row">
+							<div class="col-lg">
+								<div class="sRegistration__wrap">
+									<h6>Основные условия заказа:</h6>
+									<ul>
+										<li>Мы&nbsp;работаем исключительно с&nbsp;детскими оптовыми, розничными и&nbsp;интернет-магазинами на&nbsp;условиях соблюдения РРЦ рекомендованной розничной цены с&nbsp;минимальным уровнем наценки&nbsp;70% и&nbsp;НЕ сотрудничаем с&nbsp;организаторами совместных закупок. Просьба указывать при заказе адрес магазина либо предоставлять ссылку на&nbsp;интернет-магазин.</li>
+										<li>Минимальная сумма закупки 50000&nbsp;рублей.</li>
+										<li>Скидки от&nbsp;объема приведены в&nbsp;прайс-листе.</li>
+									</ul>
+									<div class="badge badge-primary"> 
+										<svg class="iconC iconC-attention ">
+											<use xlink:href="img/svg/spriteC.svg#attention"></use>
+										</svg>Мы&nbsp;осуществим доставку детской верхней одежды ТМ&nbsp;UKI KIDS в&nbsp;Москву и&nbsp;Московскую область , а&nbsp;также в&nbsp;регионы&nbsp;РФ любой транспортной компанией по&nbsp;вашему выбор или ж/д транспортом. Доставка до&nbsp;ТК бесплатно.
+									</div>
+								</div>
+								<div class="sRegistration__wrap">
+									<h6>Оплатить товар после выставления счета можно несколькими способами:</h6>
+									<ul>
+										<li>По&nbsp;безналичному расчету, перечислив на&nbsp;р/сч нашей организации;</li>
+										<li>Переводом на&nbsp;банковскую карту. При оплате банковской картой предоставляем дополнительную скидку.</li>
+									</ul>
+									<p>С&nbsp;поставкой товара мы&nbsp;предоставляем полный пакет документов: накладные на&nbsp;товар, оригинал договора на&nbsp;поставку и&nbsp;копию сертификата соответствия ГОСТу</p>
+									<div class="badge badge-primary"> 
+										<svg class="iconC iconC-attention ">
+											<use xlink:href="img/svg/spriteC.svg#attention"></use>
+										</svg>
+										<div>Оформить заказ или задать вопросы можно в&nbsp;любое удобное для вас времяпо телефону: <a href="tel:88002006160">8 (800) 200-61-60</a> или по&nbsp;электронной почте: <a href="mailto:sale@uki-kids.ru">sale@uki-kids.ru.</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="form-wrap">
+									<form>
+										<h2>Получение статуса оптового клиента</h2>
+										<div class="form-wrap__wrapper">
+											<h5>Персональные данные</h5>
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">ФИО <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-invalid" inputmode="text" name="text" type="text" placeholder="ФИО" required="required"/>
+													<div class="invalid-feedback">Заполните поле</div>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Эл. почта <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="email" name="email" type="email" placeholder="Эл. почта" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Телефон <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон" required="required" disabled="disabled"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Пароль <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Пароль" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="form-wrap__wrapper">
+											<h5>Данные о компании</h5>
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Наименование компании <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Наименование компании" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">ИНН <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="ИНН" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Город <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Город" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Адрес <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Адрес" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__policy">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/>
+													 Я согласен на обработку <a href="#">персональных данных</a>
+												</label>
+											</div>
+											<button class="form-wrap__btn btn btn-accent" type="submit">Отправить заявку
+											</button>
+										</div>
+										<div class="form-wrap__socials"><span>Зарегистрироваться через</span>
+											<div class="soc">
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="iconC iconC-vk ">
+														<use xlink:href="img/svg/spriteC.svg#vk"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="iconC iconC-google ">
+														<use xlink:href="img/svg/spriteC.svg#google"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="iconC iconC-yandex ">
+														<use xlink:href="img/svg/spriteC.svg#yandex"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sRegistration-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
