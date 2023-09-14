@@ -1,0 +1,245 @@
+mixin sWholesaleOrder(data)
+	// start sWholesaleOrder
+	+b.SECTION.sWholesaleOrder.section#sWholesaleOrder&attributes(attributes)
+		.container
+			+e.download(href='#')
+				+iconC('excel')
+				| Скачать актуальный прайс
+			+e.row.row
+				.col-lg 
+					h5 Оптовый заказ
+					+b.form-wrap
+						+input('Прикрепить файл', 'text', 'Прикрепить файл')
+					.badge.badge-primary 
+						+iconC('check')
+						| Обработка заказов в течении 2-3 дней. Наш менеджер позвонит вам!
+				.col-lg
+					+delivery('delivery', 'Доставка')
+						+in-c('radio', '', 'delivery')
+							+e.title Самовывоз
+							p Из г. Ярославль
+						+in-c('radio', '', 'delivery')
+							+e.title Почта России
+							p Стоимость доставки #[span от 190 рублей], срок от&nbsp;2&nbsp;дней. Когда товар поступит в&nbsp;отделение, вы&nbsp;можете заказать доставку на&nbsp;дом #[span (100 руб.)], но&nbsp;только для оплаченных заранее товаров.
+						+in-c('radio', '', 'delivery')
+							+e.title СДЭК
+							p Из г. Стоимость доставки #[span от 180 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером.
+						+in-c('radio', '', 'delivery')
+							+e.title Boxberry
+							p Можно заказать доставку до Пункта выдачи или «до дверей» курьером. Стоимость #[span от 173 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером. В&nbsp;некоторых пунктах выдачи невозможна оплата с&nbsp;помощью банковской карты.
+					+delivery('wallet', 'Оплата')
+						+in-c('radio', '', 'payment')
+							+e.title На расчетный счет продавца
+					+e.final-price
+						.row
+							.col-auto
+								h6 Итого:
+							.col
+								ul
+									li 
+										span.wrap-left
+											span.text Стоимость
+										span.wrap-right
+											span.text 159 000,00 ₽
+									li 
+										span.wrap-left
+											span.text Доставка
+										span.wrap-right
+											span.text 950 ₽
+						+e.summary
+							| Всего к оплате:
+							h6 159 950,00 ₽
+					+e.btn.btn.btn-accent(href='#') Оформить
+	// end sWholesaleOrder
+
+mixin sWholesaleOrder2(data)
+	// start sWholesaleOrder
+	+b.SECTION.sWholesaleOrder.section#sWholesaleOrder&attributes(attributes)
+		.container
+			h4 Ваш заказ
+			+e.row.row
+				.col-lg-7
+					+cartItem()
+				.col-lg
+					+delivery('delivery', 'Доставка')
+						+in-c('radio', '', 'delivery')
+							+e.title Самовывоз
+							p Из г. Ярославль
+						+in-c('radio', '', 'delivery')
+							+e.title Почта России
+							p Стоимость доставки #[span от 190 рублей], срок от&nbsp;2&nbsp;дней. Когда товар поступит в&nbsp;отделение, вы&nbsp;можете заказать доставку на&nbsp;дом #[span (100 руб.)], но&nbsp;только для оплаченных заранее товаров.
+						+in-c('radio', '', 'delivery')
+							+e.title СДЭК
+							p Из г. Стоимость доставки #[span от 180 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером.
+						+in-c('radio', '', 'delivery')
+							+e.title Boxberry
+							p Можно заказать доставку до Пункта выдачи или «до дверей» курьером. Стоимость #[span от 173 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером. В&nbsp;некоторых пунктах выдачи невозможна оплата с&nbsp;помощью банковской карты.
+					+delivery('wallet', 'Оплата')
+						+in-c('radio', '', 'payment')
+							+e.title На расчетный счет продавца
+					+e.final-price
+						.row
+							.col-auto
+								h6 Итого:
+							.col
+								ul
+									li 
+										span.wrap-left
+											span.text Стоимость
+										span.wrap-right
+											span.text 159 000,00 ₽
+									li 
+										span.wrap-left
+											span.text Доставка
+										span.wrap-right
+											span.text 950 ₽
+						+e.summary
+							| Всего к оплате:
+							h6 159 950,00 ₽
+					+e.btn.btn.btn-accent(href='#') Оформить
+	// end sWholesaleOrder
+
+mixin sWholesaleOrder3(data)
+	// start sWholesaleOrder
+	+b.SECTION.sWholesaleOrder.section#sWholesaleOrder&attributes(attributes)
+		.container
+			+e.main-info
+				.row
+					.col-lg-auto
+						+e.main-info-item
+							+icon('delivery')
+							div
+								h6 Доставка в пункт выдачи
+								p Доставка СДЭК, Россия, г. Ярославль, ул. Ленина,12 
+						+e.main-info-item
+							+icon('profile')
+							div
+								h6 Получатель
+								p Алексей Пименов 
+								a(href="mailto:pimenov.al@gmail.com") pimenov.al@gmail.com
+								a(href="tel:+79324454477") +7 (932) 445 44 77
+					+e.col.col-lg
+						+e.main-info-item
+							+icon('card')
+							div
+								h6 Способ оплаты
+								p Банковская карта
+							+e.price 8580 ₽ 
+						+e.price-wrap
+							| Товары
+							+e.price 8580 ₽ 
+						+e.price-wrap
+							| Доставка
+							+e.price 0 ₽ 
+						+e.price-wrap
+							| Итого
+							+e.price 8580 ₽ 
+					.col-lg-auto
+						+e.link(href='#') Электронный чек
+						+e.link(href='#') Повторить заказ
+						+e.link(href='#') Возврат товаров
+	// end sWholesaleOrder
+
+mixin sWholesaleOrder4(data)
+	// start sWholesaleOrder
+	+b.SECTION.sWholesaleOrder.section#sWholesaleOrder&attributes(attributes)
+		.container
+			h4 Доставка и оплата
+			+e.title Тип покупателя и регион доставки
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Юр.лицо
+					.tabs__btn Физ.лицо
+				.tabs__content.active
+					+b.form-wrap
+						+input('Город', 'text', 'Город', t, t, true)
+						+input('Индекс', 'text', 'Индекс', t, t, true)
+					+e.delivery-row.row
+						.col-lg
+							+delivery('delivery', 'Доставка')
+								+in-c('radio', '', 'delivery')
+									+e.title Самовывоз
+									p Из г. Ярославль
+								+in-c('radio', '', 'delivery')
+									+e.title Почта России
+									p Стоимость доставки #[span от 190 рублей], срок от&nbsp;2&nbsp;дней. Когда товар поступит в&nbsp;отделение, вы&nbsp;можете заказать доставку на&nbsp;дом #[span (100 руб.)], но&nbsp;только для оплаченных заранее товаров.
+								+in-c('radio', '', 'delivery')
+									+e.title СДЭК
+									p Из г. Стоимость доставки #[span от 180 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером.
+								+in-c('radio', '', 'delivery')
+									+e.title Boxberry
+									p Можно заказать доставку до Пункта выдачи или «до дверей» курьером. Стоимость #[span от 173 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером. В&nbsp;некоторых пунктах выдачи невозможна оплата с&nbsp;помощью банковской карты.
+						.col-lg
+							+delivery('wallet', 'Оплата')
+								+in-c('radio', '', 'payment')
+									+e.title На расчетный счет продавца
+				.tabs__content 
+					+b.form-wrap
+						+input('Город / Населенный пункт', 'text', 'Город / Населенный пункт', t, t, true)
+					+e.delivery-row.row
+						.col-lg
+							+delivery('delivery', 'Доставка')
+								+in-c('radio', '', 'delivery')
+									+e.title Самовывоз
+									p Из г. Ярославль
+								+in-c('radio', '', 'delivery2')
+									+e.title Почта России
+									p Стоимость доставки #[span от 190 рублей], срок от&nbsp;2&nbsp;дней. Когда товар поступит в&nbsp;отделение, вы&nbsp;можете заказать доставку на&nbsp;дом #[span (100 руб.)], но&nbsp;только для оплаченных заранее товаров.
+								+in-c('radio', '', 'delivery2')
+									+e.title СДЭК
+									p Из г. Стоимость доставки #[span от 180 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером.
+								+in-c('radio', '', 'delivery2')
+									+e.title Boxberry
+									p Можно заказать доставку до Пункта выдачи или «до дверей» курьером. Стоимость #[span от 173 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером. В&nbsp;некоторых пунктах выдачи невозможна оплата с&nbsp;помощью банковской карты.
+						.col-lg
+							+delivery('wallet', 'Оплата')
+								+in-c('radio', '', 'payment2')
+									+e.title Банковской картой
+									p После оплаты мы отправляем кассовый чек вам на электронную почту.
+								+in-c('radio', '', 'payment2')
+									+e.title В пункте выдачи
+									p Оплата при получении заказа на пункте выдачи. Наличным или картой.
+								+in-c('radio', '', 'payment2')
+									+e.title На расчетный счет продавца
+	// end sWholesaleOrder
+
+mixin sWholesaleOrder5(data)
+	// start sWholesaleOrder
+	+b.SECTION.sWholesaleOrder.section#sWholesaleOrder&attributes(attributes)
+		.container
+			+e.main-info
+				.row
+					.col-lg-auto
+						+e.main-info-item
+							+icon('delivery')
+							div
+								h6 Доставка в пункт выдачи
+								p Доставка СДЭК, Россия, г. Ярославль, ул. Ленина,12 
+						+e.main-info-item
+							+icon('profile')
+							div
+								h6 Получатель
+								p Алексей Пименов 
+								a(href="mailto:pimenov.al@gmail.com") pimenov.al@gmail.com
+								a(href="tel:+79324454477") +7 (932) 445 44 77
+					+e.col.col-lg
+						+e.main-info-item
+							+icon('card')
+							div
+								h6 Способ оплаты
+								p Банковская карта
+							+e.price 8580 ₽ 
+						+e.price-wrap
+							| Товары
+							+e.price 8580 ₽ 
+						+e.price-wrap
+							| Доставка
+							+e.price 0 ₽ 
+						+e.price-wrap
+							| Итого
+							+e.price 8580 ₽ 
+					.col-lg-auto
+						+e.link(href='#') Электронный чек
+						+e.link(href='#') Повторить заказ
+						+e.link(href='#') Возврат товаров
+	// end sWholesaleOrder

@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/topLine/_topLine.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sUserContent/_sUserContent.pug
+include ../blocks/sWholesaleOrder/_sWholesaleOrder.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '08-orders.jpg'
+
+block title
+	- let  title= 'Оформленные заказы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title, 'Заказы')
+		+sWholesaleOrder5
+	+parts('footer')

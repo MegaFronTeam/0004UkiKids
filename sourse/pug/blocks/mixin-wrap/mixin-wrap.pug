@@ -64,3 +64,56 @@ mixin mainPageNav()
 		//- 		.col-auto: a(href="#") Напишите нам
 		//- 		.col-auto
 		//- 			a(href="#") ОПТОВИКАМ
+
+mixin delivery(icon, name)
+	+b.delivery
+		+e.head
+			+icon(icon)
+			!= name
+		+e.body
+			block
+
+mixin cartItem()
+	+b.cart-item
+		table
+			thead
+				tr
+					th Товар
+					th Цена
+					th Кол-во
+					th Стоимость
+			tbody
+				tr
+					td
+						+e.content-wrap
+							+e.img-wrap: +img('img/cart-img-1.jpg', 'bg')
+							div
+								h6 Комбинезон синий зимний
+								+e.properties
+									| Цвет:
+									.color
+								+e.properties
+									| Размер: 94
+					td: +e.price 3510 ₽ 
+					td: +addblock()
+					td 
+						+e.full-price
+							| 7020 ₽
+							+e.delete(href='#'): +icon('delete') 
+				tr
+					td
+						+e.content-wrap
+							+e.img-wrap: +img('img/cart-img-1.jpg', 'bg')
+							div
+								h6 Комбинезон синий зимний
+								+e.properties
+									| Цвет:
+									.color
+								+e.properties
+									| Размер: 94
+					td: +e.price 3510 ₽ 
+					td: +addblock()
+					td 
+						+e.full-price
+							| 7020 ₽
+							+e.delete(href='#'): +icon('delete') 

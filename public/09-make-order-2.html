@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Оформление заказа</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="09-make-order.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Оформление заказа</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Оптовикам</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<h1 class="h2">Оформление заказа</h1>
+					</div>
+				</div>
+				<!-- start sWholesaleOrder-->
+				<section class="sWholesaleOrder section" id="sWholesaleOrder">
+					<div class="container">
+						<h4>Ваш заказ</h4>
+						<div class="sWholesaleOrder__row row">
+							<div class="col-lg-7">
+								<div class="cart-item">
+									<table>
+										<thead>
+											<tr>
+												<th>Товар</th>
+												<th>Цена</th>
+												<th>Кол-во</th>
+												<th>Стоимость</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="cart-item__content-wrap">
+														<div class="cart-item__img-wrap"><img class="object-fit-js" src="img/cart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+														<div>
+															<h6>Комбинезон синий зимний</h6>
+															<div class="cart-item__properties">Цвет:
+																<div class="color"></div>
+															</div>
+															<div class="cart-item__properties">Размер: 94
+															</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="cart-item__price">3510 ₽ 
+													</div>
+												</td>
+												<td>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--minus" type="button" disabled="disabled">
+														</button>
+														<input type="text" value="1" inputmode="numeric"/>
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+													</div>
+												</td>
+												<td> 
+													<div class="cart-item__full-price">7020 ₽
+														<a class="cart-item__delete" href="#">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="cart-item__content-wrap">
+														<div class="cart-item__img-wrap"><img class="object-fit-js" src="img/cart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+														<div>
+															<h6>Комбинезон синий зимний</h6>
+															<div class="cart-item__properties">Цвет:
+																<div class="color"></div>
+															</div>
+															<div class="cart-item__properties">Размер: 94
+															</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="cart-item__price">3510 ₽ 
+													</div>
+												</td>
+												<td>
+													<div class="addBlock">
+														<button class="addBlock__btn addBlock__btn--minus" type="button" disabled="disabled">
+														</button>
+														<input type="text" value="1" inputmode="numeric"/>
+														<button class="addBlock__btn addBlock__btn--plus" type="button">
+														</button>
+													</div>
+												</td>
+												<td> 
+													<div class="cart-item__full-price">7020 ₽
+														<a class="cart-item__delete" href="#">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="delivery">
+									<div class="delivery__head">
+										<svg class="icon icon-delivery ">
+											<use xlink:href="img/svg/sprite.svg#delivery"></use>
+										</svg>Доставка
+									</div>
+									<div class="delivery__body">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="delivery" type="radio"/><span class="custom-input__title">Самовывоз</span>
+											<p>Из г. Ярославль</p>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="delivery" type="radio"/><span class="custom-input__title">Почта России</span>
+											<p>Стоимость доставки <span>от 190 рублей</span>, срок от&nbsp;2&nbsp;дней. Когда товар поступит в&nbsp;отделение, вы&nbsp;можете заказать доставку на&nbsp;дом <span>(100 руб.)</span>, но&nbsp;только для оплаченных заранее товаров.</p>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="delivery" type="radio"/><span class="custom-input__title">СДЭК</span>
+											<p>Из г. Стоимость доставки <span>от 180 рублей</span>, срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером.</p>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="delivery" type="radio"/><span class="custom-input__title">Boxberry</span>
+											<p>Можно заказать доставку до Пункта выдачи или «до дверей» курьером. Стоимость <span>от 173 рублей</span>, срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером. В&nbsp;некоторых пунктах выдачи невозможна оплата с&nbsp;помощью банковской карты.</p>
+										</label>
+									</div>
+								</div>
+								<div class="delivery">
+									<div class="delivery__head">
+										<svg class="icon icon-wallet ">
+											<use xlink:href="img/svg/sprite.svg#wallet"></use>
+										</svg>Оплата
+									</div>
+									<div class="delivery__body">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="payment" type="radio"/><span class="custom-input__title">На расчетный счет продавца</span>
+										</label>
+									</div>
+								</div>
+								<div class="sWholesaleOrder__final-price">
+									<div class="row">
+										<div class="col-auto">
+											<h6>Итого:</h6>
+										</div>
+										<div class="col">
+											<ul>
+												<li> <span class="wrap-left"><span class="text">Стоимость</span></span><span class="wrap-right"><span class="text">159 000,00 ₽</span></span></li>
+												<li> <span class="wrap-left"><span class="text">Доставка</span></span><span class="wrap-right"><span class="text">950 ₽</span></span></li>
+											</ul>
+										</div>
+									</div>
+									<div class="sWholesaleOrder__summary">Всего к оплате:
+										<h6>159 950,00 ₽</h6>
+									</div>
+								</div>
+								<a class="sWholesaleOrder__btn btn btn-accent" href="#">Оформить
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sWholesaleOrder-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

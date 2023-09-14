@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Оформленные заказы</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="08-orders.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Заказы</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1 class="h2">Оформленные заказы</h1>
+					</div>
+				</div>
+				<!-- start sWholesaleOrder-->
+				<section class="sWholesaleOrder section" id="sWholesaleOrder">
+					<div class="container">
+						<div class="sWholesaleOrder__main-info">
+							<div class="row">
+								<div class="col-lg-auto">
+									<div class="sWholesaleOrder__main-info-item">
+										<svg class="icon icon-delivery ">
+											<use xlink:href="img/svg/sprite.svg#delivery"></use>
+										</svg>
+										<div>
+											<h6>Доставка в пункт выдачи</h6>
+											<p>Доставка СДЭК, Россия, г. Ярославль, ул. Ленина,12 </p>
+										</div>
+									</div>
+									<div class="sWholesaleOrder__main-info-item">
+										<svg class="icon icon-profile ">
+											<use xlink:href="img/svg/sprite.svg#profile"></use>
+										</svg>
+										<div>
+											<h6>Получатель</h6>
+											<p>Алексей Пименов </p><a href="mailto:pimenov.al@gmail.com">pimenov.al@gmail.com</a><a href="tel:+79324454477">+7 (932) 445 44 77</a>
+										</div>
+									</div>
+								</div>
+								<div class="sWholesaleOrder__col col-lg">
+									<div class="sWholesaleOrder__main-info-item">
+										<svg class="icon icon-card ">
+											<use xlink:href="img/svg/sprite.svg#card"></use>
+										</svg>
+										<div>
+											<h6>Способ оплаты</h6>
+											<p>Банковская карта</p>
+										</div>
+										<div class="sWholesaleOrder__price">8580 ₽ 
+										</div>
+									</div>
+									<div class="sWholesaleOrder__price-wrap">Товары
+										<div class="sWholesaleOrder__price">8580 ₽ 
+										</div>
+									</div>
+									<div class="sWholesaleOrder__price-wrap">Доставка
+										<div class="sWholesaleOrder__price">0 ₽ 
+										</div>
+									</div>
+									<div class="sWholesaleOrder__price-wrap">Итого
+										<div class="sWholesaleOrder__price">8580 ₽ 
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-auto">
+									<a class="sWholesaleOrder__link" href="#">Электронный чек
+									</a>
+									<a class="sWholesaleOrder__link" href="#">Повторить заказ
+									</a>
+									<a class="sWholesaleOrder__link" href="#">Возврат товаров
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sWholesaleOrder-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

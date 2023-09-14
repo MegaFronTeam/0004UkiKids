@@ -182,3 +182,24 @@ input::-webkit-inner-spin-button {
 	.select2-selection__arrow {
 	display: none;
 }
+
+.custom-input {
+	padding-left: rem(38);
+	&__input {
+		&[type='radio'] {
+			width: rem(24);
+			height: rem(24);
+			margin-left: rem(-38);
+			border-width: rem(2);
+			border-color: $gray-100;
+			&:checked {
+				--bs-form-check-bg-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='#AEBF06'/%3E%3C/svg%3E");
+				background-color: #fff;
+				border-color: #AEBF06;
+			}
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+include ../blocks/topLine/_topLine.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sWholesaleOrder/_sWholesaleOrder.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '09-make-order.jpg'
+
+block title
+	- let  title= 'Оформление заказа'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title, 'Оформление заказа', 'Оптовикам')
+		+sWholesaleOrder2
+	+parts('footer')
