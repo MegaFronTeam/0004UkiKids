@@ -1,0 +1,45 @@
+// start .sTerms
+.sTerms {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+	&__list-title {
+		margin-bottom: 16px;
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: 1.2;
+	}
+	ul {
+		padding-left: 20px;
+		margin-bottom: 20px;
+	}
+	li{
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sTerms

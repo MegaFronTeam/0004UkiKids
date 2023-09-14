@@ -82,25 +82,7 @@ mixin sCatalog(data)
 								+in-c('checkbox', '', 'color').--indigo
 				+e.row.row
 					+breadcrumb('Главная','Страница категорий','Категории')
-					+e.sorting-row
-						+b.section-title
-							h1 Каталог
-						+e.sort.d-none.d-sm-flex
-							+e.sort-title Сортировка: 
-							+e.sort-wrap
-								+e.sort-btn--js.btn.BUTTON Новинки
-									+img('img/caret-down.svg')
-								+e.sort-dropdown.UL
-									+e.sort-item.LI По&nbsp;цене
-									+e.sort-item.LI По&nbsp;популярности
-									+e.sort-item.LI По&nbsp;рейтингу
-						+e.filter-btn--js.btn.BUTTON.d-lg-none
-							+icon('filters')
-						+e.view-btns.d-none.d-md-flex
-							+e.view-btn.btn.BUTTON
-								+icon('list')
-							+e.view-btn.btn.BUTTON
-								+icon('grid')
+					+sortingRow('Каталог','Новинки', 'fiter')
 					- const wrapClass="col-sm-6 col-md-4"
 					+e.col(class= wrapClass)
 						+product-item('1','Тестовый товар','5 600 р.','7 900 р.','tags')

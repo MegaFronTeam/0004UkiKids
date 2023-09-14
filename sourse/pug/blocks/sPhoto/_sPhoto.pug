@@ -1,25 +1,40 @@
+mixin file(icon, title, img)
+	.col-6.col-md-4.col-lg-3
+		+e.item(href="#")
+			+e.item-top
+				+icon(`${icon}`)
+				+e.title= title
+			+e.content
+				if img
+					+e.img-wrap
+						+img(`img/file-${img}.jpg`)
+
 mixin sPhoto(data)
 	// start sPhoto
 	+b.SECTION.sPhoto.section#sPhoto&attributes(attributes)
 		.container
-			+e.sorting-row
-				+b.section-title
-					h2 Фото и видеоматериалы
-				+e.sort.d-none.d-sm-flex
-					+e.sort-title Сортировка: 
-					+e.sort-wrap
-						+e.sort-btn--js.btn.BUTTON Тип файла
-							+img('img/caret-down.svg')
-						+e.sort-dropdown.UL
-							+e.sort-item.LI По&nbsp;цене
-							+e.sort-item.LI По&nbsp;популярности
-							+e.sort-item.LI По&nbsp;рейтингу
-				+e.filter-btn--js.btn.BUTTON.d-lg-none
-					+icon('filters')
-				+e.view-btns.d-none.d-md-flex
-					+e.view-btn.btn.BUTTON
-						+icon('list')
-					+e.view-btn.btn.BUTTON
-						+icon('grid')
+			+sortingRow
+			+b.download-row
+				+icon('download')
+				+e.caption Все фото и видео материалы можете скачать тут
+				+e.link(href="#") Скачать
+			h3 Файлы
 			+e.row.row
+				+file('doc', 'Правила размещения марктинговых материалов', '1')
+				+file('doc', 'Положениие о оптовых поку', '2')
+				+file('doc', 'Документация', '3')
+				+file('doc', 'Общее положение', '4')
+			h3 Фото
+			+e.row--img.row
+				+file('img', 'Промо материалы', '5')
+				+file('img', 'Развертка стенда', '')
+				+file('img', 'Логотип', '')
+				+file('img', 'Листовка', '')
+			h3 Видео
+			+e.row--video.row
+				+file('video', 'Промо новой коллекции', '')
+				+file('video', 'Детская одежда Промо', '')
+				+file('video', 'Детская одежда ', '')
+				+file('video', 'Зимняя коллекция', '')
+
 	// end sPhoto

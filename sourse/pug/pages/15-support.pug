@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+
+include ../blocks/topLine/_topLine.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sUserContent/_sUserContent.pug
+include ../blocks/sSupport/_sSupport.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '07-profile.jpg'
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title, title)
+		+sUserContent(0).sUserContent--settings
+			.row.mb-3
+				.col-lg-auto
+					+accInfo().--settings
+				.col-lg
+					+sSupport
+	+parts('footer')
+      
+
+
+

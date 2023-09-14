@@ -129,8 +129,12 @@
 		}
 	}
 }
-
-
+.forgot-password {
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	font-size: 12px;
+}
 //
 @include media-breakpoint-up(xl) {}
 @include media-breakpoint-up(lg) {}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Личный кабинет</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="07-profile.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1 class="h2">Личный кабинет</h1>
+					</div>
+				</div>
+				<!-- start sUserContent-->
+				<div class="sUserContent section sUserContent sUserContent--settings" id="sUserContent">
+					<div class="container">
+						<div class="sUserContent__slider swiper def-swiper-js">
+							<div class="swiper-wrapper">
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-profile ">
+											<use xlink:href="img/svg/sprite.svg#profile"></use>
+										</svg>Профиль
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-orders ">
+											<use xlink:href="img/svg/sprite.svg#orders"></use>
+										</svg>Заказы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-card ">
+											<use xlink:href="img/svg/sprite.svg#card"></use>
+										</svg>Доставка и оплата
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-gallery ">
+											<use xlink:href="img/svg/sprite.svg#gallery"></use>
+										</svg>Фото и видеоматериалы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-document ">
+											<use xlink:href="img/svg/sprite.svg#document"></use>
+										</svg>Условия сотрудничества
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-lg-auto">
+									<div class="account-info account-info--settings">
+										<div class="account-info__personality">
+											<div class="account-info__img-wrap"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+											</div>
+											<h6>Алексей Пименов</h6><a href="mailto:pimenov.al@gmail.com">pimenov.al@gmail.com </a>
+										</div>
+										<div class="account-info__link-wrap">
+											<a class="account-info__link" href="#">
+												<div class="account-info__icon-wrap active">
+													<svg class="iconC iconC-sUserContent-icon-1 ">
+														<use xlink:href="img/svg/spriteC.svg#sUserContent-icon-1"></use>
+													</svg>
+												</div>Уведомления
+											</a>
+											<a class="account-info__link" href="#">
+												<div class="account-info__icon-wrap">
+													<svg class="iconC iconC-sUserContent-icon-2 ">
+														<use xlink:href="img/svg/spriteC.svg#sUserContent-icon-2"></use>
+													</svg>
+												</div>Настройки
+											</a>
+											<a class="account-info__link" href="#">
+												<div class="account-info__icon-wrap">
+													<svg class="iconC iconC-sUserContent-icon-3 ">
+														<use xlink:href="img/svg/spriteC.svg#sUserContent-icon-3"></use>
+													</svg>
+												</div>Техподдержка
+											</a>
+										</div>
+										<div class="account-info__log-out"><a href="#">Выйти из аккаунта
+												<svg class="icon icon-login ">
+													<use xlink:href="img/svg/sprite.svg#login"></use>
+												</svg></a>
+										</div>
+									</div>
+							</div>
+							<div class="col-lg">
+								<!-- start sSupport-->
+								<section class="sSupport section" id="sSupport">
+									<div class="container">
+										<div class="section-title">
+											<h2>Техподдержка</h2>
+										</div>
+										<div class="sub-menu-tabs tabs swiper def-swiper-js">
+											<div class="tabs__caption swiper-wrapper">
+												<div class="tabs__btn active swiper-slide">Обращение в поддержку</div>
+												<div class="tabs__btn swiper-slide">Вопрос - ответ</div>
+											</div>
+											<div class="tabs__content active">
+												<div class="attention-block">
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Обращение в техподдержку успешно подано! Наш менеджер постарается ответить вам, как можно раньше. Статус и решение проблемы вы можете посмотреть в разделе <a href="#">«Уведомления»</a>.
+												</div>
+												<div class="form-wrap">
+													<form>
+														<div class="form-wrap__title">Написать о проблеме
+														</div>
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Контактное лицо <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="ФИО"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Дата заявки <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="01.01.23"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Наименование компании <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="ООО Наименование компании"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Тема обращения <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Описание проблемы <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Добавить комментарий <span class="text-danger">*</span></span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__btn-row">
+															<div class="upload-field">
+																<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="file" name="file" type="file"/>
+																</div>
+																<!-- +e.input-wrap-->
+																<div class="file-name"></div>
+															</div>
+															<div class="form-wrap__submit-btn btn btn-accent">Отправить
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+											<div class="tabs__content">
+												<div class="section-title">
+													<h3>Часто задаваемые вопросы</h3>
+												</div>
+												<div class="dd-group dd-group-js">
+													<div class="dd-group__item active">
+														<div class="dd-group__head dd-head-js">Осуществляется  ли доставка по всей России?
+														</div>
+														<div class="dd-group__content dd-content-js active">
+															<p>Товары нашего магазина доставлются покупателям по всей России. Более подробную информацию о доставке вы можете посмотреть на сайте в разделе <a href="#">«Оплата и доставка».</a> </p>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">Возможен ли самовывоз заказанного товара?
+														</div>
+														<div class="dd-group__content dd-content-js">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">Как рассчитывается стоимость доставки по городу?
+														</div>
+														<div class="dd-group__content dd-content-js">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">При доставке оптом как расчитывается стоимость товара?
+														</div>
+														<div class="dd-group__content dd-content-js">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- end sSupport-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sUserContent-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

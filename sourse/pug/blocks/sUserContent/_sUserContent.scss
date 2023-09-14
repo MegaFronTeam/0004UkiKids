@@ -3,7 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	
+	&--settings {
+		padding-bottom: 48px;
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -92,6 +94,33 @@
 	border-radius: 5px;
 	background-color: $primary;
 	color: #fff;
+	&--terms {
+		@include media-breakpoint-up(lg) {
+			margin-right: 86px;
+			width: 310px;
+			height: 100%;
+		}
+	}
+	&--notice {
+		margin-bottom: 30px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 24px;
+			margin-right: 24px;
+			width: 310px;
+			height: 728px;
+		}
+	}
+	&--settings {
+		margin-bottom: 30px;
+		@include media-breakpoint-up(lg) {
+			margin-right: 24px;
+			width: 310px;
+			height: 100%;
+		}
+	}
 	&__personality {
 		display: flex;
 		flex-direction: column;

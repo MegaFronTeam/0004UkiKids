@@ -1,0 +1,213 @@
+// start .sSettings
+.sSettings {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	.tabs__caption {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 28px;
+	}
+	.swiper {
+		@include media-breakpoint-down(lg) {
+			overflow: visible;
+		}
+	}
+	.tabs__btn {
+		color: $gray-600;
+		font-size:16px;
+		position: relative;
+		width: auto;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: transparent;
+		}
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&.active {
+			font-weight: 700;
+			color: $primary;
+			&::after {
+				background-color: $primary;
+			}
+		}
+	}
+	.form-wrap__title, .sSettings__title {
+		margin-bottom: 30px;
+		color: $primary;
+		font-size: rem(20);
+	}
+	&__cards-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+		list-style-type: none;
+	}
+	&__cards-item {
+		width: 159px;
+		height: 100px;
+		flex-grow: 0;
+		flex-shrink: 0;
+		margin-bottom: 20px;
+		margin-right: 20px;
+		border-radius: 5px;
+		border: 1px solid rgba(32, 67, 143, 0.08);
+		overflow: hidden;
+		&:not(:last-child) {
+		}
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		width: 100%;
+		height: 100%;
+		color: $gray-600;
+		font-weight: 500;
+		&:hover {
+			color: $primary;
+		}
+		&.active {
+			background-color: $gray-200;
+			color: $primary;
+		}
+		&--filled {
+			align-items: flex-start;
+			justify-content: space-between;
+			padding: 6px;
+			background: #AEBF06;
+			color: white;
+			&:hover {
+				color: white;
+			}
+		}
+		.icon {
+			margin-bottom: 10px;
+			font-size: 24px;
+		}
+	}
+	&__card-top {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		font-size: 12px;
+		&::before {
+			content: url('../img/check.svg');
+			width: 14px;
+			height: 14px;
+			margin-right: 4px;
+			border-radius: 50%;
+			background-color: $white;
+		}
+	}
+	&__card-bottom {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		img {
+			width: 24px;
+			object-fit: contain;
+		}
+	}
+	&__card-number {
+		font-size: 10px;
+	}
+	&__card-title {
+		font-size: 14px;
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+	.form-wrap {
+		max-width: 350px;
+		&.grid {
+			form {
+				display: grid;
+				column-gap: 30px;
+				grid-template-columns: 1fr 1fr;
+				margin-bottom: 30px;
+				.form-wrap__input-wrap:first-child,
+				.form-wrap__btn {
+					grid-column: span 2;
+					font-size: 14px;
+					font-weight: 400;
+					text-transform: uppercase;
+				}
+			}
+		}
+		&.columns {
+			max-width: none;
+			form {
+				@include media-breakpoint-up(md) {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					column-gap: 10px;
+				}
+			}
+			.form-wrap__input-wrap {
+				max-width: 350px;
+			}
+		}
+		.form-control.is-valid, .was-validated .form-control:valid {
+			border-color: $gray-100;
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z' fill='%23E5E5E5'/%3E%3Cpath d='M10.5804 15.5796C10.3804 15.5796 10.1904 15.4996 10.0504 15.3596L7.22043 12.5296C6.93043 12.2396 6.93043 11.7596 7.22043 11.4696C7.51043 11.1796 7.99043 11.1796 8.28043 11.4696L10.5804 13.7696L15.7204 8.62961C16.0104 8.33961 16.4904 8.33961 16.7804 8.62961C17.0704 8.91961 17.0704 9.39961 16.7804 9.68961L11.1104 15.3596C10.9704 15.4996 10.7804 15.5796 10.5804 15.5796Z' fill='%23E5E5E5'/%3E%3C/svg%3E%0A");
+			&:focus {
+				border-color: $primary;
+			}
+		}
+	}
+	.password-wrap {
+		position: relative;
+	}
+	.pass-button {
+		position: absolute;
+		display: inline-block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 15px;
+		right: 10px;
+		width: 24px;
+		height: 24px;
+		background: url('../img/pass-close.svg') 0 0 no-repeat;
+		&.shown {
+			&::after {
+				content: '';
+				display: inline-block;
+				flex-shrink: 0;
+				width: 17px;
+				height: 2px;
+				background-color: $body-color;
+				transform: rotate(50deg);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSettings

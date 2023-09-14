@@ -1,0 +1,31 @@
+mixin noticeRow(sender,mess,date,time,active)
+	tr(class=active)
+		+e.checkbox-td.TD
+			if active
+				+in-c(checked='checked')
+			else
+				+in-c
+		+e.sender-td.TD
+			+e.sender= sender
+		td
+			+e.message= mess
+		+e.date-td.TD
+			+e.date= date
+			+e.time= time
+		+e.more-td.TD
+			+e.more-btn.btn.BUTTON
+				+icon('points')
+
+mixin sNotice(data)
+	// start sNotice
+	+b.SECTION.sNotice.section#sNotice&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Уведомления
+			table.table
+				tbody
+					//- +noticeRow
+					+noticeRow('Менеджер','Регистрация прошла успешно. Вам доступны все функции Личного кабинета отового покупателя','27.06.23.','10.24','active')
+					+noticeRow('Заказ №4512','Заказ 27489. Наш менеджер свяжется с вами для уточнения информации','27.06.23.','10.24','')
+					+noticeRow('Заказ № 1255','Заказ готов, можно его забирать: ул. Старокоптевская, д. 7, оф. 402. Подробнее: targetСМС.ru/kontakty. Пн-пт 10:00–19:30. Наличие паспорта обязательно','27.06.23.','10.24','')
+	// end sNotice
