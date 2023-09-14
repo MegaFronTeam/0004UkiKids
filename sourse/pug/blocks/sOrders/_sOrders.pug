@@ -1,0 +1,79 @@
+mixin sOrders(data)
+	// start sOrders
+	+b.sOrders.section#sOrders&attributes(attributes)
+		h4 Заказы
+		.tabs
+			.tabs__caption
+				.tabs__btn.active Оптовые заказы
+				.tabs__btn Заказы
+			.tabs__content.active
+				+e.table-wrap
+					table
+						thead
+							tr
+								th № заказа
+								th Дата заказа
+								th Сумма (₽) и кол-во 
+								th Статус 
+								th Детали заказа 
+								th Действия
+						tbody
+							mixin tr(status='В корзине')
+								- let statusClass = '';
+								- 
+									switch (status) {
+										case ('В корзине'):
+											statusClass='in-cart';
+											break;
+										case ('Отменен'):
+											statusClass='cancel';
+											break;
+										case ('Доставлен'):
+											statusClass='delivered';
+											break;
+										case ('В обработке'):
+											statusClass='in-work';
+											break;
+									}
+								tr
+									td 
+										+e.order
+											| Заказ № 1725
+											+icon('box')
+									td 27.06.2023
+									td
+										+e.price
+											div
+												| 83550 ₽ 
+												span 120 шт.
+											+icon('box')
+									td
+										+e.status(class!=statusClass)!= status
+									td
+										+e.download(href="#") 
+											+icon('download')
+											| Скачать XLX
+									td
+										+e.action
+											span
+											+e.action-dropdown
+												+e.order-btn(href='#') Оформить
+												+e.reorder-btn(href='#') Повторить
+												+e.edit-btn(href='#') Изменить
+
+							+tr('В корзине')
+							+tr('Отменен')
+							+tr('Доставлен')
+							+tr('В обработке')
+							+tr('В корзине')
+							+tr('Доставлен')
+				+b.pagination-wrap
+					+e.display
+						+e.title Показывать на странице:
+						+btn('12','button').btn.pagination-wrap__btn--active
+						+btn('24','button').btn
+						+btn('36','button').btn
+						+btn('48','button').btn
+					+pugin
+			.tabs__content 2
+	// end sOrders

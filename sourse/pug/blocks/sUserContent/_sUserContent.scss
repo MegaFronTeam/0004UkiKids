@@ -1,10 +1,12 @@
 // start .sUserContent
 .sUserContent {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(20)};
 	// --sTPB: #{rem()};
 	&--settings {
 		padding-bottom: 48px;
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(45)};
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -78,7 +80,32 @@
 			width: calc(100% / var(--slides-on-screen) - var(--gutter-x));
 		}
 	}
-
+	&__form-row {
+		--bs-gutter-y: #{rem(24)};
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(95)};
+		}
+	}
+	.form-wrap {
+		@include media-breakpoint-up(md) {
+			max-width: rem(350);
+		}
+		h5 {
+			margin-bottom: rem(28.600);
+		}
+		&__input {
+			border-color: rgba(9, 74, 186, 0.08);
+			&:focus {
+				border-color: #90a1c7;
+			}
+			&.is-valid {
+				border-color: $green;
+			}
+			&.is-invalid {
+				border-color: $red;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -94,6 +121,7 @@
 	border-radius: 5px;
 	background-color: $primary;
 	color: #fff;
+<<<<<<< HEAD
 	&--terms {
 		@include media-breakpoint-up(lg) {
 			margin-right: 86px;
@@ -120,6 +148,11 @@
 			width: 310px;
 			height: 100%;
 		}
+=======
+	height: 100%;
+	@include media-breakpoint-up(lg) {
+		min-width: rem(310);
+>>>>>>> refs/remotes/origin/main
 	}
 	&__personality {
 		display: flex;
@@ -128,7 +161,7 @@
 		border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 		padding: rem(16);
 		@include media-breakpoint-up(lg) {
-			padding: rem(40) rem(20) rem(40);
+			padding: rem(40) rem(20) rem(17.600);
 		}
 		h6 {
 			color: #fff;
@@ -156,7 +189,6 @@
 	&__link-wrap {
 		display: flex;
 		flex-direction: column;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 		padding: rem(16);
 		@include media-breakpoint-up(lg) {
 			padding: rem(20);
@@ -169,6 +201,7 @@
 		font-size: rem(14);
 		padding: rem(9) 0;
 		line-height: 1.37;
+		margin-bottom: rem(10);
 		@include media-breakpoint-up(lg) {
 			font-size: rem(16);
 		}
@@ -203,6 +236,7 @@
 	}
 	&__log-out {
 		margin-top: auto;
+		border-top: 1px solid rgba(255, 255, 255, 0.10);
 		a {
 			padding: rem(16);
 			font-size: rem(14);

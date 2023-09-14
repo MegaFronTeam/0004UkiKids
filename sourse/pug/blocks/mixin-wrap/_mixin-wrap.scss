@@ -191,6 +191,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
+	@include roww('12px', '12px', 'm');
 	&__display {
 		display: flex;
 		align-items: center;
@@ -242,7 +244,7 @@
 	padding-top: rem(22);
 	padding-bottom: rem(20);
 	@include media-breakpoint-up(lg)  {
-		padding-top: rem(48);
+		padding-top: rem(41.600);
 	}
 	.breadcrumb {
 		margin-bottom: rem(16);
