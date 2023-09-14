@@ -50,14 +50,14 @@
 						<div class="sUserContent__slider swiper def-swiper-js">
 							<div class="swiper-wrapper">
 								<div class="sUserContent__slide swiper-slide">
-									<a class="sUserContent__btn active" href="#">
+									<a class="sUserContent__btn" href="#">
 										<svg class="icon icon-profile ">
 											<use xlink:href="img/svg/sprite.svg#profile"></use>
 										</svg>Профиль
 									</a>
 								</div>
 								<div class="sUserContent__slide swiper-slide">
-									<a class="sUserContent__btn" href="#">
+									<a class="sUserContent__btn active" href="#">
 										<svg class="icon icon-orders ">
 											<use xlink:href="img/svg/sprite.svg#orders"></use>
 										</svg>Заказы
@@ -95,37 +95,297 @@
 									<div class="tabs__btn">Заказы</div>
 								</div>
 								<div class="tabs__content active">
-									<table>
-										<thead>
-											<tr>
-												<th>№ заказа</th>
-												<th>Дата заказа</th>
-												<th>Сумма (₽) и кол-во </th>
-												<th>Статус </th>
-												<th>Детали заказа </th>
-												<th>Действия</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Заказ № 1725</td>
-												<td>27.06.2023</td>
-												<td>
-													<div class="sOrders__price">83550 ₽ <span>120 шт.</span>
-													</div>
-												</td>
-												<td>
-													<div class="sOrders__status">В корзине
-													</div>
-												</td>
-												<td><a href="#">Скачать XLX</a></td>
-												<td>
-													<div class="sOrders__action"> 
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+									<div class="sOrders__table-wrap">
+										<table>
+											<thead>
+												<tr>
+													<th>№ заказа</th>
+													<th>Дата заказа</th>
+													<th>Сумма (₽) и кол-во </th>
+													<th>Статус </th>
+													<th>Детали заказа </th>
+													<th>Действия</th>
+												</tr>
+											</thead>
+											<tbody>
+														<tr>
+															<td> 
+																<div class="sOrders__order">Заказ № 1725
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>27.06.2023</td>
+															<td>
+																<div class="sOrders__price">
+																	<div>83550 ₽ <span>120 шт.</span></div>
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>
+																<div class="sOrders__status in-cart">В корзине
+																</div>
+															</td>
+															<td>
+																<a class="sOrders__download" href="#"> 
+																	<svg class="icon icon-download ">
+																		<use xlink:href="img/svg/sprite.svg#download"></use>
+																	</svg>Скачать XLX
+																</a>
+															</td>
+															<td>
+																<div class="sOrders__action"><span></span>
+																	<div class="sOrders__action-dropdown">
+																		<a class="sOrders__order-btn" href="#">Оформить
+																		</a>
+																		<a class="sOrders__reorder-btn" href="#">Повторить
+																		</a>
+																		<a class="sOrders__edit-btn" href="#">Изменить
+																		</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> 
+																<div class="sOrders__order">Заказ № 1725
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>27.06.2023</td>
+															<td>
+																<div class="sOrders__price">
+																	<div>83550 ₽ <span>120 шт.</span></div>
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>
+																<div class="sOrders__status cancel">Отменен
+																</div>
+															</td>
+															<td>
+																<a class="sOrders__download" href="#"> 
+																	<svg class="icon icon-download ">
+																		<use xlink:href="img/svg/sprite.svg#download"></use>
+																	</svg>Скачать XLX
+																</a>
+															</td>
+															<td>
+																<div class="sOrders__action"><span></span>
+																	<div class="sOrders__action-dropdown">
+																		<a class="sOrders__order-btn" href="#">Оформить
+																		</a>
+																		<a class="sOrders__reorder-btn" href="#">Повторить
+																		</a>
+																		<a class="sOrders__edit-btn" href="#">Изменить
+																		</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> 
+																<div class="sOrders__order">Заказ № 1725
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>27.06.2023</td>
+															<td>
+																<div class="sOrders__price">
+																	<div>83550 ₽ <span>120 шт.</span></div>
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>
+																<div class="sOrders__status delivered">Доставлен
+																</div>
+															</td>
+															<td>
+																<a class="sOrders__download" href="#"> 
+																	<svg class="icon icon-download ">
+																		<use xlink:href="img/svg/sprite.svg#download"></use>
+																	</svg>Скачать XLX
+																</a>
+															</td>
+															<td>
+																<div class="sOrders__action"><span></span>
+																	<div class="sOrders__action-dropdown">
+																		<a class="sOrders__order-btn" href="#">Оформить
+																		</a>
+																		<a class="sOrders__reorder-btn" href="#">Повторить
+																		</a>
+																		<a class="sOrders__edit-btn" href="#">Изменить
+																		</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> 
+																<div class="sOrders__order">Заказ № 1725
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>27.06.2023</td>
+															<td>
+																<div class="sOrders__price">
+																	<div>83550 ₽ <span>120 шт.</span></div>
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>
+																<div class="sOrders__status in-work">В обработке
+																</div>
+															</td>
+															<td>
+																<a class="sOrders__download" href="#"> 
+																	<svg class="icon icon-download ">
+																		<use xlink:href="img/svg/sprite.svg#download"></use>
+																	</svg>Скачать XLX
+																</a>
+															</td>
+															<td>
+																<div class="sOrders__action"><span></span>
+																	<div class="sOrders__action-dropdown">
+																		<a class="sOrders__order-btn" href="#">Оформить
+																		</a>
+																		<a class="sOrders__reorder-btn" href="#">Повторить
+																		</a>
+																		<a class="sOrders__edit-btn" href="#">Изменить
+																		</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> 
+																<div class="sOrders__order">Заказ № 1725
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>27.06.2023</td>
+															<td>
+																<div class="sOrders__price">
+																	<div>83550 ₽ <span>120 шт.</span></div>
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>
+																<div class="sOrders__status in-cart">В корзине
+																</div>
+															</td>
+															<td>
+																<a class="sOrders__download" href="#"> 
+																	<svg class="icon icon-download ">
+																		<use xlink:href="img/svg/sprite.svg#download"></use>
+																	</svg>Скачать XLX
+																</a>
+															</td>
+															<td>
+																<div class="sOrders__action"><span></span>
+																	<div class="sOrders__action-dropdown">
+																		<a class="sOrders__order-btn" href="#">Оформить
+																		</a>
+																		<a class="sOrders__reorder-btn" href="#">Повторить
+																		</a>
+																		<a class="sOrders__edit-btn" href="#">Изменить
+																		</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> 
+																<div class="sOrders__order">Заказ № 1725
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>27.06.2023</td>
+															<td>
+																<div class="sOrders__price">
+																	<div>83550 ₽ <span>120 шт.</span></div>
+																	<svg class="icon icon-box ">
+																		<use xlink:href="img/svg/sprite.svg#box"></use>
+																	</svg>
+																</div>
+															</td>
+															<td>
+																<div class="sOrders__status delivered">Доставлен
+																</div>
+															</td>
+															<td>
+																<a class="sOrders__download" href="#"> 
+																	<svg class="icon icon-download ">
+																		<use xlink:href="img/svg/sprite.svg#download"></use>
+																	</svg>Скачать XLX
+																</a>
+															</td>
+															<td>
+																<div class="sOrders__action"><span></span>
+																	<div class="sOrders__action-dropdown">
+																		<a class="sOrders__order-btn" href="#">Оформить
+																		</a>
+																		<a class="sOrders__reorder-btn" href="#">Повторить
+																		</a>
+																		<a class="sOrders__edit-btn" href="#">Изменить
+																		</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="pagination-wrap">
+										<div class="pagination-wrap__display">
+											<div class="pagination-wrap__title">Показывать на странице:
+											</div>
+											<button class="pagination-wrap__btn btn pagination-wrap__btn pagination-wrap__btn--active" type="button">12
+											</button>
+											<button class="pagination-wrap__btn btn" type="button">24
+											</button>
+											<button class="pagination-wrap__btn btn" type="button">36
+											</button>
+											<button class="pagination-wrap__btn btn" type="button">48
+											</button>
+										</div>
+										<div class="pagination-wrapper">
+											<ul class="page-numbers">
+														<li><span class="page-numbers current"> 1</span>
+														</li>
+														<li><a class="page-numbers" href="#">2</a>
+														</li>
+														<li><a class="page-numbers" href="#">3</a>
+														</li>
+														<li><a class="next page-numbers" href="#">
+																<svg class="icon icon-next ">
+																	<use xlink:href="img/svg/sprite.svg#next"></use>
+																</svg></a>
+														</li>
+											</ul>
+										</div>
+									</div>
 								</div>
 								<div class="tabs__content">2</div>
 							</div>

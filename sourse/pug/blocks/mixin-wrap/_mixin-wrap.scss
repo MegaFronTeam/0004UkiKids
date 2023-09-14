@@ -191,6 +191,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
+	@include roww('12px', '12px', 'm');
 	&__display {
 		display: flex;
 		align-items: center;

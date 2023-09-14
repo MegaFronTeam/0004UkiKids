@@ -4,3 +4,5 @@
 1. <https://megafronteam.github.io/0004UkiKids/public/04-cart.html>
 1. <https://megafronteam.github.io/0004UkiKids/public/05-contacts.html>
 1. <https://megafronteam.github.io/0004UkiKids/public/06-registration.html>
+1. 
+1. <https://megafronteam.github.io/0004UkiKids/public/08-orders.html>
