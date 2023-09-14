@@ -68,15 +68,14 @@
 	width: calc(16 / #{$h} *1em );
 }
 .icon-download {
-<<<<<<< HEAD
-	$h: 34;
-	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(32 / #{$h} *1em );
-=======
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
->>>>>>> refs/remotes/origin/main
+}
+.icon-download-photo {
+	$h: 34;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
 }
 .icon-fb {
 	$h: 24;
