@@ -13,10 +13,6 @@
 	&__container {
 		display: flex;
 	}
-	&__sorting-row {
-		display: flex;
-		align-items: flex-start;
-	}
 	.section-title {
 		flex-grow: 1;
 	}
@@ -25,64 +21,14 @@
 		font-size: rem(23);
 		text-transform: capitalize;
 	}
-	&__sort {
-		display: flex;
+	.sorting-row__sort {
 		margin-right: 100px;
-		color: #333;
-		font-size: 14px;
-	}
-	&__sort-title {
-		margin-right: 10px;
-	}
-	&__sort-wrap {
-		position: relative;
-	}
-	&__sort-btn {
-		padding: 0;
-		font-size: 14px;
-		border: none;
-		img {
-			margin-left: 10px;
+		@include media-breakpoint-down(md) {
+			display: none;
 		}
+		
 	}
-	&__sort-dropdown {
-		position: absolute;
-		top: 110%;
-		padding: 10px;
-		list-style-type: none;
-		z-index: 10;
-		border-radius: 5px;
-		background-color: $white;
-		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-		opacity: 0;
-		visibility: hidden;
-		@include mt;
-		&.active {
-			opacity: 1!important;
-			visibility: visible!important;
-		}
-	}
-	&__sort-item {
-		cursor: pointer;
-		&:not(:last-child) {
-			margin-bottom: 10px;
-		}
-	}
-	&__view-btn {
-		padding: 0;
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
-		&:active {
-			border: none;
-		}
-		&:hover {
-			.icon {
-				fill: $primary;
-			}
-		}
-	}
-	&__filter-btn {
+	.sorting-row__filter-btn {
 		padding: 0;
 		margin-right: 15px;
 		.icon {

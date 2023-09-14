@@ -11,3 +11,9 @@
 1. <https://megafronteam.github.io/0004UkiKids/public/09-make-order-3.html>
 1. <https://megafronteam.github.io/0004UkiKids/public/10-shipping-and-payment.html>
 1. <https://megafronteam.github.io/0004UkiKids/public/10-shipping-and-payment-2.html>
+1. <https://megafronteam.github.io/0004UkiKids/public/11-photo.html>
+1. <https://megafronteam.github.io/0004UkiKids/public/12-cooperation-terms.html>
+1. <https://megafronteam.github.io/0004UkiKids/public/13-notice.html>
+1. <https://megafronteam.github.io/0004UkiKids/public/14-settings.html>
+1. <https://megafronteam.github.io/0004UkiKids/public/15-support.html>
+1. 

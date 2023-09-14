@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Личный кабинет</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="07-profile.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1 class="h2">Личный кабинет</h1>
+					</div>
+				</div>
+				<!-- start sUserContent-->
+				<div class="sUserContent section sUserContent sUserContent--settings" id="sUserContent">
+					<div class="container">
+						<div class="sUserContent__slider swiper def-swiper-js">
+							<div class="swiper-wrapper">
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-profile ">
+											<use xlink:href="img/svg/sprite.svg#profile"></use>
+										</svg>Профиль
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-orders ">
+											<use xlink:href="img/svg/sprite.svg#orders"></use>
+										</svg>Заказы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-card ">
+											<use xlink:href="img/svg/sprite.svg#card"></use>
+										</svg>Доставка и оплата
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-gallery ">
+											<use xlink:href="img/svg/sprite.svg#gallery"></use>
+										</svg>Фото и видеоматериалы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-document ">
+											<use xlink:href="img/svg/sprite.svg#document"></use>
+										</svg>Условия сотрудничества
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-lg-auto">
+									<div class="account-info account-info--settings">
+										<div class="account-info__personality">
+											<div class="account-info__img-wrap"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+											</div>
+											<h6>Алексей Пименов</h6><a href="mailto:pimenov.al@gmail.com">pimenov.al@gmail.com </a>
+										</div>
+										<div class="account-info__link-wrap">
+											<a class="account-info__link" href="#">
+												<div class="account-info__icon-wrap active">
+													<svg class="iconC iconC-sUserContent-icon-1 ">
+														<use xlink:href="img/svg/spriteC.svg#sUserContent-icon-1"></use>
+													</svg>
+												</div>Уведомления
+											</a>
+											<a class="account-info__link" href="#">
+												<div class="account-info__icon-wrap">
+													<svg class="iconC iconC-sUserContent-icon-2 ">
+														<use xlink:href="img/svg/spriteC.svg#sUserContent-icon-2"></use>
+													</svg>
+												</div>Настройки
+											</a>
+											<a class="account-info__link" href="#">
+												<div class="account-info__icon-wrap">
+													<svg class="iconC iconC-sUserContent-icon-3 ">
+														<use xlink:href="img/svg/spriteC.svg#sUserContent-icon-3"></use>
+													</svg>
+												</div>Техподдержка
+											</a>
+										</div>
+										<div class="account-info__log-out"><a href="#">Выйти из аккаунта
+												<svg class="icon icon-login ">
+													<use xlink:href="img/svg/sprite.svg#login"></use>
+												</svg></a>
+										</div>
+									</div>
+							</div>
+							<div class="col-lg">
+								<!-- start sSettings-->
+								<section class="sSettings section" id="sSettings">
+									<div class="section-title">
+										<h2>Настройки</h2>
+									</div>
+									<div class="tabs swiper def-swiper-js">
+										<div class="tabs__caption swiper-wrapper">
+											<div class="tabs__btn active swiper-slide">Данные покупателя</div>
+											<div class="tabs__btn swiper-slide">Данные о компании</div>
+											<div class="tabs__btn swiper-slide">Сохраненные способы оплаты</div>
+											<div class="tabs__btn swiper-slide">Безопасность</div>
+										</div>
+										<div class="tabs__content active">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__title">Персональные данные
+													</div>
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Фамилия <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="text" name="text" type="text" placeholder="" required="required" value="Пименов"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Имя <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="Алексей"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Отчество <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="Александрович"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Эл. почта <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="" required="required" value="pimenov.al@gmail.com"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="" value="+7 (932) 445 44 77"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__title">Данные о компании
+													</div>
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Наименование компании <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="ООО Наименование компании"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">ИНН <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="number" name="number" type="number" placeholder="" step="any" required="required" value="500100732259"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Город <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="Москва"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Фактический адрес магазина <span class="text-danger">*</span></span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required" value="8-я Вишневая, ул."/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="sSettings__title">Банковские карты
+											</div>
+											<ul class="sSettings__cards-list">
+												<li class="sSettings__cards-item">
+													<a class="sSettings__card sSettings__card--filled" href="#">
+														<div class="sSettings__card-top">Основная карта
+														</div>
+														<div class="sSettings__card-bottom">
+															<div class="sSettings__card-number">2300 50** **** 2243
+															</div><img src="img/visa.png" alt="" loading="lazy"/>
+														</div>
+													</a>
+												</li>
+												<li class="sSettings__cards-item">
+													<a class="sSettings__card active" href="#">
+														<svg class="icon icon-add-card ">
+															<use xlink:href="img/svg/sprite.svg#add-card"></use>
+														</svg>
+														<div class="sSettings__card-title">Привязать карту
+														</div>
+													</a>
+												</li>
+												<li class="sSettings__cards-item">
+													<a class="sSettings__card" href="#">
+														<svg class="icon icon-add-card ">
+															<use xlink:href="img/svg/sprite.svg#add-card"></use>
+														</svg>
+														<div class="sSettings__card-title">Привязать карту
+														</div>
+													</a>
+												</li>
+												<li class="sSettings__cards-item">
+													<a class="sSettings__card" href="#">
+														<svg class="icon icon-add-card ">
+															<use xlink:href="img/svg/sprite.svg#add-card"></use>
+														</svg>
+														<div class="sSettings__card-title">Привязать карту
+														</div>
+													</a>
+												</li>
+											</ul>
+											<div class="sSettings__title">Привязать карту
+											</div>
+											<div class="form-wrap grid">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Номер карты <span class="text-danger">*</span></span><input class="form-wrap__input form-control form-control--large" inputmode="number" name="number" type="number" placeholder="" step="any" required="required"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">ММ/ГГ <span class="text-danger">*</span></span><input class="form-wrap__input form-control form-control--short" inputmode="text" name="text" type="text" placeholder="" required="required"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">CVV/CVC <span class="text-danger">*</span></span><input class="form-wrap__input form-control form-control--short" inputmode="text" name="text" type="text" placeholder="" required="required"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<button class="form-wrap__btn btn btn-accent" type="button">ПРИВЯЗАТЬ
+													</button>
+												</form>
+											</div>
+											<div class="sSettings__title">Банковские счета
+											</div>
+											<div class="form-wrap columns">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Наименование компании <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="text" name="text" type="text" placeholder="" required="required" value="ООО Наименование компании"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Город <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="text" name="text" type="text" placeholder="" required="required" value="Москва"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Фактический адрес магазина <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="text" name="text" type="text" placeholder="" required="required" value="8-я Вишневая, ул."/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">ИНН <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="number" name="number" type="number" placeholder="" step="any" required="required" value="500100732259"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control is-valid" inputmode="tel" name="tel" type="tel" placeholder="" value="+7(863) 332-22-28"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Реквизиты счета <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="number" name="number" type="number" placeholder="" step="any" required="required" value="40702810600000000067"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Банк <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="text" name="text" type="text" placeholder="" required="required" value="АО «Сбербанк»"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">БИК <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="number" name="number" type="number" placeholder="" step="any" required="required" value="044525975"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">К,С <span class="text-danger">*</span></span><input class="form-wrap__input form-control is-valid" inputmode="number" name="number" type="number" placeholder="" step="any" required="required" value="301018101452500000975"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__title">Изменить пароль
+													</div>
+													<div class="password-wrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Текущий пароль <span class="text-danger">*</span></span><input class="form-wrap__input form-control form-control--pas" inputmode="password" name="password" type="password" placeholder="" required="required" value="0000000"/><a class="forgot-password" href="#">Забыли пароль?</a>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="pass-button btn"></div>
+													</div>
+													<div class="password-wrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Новый пароль <span class="text-danger">*</span></span><input class="form-wrap__input form-control form-control--pas" inputmode="password" name="password" type="password" placeholder="" required="required" value="0000000"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="pass-button btn"></div>
+													</div>
+													<div class="password-wrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Новый пароль <span class="text-danger">*</span></span><input class="form-wrap__input form-control form-control--pas" inputmode="password" name="password" type="password" placeholder="" required="required" value="0000000"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="pass-button btn"></div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="sSettings__row row">
+										</div>
+									</div>
+								</section>
+								<!-- end sSettings-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sUserContent-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="up-btn btn BUTTON">
+				<svg class="icon icon-arrow-up ">
+					<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

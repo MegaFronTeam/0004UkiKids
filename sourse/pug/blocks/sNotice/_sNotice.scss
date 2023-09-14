@@ -1,0 +1,121 @@
+// start .sNotice
+.sNotice {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(30)};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+	tr {
+		@include media-breakpoint-down(md) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: stretch;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+	}
+	tr.active {
+		td {
+			border-bottom: 1px solid rgba(9, 74, 186, 0.08);
+			background: #F2F4F9;
+			@include media-breakpoint-up(md) {
+				&:first-child {
+					border-top-left-radius: 5px;;
+					border-bottom-left-radius: 5px;
+				}
+				&:last-child {
+					border-top-right-radius: 5px;;
+					border-bottom-right-radius: 5px;
+				}
+			}
+		}
+	}
+	td {
+		border-bottom: 1px solid rgba(9, 74, 186, 0.08);
+		@include media-breakpoint-down(md) {
+			padding: 10px;
+		}
+	}
+	.form-check-input {
+		width: 24px;
+		height: 24px;
+	}
+	.form-check-input:checked {
+		background-color: #AEBF06;
+		border: 1px solid #D9D9D9;
+	}
+	.form-check-input:checked[type=checkbox] {
+   background-image: url("../img/checkbox.svg");
+	 background-size: 16px 16px;
+	}
+	&__sender-td {
+		white-space: nowrap;
+		@include media-breakpoint-down(md) {
+			width: calc(100% - 44px);
+		}
+	}
+	&__sender {
+		font-weight: 700;
+	}
+	&__message {
+		-webkit-line-clamp: 2;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+		line-height: 1.2;
+	}
+	&__date-td {
+		white-space: nowrap;
+		@include media-breakpoint-down(md) {
+			width:50%;
+		}
+	}
+	&__more-td {
+		@include media-breakpoint-down(md) {
+			width:50%;
+			text-align: right;
+		}
+	}
+	&__date, &__time {
+		display: inline;
+		color: #777;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 150%;
+	}
+	&__more-btn {
+		padding: 10px;
+		@include media-breakpoint-down(md) {
+			padding: 5px;
+		}
+		.icon {
+			fill: $gray-600;
+		}
+	}
+
+	td {
+		padding: 20px 10px;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNotice

@@ -1,0 +1,37 @@
+mixin sSupport(data)
+	// start sSupport
+	+b.SECTION.sSupport.section#sSupport&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Техподдержка
+			.sub-menu-tabs.tabs.swiper.def-swiper-js
+				.tabs__caption.swiper-wrapper
+					.tabs__btn.active.swiper-slide Обращение в поддержку
+					.tabs__btn.swiper-slide Вопрос - ответ
+				.tabs__content.active
+					+b.attention-block
+						+iconC('check')
+						| Обращение в техподдержку успешно подано! Наш менеджер постарается ответить вам, как можно раньше. Статус и решение проблемы вы можете посмотреть в разделе #[a(href="#") «Уведомления»].
+					+form-wrap
+						+e.title Написать о проблеме
+						+input('', 'text', 'Контактное лицо', t, t, true)(value="ФИО")
+						+input('', 'text', 'Дата заявки', t, t, true)(value="01.01.23")
+						+input('', 'text', 'Наименование компании', t, t, true)(value="ООО Наименование компании")
+						+input('', 'text', 'Тема обращения', t, t, true)
+						+input('', 'text', 'Описание проблемы', t, t, true)
+						+input('', 'textarea', 'Добавить комментарий', t, t, true)
+						+e.btn-row
+							.upload-field
+								+input('Добавить файл','file')
+								.file-name
+							+e.submit-btn.btn.btn-accent Отправить
+				.tabs__content
+					+b.section-title
+						h3 Часто задаваемые вопросы
+					+ddGroup()
+						+ddGroupItem('Осуществляется  ли доставка по всей России?','active')
+							p Товары нашего магазина доставлются покупателям по всей России. Более подробную информацию о доставке вы можете посмотреть на сайте в разделе #[a(href="#") «Оплата и доставка».] 
+						+ddGroupItem('Возможен ли самовывоз заказанного товара?')
+						+ddGroupItem('Как рассчитывается стоимость доставки по городу?')
+						+ddGroupItem('При доставке оптом как расчитывается стоимость товара?')
+	// end sSupport

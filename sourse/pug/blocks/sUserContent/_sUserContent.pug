@@ -25,7 +25,7 @@ mixin sUserContent(activeBtn=1)
 							+icon('document')
 							| Условия сотрудничества
 			mixin accInfo()
-				+b.account-info
+				+b.account-info&attributes(attributes)
 					+e.personality
 						+e.img-wrap: +img(`img/avatar.jpg`, 'bg')
 						h6 Алексей Пименов

@@ -117,3 +117,25 @@ mixin cartItem()
 						+e.full-price
 							| 7020 ₽
 							+e.delete(href='#'): +icon('delete') 
+mixin sortingRow(h2="Фото и видеоматериалы",title='Тип файла',filter)
+	+b.sorting-row
+				+b.section-title
+					h2= h2
+				+e.sort
+					+e.sort-title Сортировка:
+					+e.sort-wrap
+						+e.sort-btn--js.btn.BUTTON= title
+							+img('img/caret-down.svg')
+						+e.sort-dropdown.UL
+							+e.sort-item.LI По&nbsp;цене
+							+e.sort-item.LI По&nbsp;популярности
+							+e.sort-item.LI По&nbsp;рейтингу
+				if filter
+					+e.filter-btn--js.btn.BUTTON.d-lg-none
+							+icon('filters')
+				+e.view-btns.d-none.d-md-flex
+					+e.view-btn.btn.BUTTON
+						+icon('list')
+					+e.view-btn.btn.BUTTON
+						+icon('grid')
+

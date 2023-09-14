@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
 		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
@@ -44,48 +44,270 @@
 						<h1 class="h2">Личный кабинет</h1>
 					</div>
 				</div>
+				<!-- start sUserContent-->
+				<div class="sUserContent section" id="sUserContent">
+					<div class="container">
+						<div class="sUserContent__slider swiper def-swiper-js">
+							<div class="swiper-wrapper">
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-profile ">
+											<use xlink:href="img/svg/sprite.svg#profile"></use>
+										</svg>Профиль
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-orders ">
+											<use xlink:href="img/svg/sprite.svg#orders"></use>
+										</svg>Заказы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-card ">
+											<use xlink:href="img/svg/sprite.svg#card"></use>
+										</svg>Доставка и оплата
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn active" href="#">
+										<svg class="icon icon-gallery ">
+											<use xlink:href="img/svg/sprite.svg#gallery"></use>
+										</svg>Фото и видеоматериалы
+									</a>
+								</div>
+								<div class="sUserContent__slide swiper-slide">
+									<a class="sUserContent__btn" href="#">
+										<svg class="icon icon-document ">
+											<use xlink:href="img/svg/sprite.svg#document"></use>
+										</svg>Условия сотрудничества
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sUserContent-->
 				<!-- start sPhoto-->
 				<section class="sPhoto section" id="sPhoto">
 					<div class="container">
-						<div class="sPhoto__sorting-row">
+						<div class="sorting-row">
 							<div class="section-title">
 								<h2>Фото и видеоматериалы</h2>
 							</div>
-							<div class="sPhoto__sort d-none d-sm-flex">
-								<div class="sPhoto__sort-title">Сортировка: 
+							<div class="sorting-row__sort">
+								<div class="sorting-row__sort-title">Сортировка:
 								</div>
-								<div class="sPhoto__sort-wrap">
-									<button class="sPhoto__sort-btn sPhoto__sort-btn--js btn">Тип файла<img src="img/caret-down.svg" alt="" loading="lazy"/>
+								<div class="sorting-row__sort-wrap">
+									<button class="sorting-row__sort-btn sorting-row__sort-btn--js btn">Тип файла<img src="img/caret-down.svg" alt="" loading="lazy"/>
 									</button>
-									<ul class="sPhoto__sort-dropdown">
-										<li class="sPhoto__sort-item">По&nbsp;цене
+									<ul class="sorting-row__sort-dropdown">
+										<li class="sorting-row__sort-item">По&nbsp;цене
 										</li>
-										<li class="sPhoto__sort-item">По&nbsp;популярности
+										<li class="sorting-row__sort-item">По&nbsp;популярности
 										</li>
-										<li class="sPhoto__sort-item">По&nbsp;рейтингу
+										<li class="sorting-row__sort-item">По&nbsp;рейтингу
 										</li>
 									</ul>
 								</div>
 							</div>
-							<button class="sPhoto__filter-btn sPhoto__filter-btn--js btn d-lg-none">
-								<svg class="icon icon-filters ">
-									<use xlink:href="img/svg/sprite.svg#filters"></use>
-								</svg>
-							</button>
-							<div class="sPhoto__view-btns d-none d-md-flex">
-								<button class="sPhoto__view-btn btn">
+							<div class="sorting-row__view-btns d-none d-md-flex">
+								<button class="sorting-row__view-btn btn">
 									<svg class="icon icon-list ">
 										<use xlink:href="img/svg/sprite.svg#list"></use>
 									</svg>
 								</button>
-								<button class="sPhoto__view-btn btn">
+								<button class="sorting-row__view-btn btn">
 									<svg class="icon icon-grid ">
 										<use xlink:href="img/svg/sprite.svg#grid"></use>
 									</svg>
 								</button>
 							</div>
 						</div>
+						<div class="download-row">
+							<svg class="icon icon-download-photo ">
+								<use xlink:href="img/svg/sprite.svg#download-photo"></use>
+							</svg>
+							<div class="download-row__caption">Все фото и видео материалы можете скачать тут
+							</div>
+							<a class="download-row__link" href="#">Скачать
+							</a>
+						</div>
+						<h3>Файлы</h3>
 						<div class="sPhoto__row row">
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-doc ">
+											<use xlink:href="img/svg/sprite.svg#doc"></use>
+										</svg>
+										<div class="sPhoto__title">Правила размещения марктинговых материалов
+										</div>
+									</div>
+									<div class="sPhoto__content">
+										<div class="sPhoto__img-wrap"><img src="img/file-1.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-doc ">
+											<use xlink:href="img/svg/sprite.svg#doc"></use>
+										</svg>
+										<div class="sPhoto__title">Положениие о оптовых поку
+										</div>
+									</div>
+									<div class="sPhoto__content">
+										<div class="sPhoto__img-wrap"><img src="img/file-2.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-doc ">
+											<use xlink:href="img/svg/sprite.svg#doc"></use>
+										</svg>
+										<div class="sPhoto__title">Документация
+										</div>
+									</div>
+									<div class="sPhoto__content">
+										<div class="sPhoto__img-wrap"><img src="img/file-3.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-doc ">
+											<use xlink:href="img/svg/sprite.svg#doc"></use>
+										</svg>
+										<div class="sPhoto__title">Общее положение
+										</div>
+									</div>
+									<div class="sPhoto__content">
+										<div class="sPhoto__img-wrap"><img src="img/file-4.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<h3>Фото</h3>
+						<div class="sPhoto__row sPhoto__row--img row">
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-img ">
+											<use xlink:href="img/svg/sprite.svg#img"></use>
+										</svg>
+										<div class="sPhoto__title">Промо материалы
+										</div>
+									</div>
+									<div class="sPhoto__content">
+										<div class="sPhoto__img-wrap"><img src="img/file-5.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-img ">
+											<use xlink:href="img/svg/sprite.svg#img"></use>
+										</svg>
+										<div class="sPhoto__title">Развертка стенда
+										</div>
+									</div>
+									<div class="sPhoto__content">
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-img ">
+											<use xlink:href="img/svg/sprite.svg#img"></use>
+										</svg>
+										<div class="sPhoto__title">Логотип
+										</div>
+									</div>
+									<div class="sPhoto__content">
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-img ">
+											<use xlink:href="img/svg/sprite.svg#img"></use>
+										</svg>
+										<div class="sPhoto__title">Листовка
+										</div>
+									</div>
+									<div class="sPhoto__content">
+									</div>
+								</a>
+							</div>
+						</div>
+						<h3>Видео</h3>
+						<div class="sPhoto__row sPhoto__row--video row">
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-video ">
+											<use xlink:href="img/svg/sprite.svg#video"></use>
+										</svg>
+										<div class="sPhoto__title">Промо новой коллекции
+										</div>
+									</div>
+									<div class="sPhoto__content">
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-video ">
+											<use xlink:href="img/svg/sprite.svg#video"></use>
+										</svg>
+										<div class="sPhoto__title">Детская одежда Промо
+										</div>
+									</div>
+									<div class="sPhoto__content">
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-video ">
+											<use xlink:href="img/svg/sprite.svg#video"></use>
+										</svg>
+										<div class="sPhoto__title">Детская одежда 
+										</div>
+									</div>
+									<div class="sPhoto__content">
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<a class="sPhoto__item" href="#">
+									<div class="sPhoto__item-top">
+										<svg class="icon icon-video ">
+											<use xlink:href="img/svg/sprite.svg#video"></use>
+										</svg>
+										<div class="sPhoto__title">Зимняя коллекция
+										</div>
+									</div>
+									<div class="sPhoto__content">
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</section>

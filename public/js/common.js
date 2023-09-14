@@ -100,64 +100,79 @@ function eventHandler() {
 		})
 	})
 
-	const upBtn = document.querySelector('.up-btn');
-	window.addEventListener('scroll', function(event) {
-		if (window.pageYOffset >= 100) {
-		 upBtn.style.display = 'block'
-		} else {
-		 upBtn.style.display = 'none'
-		}
-	 }, { passive: true });
-	
-	 upBtn.addEventListener('click', function(event) {
-		 window.scrollTo({ top: 0, behavior: 'smooth' });
-	 })
-	
-	 const sortingBtn = document.querySelector('.sCatalog__sort-btn--js');
-	 const sortingBody = document.querySelector('.sCatalog__sort-dropdown');
-	 if (sortingBtn) {
-		 sortingBtn.addEventListener('click', () => {
-				sortingBody.classList.toggle('active');
-		 });
-		 document.addEventListener('click', (e) => {
-			if ((!e.target.classList.contains('sCatalog__sort-btn')) && (!e.target.classList.contains('sCatalog__sort-dropdown'))  && window.innerWidth > 768) {
-				sortingBody.classList.remove('active');
-			}
-		})
-	 }
-	
-	$(document).on("click", '.sCatalog__filter-btn--js', function () {
-		$('.sCatalog__filter-wrap').toggleClass('active');
-		$('body').toggleClass('fixed2');
-	})
-	
-	const cardSwiper = new Swiper('.sCard__slider', {
-		spaceBetween: 5,
-		slidesPerView: 4,
-		freeMode: true,
-		watchSlidesProgress: true,
-		direction: 'vertical',
-		navigation: {
-			nextEl: '.sCard__next',
-			prevEl: '.sCard__prev',
-		},
-	}); 
-	const thumbsCardSwiper = new Swiper('.sCard__thumbs-slider', {
-		spaceBetween: 10,
-		pagination: {
-			el: '.sCard .swiper-pagination',
-			clickable: true,
-		},
-		thumbs: {
-			swiper: cardSwiper,
-		}
-	}); 
-	
-	new Swiper('.def-swiper-js', {
-		slidesPerView: 'auto',
-	}); 
+const upBtn = document.querySelector('.up-btn');
+window.addEventListener('scroll', function(event) {
+	if (window.pageYOffset >= 100) {
+	 upBtn.style.display = 'block'
+	} else {
+	 upBtn.style.display = 'none'
+	}
+ }, { passive: true });
 
-	let ordersActions = document.querySelectorAll('.sOrders__action');
+ upBtn.addEventListener('click', function(event) {
+	 window.scrollTo({ top: 0, behavior: 'smooth' });
+ })
+
+ const sortingBtns = document.querySelectorAll('.sorting-row__sort-btn--js');
+ sortingBtns.forEach(btn => {
+	 btn.addEventListener('click', (e) => {
+			e.currentTarget.closest('.sorting-row__sort-wrap').querySelector('.sorting-row__sort-dropdown').classList.toggle('active');
+	 });
+	 document.addEventListener('click', (e) => {
+		if ((!e.target.classList.contains('sorting-row__sort-btn')) && (!e.target.classList.contains('sorting-row__sort-dropdown'))  && window.innerWidth > 768) {
+			document.querySelector('.sorting-row__sort-dropdown').classList.remove('active');
+		}
+	})
+ });
+
+
+$(document).on("click", '.sCatalog__filter-btn--js', function () {
+	$('.sCatalog__filter-wrap').toggleClass('active');
+	$('body').toggleClass('fixed2');
+})
+
+const cardSwiper = new Swiper('.sCard__slider', {
+	spaceBetween: 5,
+	slidesPerView: 4,
+	freeMode: true,
+	watchSlidesProgress: true,
+	direction: 'vertical',
+	navigation: {
+		nextEl: '.sCard__next',
+		prevEl: '.sCard__prev',
+	},
+}); 
+const thumbsCardSwiper = new Swiper('.sCard__thumbs-slider', {
+	spaceBetween: 10,
+	pagination: {
+    el: '.sCard .swiper-pagination',
+		clickable: true,
+  },
+	thumbs: {
+		swiper: cardSwiper,
+	}
+}); 
+
+new Swiper('.def-swiper-js', {
+	slidesPerView: 'auto',
+}); 
+
+const passFields = document.querySelectorAll(".password-wrap");
+passFields.forEach(field => {
+	let button = field.querySelector('.pass-button');
+	button.addEventListener('click', (e) => {
+		let input = field.querySelector('.form-control--pas');
+		if (input.type == "password") {
+			input.type = "text"
+			field.querySelector('.pass-button').classList.add('shown')
+		} else {
+			input.type = "password"
+			field.querySelector('.pass-button').classList.remove('shown')
+		}
+	});
+});
+
+let ordersActions = document.querySelectorAll('.sOrders__action');
 	if (ordersActions.length > 0) {
 		for (const ordersAction of ordersActions) {
 			ordersAction.addEventListener('click', () => {
@@ -171,12 +186,24 @@ function eventHandler() {
 	})
 };
 
-
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+const uploadFields = document.querySelectorAll('.upload-field');
+if (uploadFields) {
+	uploadFields.forEach(field => {
+		let input = field.querySelector('.form-control');
+		let fileNameDiv = field.querySelector('.file-name');
+		input.addEventListener('change', (e) => {
+			console.log(input.files);
+			fileNameDiv.innerHTML = input.files[0].name;
+		});
+	});
+}
+
 
 // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');

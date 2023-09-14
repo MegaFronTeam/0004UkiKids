@@ -3,8 +3,11 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(20)};
 	// --sTPB: #{rem()};
-	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(45)};
+	&--settings {
+		padding-bottom: 48px;
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(45)};
+		}
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -119,10 +122,37 @@
 	border-radius: 5px;
 	background-color: $primary;
 	color: #fff;
-	height: 100%;
-	@include media-breakpoint-up(lg) {
-		min-width: rem(310);
+	&--terms {
+		@include media-breakpoint-up(lg) {
+			margin-right: 86px;
+			width: 310px;
+			height: 100%;
+		}
 	}
+	&--notice {
+		margin-bottom: 30px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 24px;
+			margin-right: 24px;
+			width: 310px;
+			height: 728px;
+		}
+	}
+	&--settings {
+		margin-bottom: 30px;
+		height: 100%;
+		@include media-breakpoint-up(lg) {
+			margin-right: 24px;
+			width: 310px;
+			height: 100%;
+		}
+	}	
+	// @include media-breakpoint-up(lg) {
+	// 	min-width: rem(310);
+	// }
 	&__personality {
 		display: flex;
 		flex-direction: column;

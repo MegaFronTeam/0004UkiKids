@@ -1,0 +1,79 @@
+mixin sSettings(data)
+	// start sSettings
+	+b.SECTION.sSettings.section#sSettings&attributes(attributes)
+		+b.section-title
+			h2 Настройки
+		.sub-menu-tabs.tabs.swiper.def-swiper-js
+			.tabs__caption.swiper-wrapper
+				.tabs__btn.active.swiper-slide Данные покупателя
+				.tabs__btn.swiper-slide Данные о компании
+				.tabs__btn.swiper-slide Сохраненные способы оплаты
+				.tabs__btn.swiper-slide Безопасность
+			.tabs__content.active
+				+form-wrap
+					+e.title Персональные данные
+					+input('', 'text', 'Фамилия', t, t, true)(value="Пименов").is-valid
+					+input('', 'text', 'Имя', t, t, true)(value="Алексей")
+					+input('', 'text', 'Отчество', t, t, true)(value="Александрович")
+					+input('', 'email', 'Эл. почта', t, t, true)(value="pimenov.al@gmail.com")
+					+input('', 'tel', 'Телефон', t, t, false)(value="+7 (932) 445 44 77")
+			.tabs__content
+				+form-wrap
+					+e.title Данные о компании
+					+input('', 'text', 'Наименование компании', t, t, true)(value="ООО Наименование компании")
+					+input('', 'number', 'ИНН', t, t, true)(value="500100732259")
+					+input('', 'text', 'Город', t, t, true)(value="Москва")
+					+input('', 'text', 'Фактический адрес магазина', t, t, true)(value="8-я Вишневая, ул.")
+			.tabs__content
+				+e.title Банковские карты
+				+e.cards-list.UL
+					+e.cards-item.LI
+						+e.card--filled(href='#')
+							+e.card-top Основная карта
+							+e.card-bottom
+								+e.card-number 2300 50** **** 2243
+								+img('img/visa.png')
+					+e.cards-item.LI
+						+e.card.active(href='#')
+							+icon('add-card')
+							+e.card-title Привязать карту
+					+e.cards-item.LI
+						+e.card(href='#')
+							+icon('add-card')
+							+e.card-title Привязать карту
+					+e.cards-item.LI
+						+e.card(href='#')
+							+icon('add-card')
+							+e.card-title Привязать карту
+				+e.title Привязать карту
+				+form-wrap.grid
+					+input('', 'number', 'Номер карты', t, t, true).--large
+					+input('', 'text', 'ММ/ГГ', t, t, true).--short
+					+input('', 'text', 'CVV/CVC', t, t, true).--short
+					+btn('ПРИВЯЗАТЬ','button').btn.btn-accent
+				+e.title Банковские счета
+				+form-wrap.columns
+					+input('', 'text', 'Наименование компании', t, t, true)(value="ООО Наименование компании").is-valid
+					+input('', 'text', 'Город', t, t, true)(value="Москва").is-valid
+					+input('', 'text', 'Фактический адрес магазина', t, t, true)(value="8-я Вишневая, ул.").is-valid
+					+input('', 'number', 'ИНН', t, t, true)(value="500100732259").is-valid
+					+input('', 'tel', 'Телефон', t, t, false)(value="+7(863) 332-22-28").is-valid
+					+input('', 'number', 'Реквизиты счета', t, t, true)(value="40702810600000000067").is-valid
+					+input('', 'text', 'Банк', t, t, true)(value="АО «Сбербанк»").is-valid
+					+input('', 'number', 'БИК', t, t, true)(value="044525975").is-valid
+					+input('', 'number', 'К,С', t, t, true)(value="301018101452500000975").is-valid
+			.tabs__content
+				+form-wrap
+					+e.title Изменить пароль
+					.password-wrap
+						+input('', 'password', 'Текущий пароль', t, t, true)(value="0000000").--pas
+							a.forgot-password(href="#") Забыли пароль?
+						.pass-button.btn
+					.password-wrap
+						+input('', 'password', 'Новый пароль', t, t, true)(value="0000000").--pas
+						.pass-button.btn
+					.password-wrap
+						+input('', 'password', 'Новый пароль', t, t, true)(value="0000000").--pas
+						.pass-button.btn
+			+e.row.row
+	// end sSettings
