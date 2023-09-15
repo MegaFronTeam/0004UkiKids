@@ -3,6 +3,9 @@
 	// --sPT: #{rem()};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-down(lg) {
+		--sPT: #{rem(24)};
+	}
 	.tabs__caption {
 		justify-content: normal;
 	}

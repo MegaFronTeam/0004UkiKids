@@ -18,23 +18,7 @@ mixin sOrders(data)
 								th Детали заказа 
 								th Действия
 						tbody
-							mixin tr(status='В корзине')
-								- let statusClass = '';
-								- 
-									switch (status) {
-										case ('В корзине'):
-											statusClass='in-cart';
-											break;
-										case ('Отменен'):
-											statusClass='cancel';
-											break;
-										case ('Доставлен'):
-											statusClass='delivered';
-											break;
-										case ('В обработке'):
-											statusClass='in-work';
-											break;
-									}
+							mixin tr(status='В корзине', bgColor, textColor)
 								tr
 									td 
 										+e.order
@@ -48,7 +32,7 @@ mixin sOrders(data)
 												span 120 шт.
 											+icon('box')
 									td
-										+e.status(class!=statusClass)!= status
+										+e.status(style=`--bgColor: ${bgColor}; --textColor: ${textColor}`)!= status
 									td
 										+e.download(href="#") 
 											+icon('download')
@@ -61,12 +45,12 @@ mixin sOrders(data)
 												+e.reorder-btn(href='#') Повторить
 												+e.edit-btn(href='#') Изменить
 
-							+tr('В корзине')
-							+tr('Отменен')
-							+tr('Доставлен')
-							+tr('В обработке')
-							+tr('В корзине')
-							+tr('Доставлен')
+							+tr('В корзине', '#E5E5E5', '#333')
+							+tr('Отменен', '#de4c4c', '#fff')
+							+tr('Доставлен', '#d5e34d', '#fff')
+							+tr('В обработке', '#20438f', '#fff')
+							+tr('В корзине', '#E5E5E5', '#333')
+							+tr('Доставлен', '#d5e34d', '#fff')
 				+b.pagination-wrap
 					+e.display
 						+e.title Показывать на странице:

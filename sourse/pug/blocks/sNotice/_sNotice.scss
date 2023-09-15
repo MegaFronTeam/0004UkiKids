@@ -3,6 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(30)};
+	@include media-breakpoint-down(lg) {
+		--sPT: #{rem(24)};
+	}
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -64,7 +67,7 @@
 	&__sender-td {
 		white-space: nowrap;
 		@include media-breakpoint-down(md) {
-			width: calc(100% - 44px);
+			width: calc(100% - 58px);
 		}
 	}
 	&__sender {

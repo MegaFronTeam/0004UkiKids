@@ -76,7 +76,7 @@
 	}
 	&__slide {
 		margin-right: var(--gutter-x);
-		width: 75%;
+		width: auto;
 		@include media-breakpoint-up(sm) {
 			width: calc(100% / var(--slides-on-screen) - var(--gutter-x));
 		}
@@ -122,11 +122,10 @@
 	border-radius: 5px;
 	background-color: $primary;
 	color: #fff;
+	height: 100%;
 	&--terms {
 		@include media-breakpoint-up(lg) {
 			margin-right: 86px;
-			width: 310px;
-			height: 100%;
 		}
 	}
 	&--notice {
@@ -137,22 +136,17 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 24px;
 			margin-right: 24px;
-			width: 310px;
-			height: 728px;
 		}
 	}
 	&--settings {
 		margin-bottom: 30px;
-		height: 100%;
 		@include media-breakpoint-up(lg) {
 			margin-right: 24px;
-			width: 310px;
-			height: 100%;
 		}
 	}	
-	// @include media-breakpoint-up(lg) {
-	// 	min-width: rem(310);
-	// }
+	@include media-breakpoint-up(lg) {
+		min-width: rem(310);
+	}
 	&__personality {
 		display: flex;
 		flex-direction: column;

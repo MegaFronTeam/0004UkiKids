@@ -63,7 +63,7 @@ mixin sWholesaleOrder2(data)
 			h4 Ваш заказ
 			+e.row.row
 				.col-lg-7
-					+cartItem()
+					+cartTable()
 				.col-lg
 					+delivery('delivery', 'Доставка')
 						+in-c('radio', '', 'delivery')
@@ -180,7 +180,7 @@ mixin sWholesaleOrder3(data)
 								+icon('star')
 								+icon('star')
 				.col-lg
-					+cartItem2
+					+cartTable2
 	// end sWholesaleOrder
 
 mixin sWholesaleOrder4(data)
