@@ -147,21 +147,8 @@
 		width: 100%;
 		max-width: rem(110);
 		text-align: center;
-		&.in-cart {
-			background-color: #E5E5E5;
-		}
-		&.cancel {
-			background-color: $danger;
-			color: #fff;
-		}
-		&.delivered {
-			background-color: $accent;
-			color: #fff;
-		}
-		&.in-work {
-			background-color: $primary;
-			color: #fff;
-		}
+		background-color: var(--bgColor, #E5E5E5);
+		color: var(--textColor, #333);
 	}
 	&__download {
 		color: $gray-600;
