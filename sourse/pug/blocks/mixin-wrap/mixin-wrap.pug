@@ -32,11 +32,13 @@ mixin addblock()
 
 
 mixin search()
-	+b.search-block
+	+b.search-block--js
 		form
-			input(type="text" placeholder="Поиск по сайту" inputmode='search')
+			input(type="text" placeholder="Поиск по сайту" inputmode='search' class="search-input")
 			+e.buttons
-				button 
+				button(class="remove-btn").btn
+					+icon("close-circle")
+				button(class="search-btn")
 					+icon("search")
 				button 
 					+icon("arrows")

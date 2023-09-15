@@ -130,12 +130,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="top-nav__search-col col-auto">
-						<div class="search-block">
+					<div class="top-nav__search-col col-auto col-md-6 col-lg-auto">
+						<div class="search-block search-block--js">
 							<form>
-								<input type="text" placeholder="Поиск по сайту" inputmode="search"/>
+								<input class="search-input" type="text" placeholder="Поиск по сайту" inputmode="search"/>
 								<div class="search-block__buttons">
-									<button> 
+									<button class="remove-btn btn">
+										<svg class="icon icon-close-circle ">
+											<use xlink:href="img/svg/sprite.svg#close-circle"></use>
+										</svg>
+									</button>
+									<button class="search-btn">
 										<svg class="icon icon-search ">
 											<use xlink:href="img/svg/sprite.svg#search"></use>
 										</svg>
@@ -147,6 +152,18 @@
 									</button>
 								</div>
 							</form>
+						</div>
+						<div class="top-nav__mobile-search-btns d-md-none">
+							<button class="btn mobile-search-open">
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg>
+							</button>
+							<button class="btn">
+								<svg class="icon icon-arrows ">
+									<use xlink:href="img/svg/sprite.svg#arrows"></use>
+								</svg>
+							</button>
 						</div>
 					</div>
 				</div>

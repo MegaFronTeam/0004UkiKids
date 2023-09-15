@@ -15,6 +15,7 @@
 		}
 	}
 	&__row{
+		position: relative;
 		align-items: center;
 		@include media-breakpoint-up(md) {
 			--bs-gutter-x: #{rem(32)};
@@ -51,9 +52,36 @@
 	.search-block {
 		width: 80px;
 		margin-left: auto;
+		display: none;
+		&.active {
+			@include media-breakpoint-down(md) {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 15px;
+				width: calc(100% - (var(--bs-gutter-x)));
+				height: 100%;
+				input {
+					height: 100%;
+				}
+			}
+		}
+		
 		@include media-breakpoint-up(sm) {
 			margin-left: 0;
 			width: auto;
+		}
+		form {
+			height: 100%;
+		}
+		.remove-btn{
+			display: none;
+		}
+		.remove-btn.active {
+			display: block;
+		}
+		@include media-breakpoint-up(md) {
+			display: block;
 		}
 	}
 	.search-block input {
@@ -73,6 +101,10 @@
 		@include media-breakpoint-up(lg) {
 			width: 35%;
 		}
+	}
+	&__mobile-search-btns {
+		background-color: $white;
+		border-radius: 5px;
 	}
 	&__btn-col {
 		position: fixed;

@@ -208,6 +208,13 @@ let ordersActions = document.querySelectorAll('.sOrders__action');
 			Перетащите файл сюда или <span>Выберите файл</span>`
 		});
 	}
+	$( " .remove-btn" ).on( "click", function( event ) {
+		event.preventDefault();
+	});
+	$(".mobile-search-open, .remove-btn").click(function () {
+		$(".search-block").toggleClass("active");
+		$(".remove-btn").toggleClass("active");
+	});
 
 };
 
