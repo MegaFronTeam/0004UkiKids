@@ -9,7 +9,11 @@ mixin sWholesaleOrder(data)
 				.col-lg 
 					h5 Оптовый заказ
 					+b.form-wrap
-						+input('Прикрепить файл', 'text', 'Прикрепить файл')
+						//- +input('Прикрепить файл', 'text', 'Прикрепить файл')
+						+e.input-wrap.form-group
+							label
+								+e.input-title Прикрепить файл
+								input(type="file").filepond-js
 					.badge.badge-primary 
 						+iconC('check')
 						| Обработка заказов в течении 2-3 дней. Наш менеджер позвонит вам!

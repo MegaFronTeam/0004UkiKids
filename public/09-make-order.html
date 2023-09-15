@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
@@ -59,10 +60,12 @@
 								<h5>Оптовый заказ</h5>
 								<div class="form-wrap">
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">Прикрепить файл</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Прикрепить файл"/>
+										<label>
+											<div class="form-wrap__input-title">Прикрепить файл
+											</div>
+											<input class="filepond-js" type="file"/>
 										</label>
 									</div>
-									<!-- +e.input-wrap-->
 								</div>
 								<div class="badge badge-primary"> 
 									<svg class="iconC iconC-check ">
@@ -139,6 +142,7 @@
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

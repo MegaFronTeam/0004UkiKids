@@ -184,6 +184,31 @@ let ordersActions = document.querySelectorAll('.sOrders__action');
 		let actionTarget = event.target.closest('.sOrders__action');
 		if(!actionTarget) $('.sOrders__action-dropdown').removeClass('active');
 	})
+
+	const uploadFields = document.querySelectorAll('.upload-field');
+	if (uploadFields) {
+		uploadFields.forEach(field => {
+			let input = field.querySelector('.form-control');
+			let fileNameDiv = field.querySelector('.file-name');
+			input.addEventListener('change', (e) => {
+				console.log(input.files);
+				fileNameDiv.innerHTML = input.files[0].name;
+			});
+		});
+	}
+
+	const inputElement = document.querySelector('.filepond-js');
+
+	if(inputElement) {
+		FilePond.create(inputElement, {
+			labelIdle: `<svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M20.5 8.3335V31.6668" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M8.83325 20H32.1666" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+			Перетащите файл сюда или <span>Выберите файл</span>`
+		});
+	}
+
 };
 
 if (document.readyState !== 'loading') {
@@ -192,17 +217,6 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-const uploadFields = document.querySelectorAll('.upload-field');
-if (uploadFields) {
-	uploadFields.forEach(field => {
-		let input = field.querySelector('.form-control');
-		let fileNameDiv = field.querySelector('.file-name');
-		input.addEventListener('change', (e) => {
-			console.log(input.files);
-			fileNameDiv.innerHTML = input.files[0].name;
-		});
-	});
-}
 
 
 // window.onload = function () {
