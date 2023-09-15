@@ -44,9 +44,9 @@
 
 
 .toggle-menu-mobile {
-	--h: #{em(1.5)};
+	--h: 2px;
 	--color: #777;
-	--position: calc(var(--h) * 2);
+	--position: calc(var(--h) * 3);
 	&.on span {
 		--color: #777;
 		background-color: transparent;
@@ -60,7 +60,7 @@
 	height: calc(var(--h)* 12);
 	position: relative; 
 	font-size: 32px;
-	width: 1em;
+	width: 24px;
 	cursor: pointer;
 	span:after,
 	span:before {
@@ -86,7 +86,7 @@
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: 24px;
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
