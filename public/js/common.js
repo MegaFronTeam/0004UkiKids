@@ -208,12 +208,18 @@ let ordersActions = document.querySelectorAll('.sOrders__action');
 			Перетащите файл сюда или <span>Выберите файл</span>`
 		});
 	}
-	$( " .remove-btn" ).on( "click", function( event ) {
-		event.preventDefault();
-	});
-	$(".mobile-search-open, .remove-btn").click(function () {
-		$(".search-block").toggleClass("active");
-		$(".mobile-search-open").toggleClass("active");
+
+	document.addEventListener('click', (event)=> {
+		let searchBtn = event.target.closest('.mobile-search-open');
+		let searchBlock = event.target.closest('.search-block');
+		if (searchBtn) {
+			document.querySelector('.search-block').classList.toggle('active');
+			document.querySelector('.mobile-search-open').classList.toggle('active');
+		} 
+		else if (!searchBlock) {
+			document.querySelector('.search-block').classList.remove('active');
+			document.querySelector('.mobile-search-open').classList.remove('active');
+		}
 	});
 
 };

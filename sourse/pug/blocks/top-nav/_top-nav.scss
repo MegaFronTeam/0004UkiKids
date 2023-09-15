@@ -81,12 +81,6 @@
 		form {
 			height: 100%;
 		}
-		.remove-btn{
-			display: none;
-		}
-		.remove-btn.active {
-			display: block;
-		}
 		@include media-breakpoint-up(md) {
 			display: block;
 		}
@@ -96,12 +90,12 @@
 		// &::placeholder {
 		// 	opacity: 0;
 		// }
-		@include media-breakpoint-up(sm) {
+		// @include media-breakpoint-up(sm) {
 			height: auto;
-			&::placeholder {
-				opacity: 1;
-			}
-		}
+			// &::placeholder {
+			// 	opacity: 1;
+			// }
+		// }
 	}
 	&__search-col {
 		margin-left: auto;
