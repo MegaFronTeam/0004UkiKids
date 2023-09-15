@@ -31,10 +31,10 @@ mixin sRegistration(data)
 						+e.wrapper
 							h5 Персональные данные
 							+input('ФИО', 'text', 'ФИО', t, t, true).is-invalid
-								.invalid-feedback Заполните поле
+								span.invalid-feedback Заполните поле
 							+input('Эл. почта', 'email', 'Эл. почта', t, t, true).is-valid
 							+input('Телефон', 'tel', 'Телефон', t, t, true)(disabled)
-							+input('Пароль', 'password', 'Пароль', t, t, true)
+							+input('Пароль', 'password', 'Пароль', 'text', 'text', true)
 						+e.wrapper
 							h5 Данные о компании
 							+input('Наименование компании', 'text', 'Наименование компании', t, t, true)

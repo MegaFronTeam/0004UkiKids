@@ -43,12 +43,20 @@
 				font-size: rem(18);
 			}
 		}
+		span {
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
+		}
 	}
 	.badge {
 		font-size: rem(14);
 	}
+	h4 {
+		margin-bottom: rem(20);
+	}
 	h5 {
-		margin-bottom: rem(22);
+		margin-bottom: rem(31.600);
 	}
 	.delivery {
 		margin-bottom: rem(30);
@@ -193,6 +201,7 @@
 			font-weight: 700;
 			margin-bottom: rem(3);
 			line-height: 1.37;
+			font-size: rem(16);
 		}
 		p {
 			margin-bottom: 0;
@@ -202,6 +211,7 @@
 			max-width: max-content;
 			margin-top: rem(5);
 			color: #333;
+			font-size: rem(14);
 			&:hover {
 				color: $primary;
 			}
@@ -228,7 +238,7 @@
 		color: #333;
 		font-weight: 700;
 		&:not(:last-of-type) {
-			margin-bottom: rem(16);
+			margin-bottom: rem(13.120);
 		}
 	}
 	&__price {
@@ -243,7 +253,7 @@
 		font-weight: 700;
 		margin-top: rem(14);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(26);
+			margin-bottom: rem(19.600);
 			font-size: rem(23);
 			margin-top: rem(22);
 		}
@@ -293,9 +303,15 @@
 	}
 	.form-wrap {
 		margin-bottom: rem(20);
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			max-width: rem(585);
 			margin-bottom: rem(30);
+		}
+		&--filepond {
+			margin-bottom: rem(15.600);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(15.600);
+			}
 		}
 	}
 	&__order-title {
@@ -304,7 +320,7 @@
 		line-height: 1.38;
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(30);
+			margin-bottom: rem(25.200);
 		}
 	}
 	&__date {
@@ -321,7 +337,7 @@
 		align-items: center;
 
 		&:not(:last-of-type) {
-			margin-bottom: rem(20);
+			margin-bottom: rem(21.600);
 		}
 
 		.h6 {
@@ -420,7 +436,7 @@
 			margin-bottom: rem(30);
 		}
 	}
-	.cart-item {
+	.cart-item--2 {
 		@include media-breakpoint-up(xl) {
 			margin-top: rem(100);
 		}
