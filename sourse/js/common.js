@@ -213,7 +213,7 @@ let ordersActions = document.querySelectorAll('.sOrders__action');
 	});
 	$(".mobile-search-open, .remove-btn").click(function () {
 		$(".search-block").toggleClass("active");
-		$(".remove-btn").toggleClass("active");
+		$(".mobile-search-open").toggleClass("active");
 	});
 
 };
