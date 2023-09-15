@@ -107,12 +107,14 @@ mixin sWholesaleOrder3(data)
 				.row
 					.col-lg-auto
 						+e.main-info-item
-							+icon('delivery')
+							+e.icon-wrap
+								+icon('delivery')
 							div
 								h6 Доставка в пункт выдачи
 								p Доставка СДЭК, Россия, г. Ярославль, ул. Ленина,12 
 						+e.main-info-item
-							+icon('profile')
+							+e.icon-wrap
+								+icon('profile')
 							div
 								h6 Получатель
 								p Алексей Пименов 
@@ -120,7 +122,8 @@ mixin sWholesaleOrder3(data)
 								a(href="tel:+79324454477") +7 (932) 445 44 77
 					+e.col.col-lg
 						+e.main-info-item
-							+icon('card')
+							+e.icon-wrap
+								+icon('card')
 							div
 								h6 Способ оплаты
 								p Банковская карта
@@ -138,6 +141,42 @@ mixin sWholesaleOrder3(data)
 						+e.link(href='#') Электронный чек
 						+e.link(href='#') Повторить заказ
 						+e.link(href='#') Возврат товаров
+			+e.main-row.row
+				.col-lg-auto
+					+e.order-title.h6 Заказ № 256054509
+					+e.goods-order.row
+						.col-auto
+							+e.orders-count 3 товара
+						.col-auto
+							+e.date.mb-0 Дата оформления: 
+								span 03.07.2023
+					+e.info-row.row
+						.col-auto
+							+e.info-delivery Доставка в пункт выдачи
+						.col-auto
+							+e.status.bg-primary Получен
+					+e.info-row.row
+						.col-auto
+							.h6 Оценить заказ
+						.col-auto
+							.reviews
+								+icon('star')
+								+icon('star')
+								+icon('star')
+								+icon('star')
+								+icon('star')
+					+e.info-row.row
+						.col-auto
+							.h6 Оценить товары
+						.col-auto
+							.reviews(data-active='4')
+								+icon('star')
+								+icon('star')
+								+icon('star')
+								+icon('star')
+								+icon('star')
+				.col-lg
+					+cartItem2
 	// end sWholesaleOrder
 
 mixin sWholesaleOrder4(data)
@@ -211,12 +250,14 @@ mixin sWholesaleOrder5(data)
 				.row
 					.col-lg-auto
 						+e.main-info-item
-							+icon('delivery')
+							+e.icon-wrap
+								+icon('delivery')
 							div
 								h6 Доставка в пункт выдачи
 								p Доставка СДЭК, Россия, г. Ярославль, ул. Ленина,12 
 						+e.main-info-item
-							+icon('profile')
+							+e.icon-wrap
+								+icon('profile')
 							div
 								h6 Получатель
 								p Алексей Пименов 
@@ -224,22 +265,55 @@ mixin sWholesaleOrder5(data)
 								a(href="tel:+79324454477") +7 (932) 445 44 77
 					+e.col.col-lg
 						+e.main-info-item
-							+icon('card')
+							+e.icon-wrap
+								+icon('card')
 							div
 								h6 Способ оплаты
 								p Банковская карта
-							+e.price 8580 ₽ 
+							+e.price 159 950,00 ₽
 						+e.price-wrap
 							| Товары
-							+e.price 8580 ₽ 
+							+e.price 159 950,00 ₽
 						+e.price-wrap
 							| Доставка
-							+e.price 0 ₽ 
+							+e.price 950 ₽ 
 						+e.price-wrap
 							| Итого
-							+e.price 8580 ₽ 
+							+e.price 159 950,00 ₽
 					.col-lg-auto
 						+e.link(href='#') Электронный чек
 						+e.link(href='#') Повторить заказ
 						+e.link(href='#') Возврат товаров
+			+e.order-title.h6 Заказ № 256054509
+			+e.date Дата оформления: 
+				span 03.07.2023
+			+e.download(href='#')
+				+iconC('excel')
+				.h6 Заказ № 256054509
+				span Скачать
+			+e.info-row.row
+				.col-auto
+					+e.info-delivery Доставка в пункт выдачи
+				.col-auto
+					+e.status Доставлен
+			+e.info-row.row
+				.col-auto
+					.h6 Оценить заказ
+				.col-auto
+					.reviews
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+			+e.info-row.row
+				.col-auto
+					.h6 Оценить товары
+				.col-auto
+					.reviews(data-active='4')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
 	// end sWholesaleOrder

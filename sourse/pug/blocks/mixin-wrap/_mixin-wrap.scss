@@ -287,9 +287,6 @@
 .delivery {
 	border-radius: 5px;
 	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
 	&__head {
 		color: $primary;
 		padding: rem(20.5) rem(20);
@@ -306,7 +303,6 @@
 		border: 1px solid rgba(32, 67, 143, 0.08);
 		border-top: none;
 		padding: rem(16);
-		flex-grow: 1;
 		.custom-input {
 			margin-bottom: rem(17);
 			&:last-child {
@@ -442,6 +438,29 @@
 		}
 		&:hover {
 			color: $primary;
+		}
+	}
+	&__like {
+		flex: 0 0 auto;
+		margin-left: auto;
+		color: #D9D9D9;
+		.icon {
+			font-size: rem(24);
+		}
+		&:hover {
+			color: $danger;
+		}
+	}
+	&--2 {
+		max-width: rem(697);
+		margin-left: auto;
+		table {
+			td {
+				vertical-align: top;
+			}
+		}
+		.cart-item__full-price {
+			font-weight: 700;
 		}
 	}
 }

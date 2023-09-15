@@ -117,6 +117,41 @@ mixin cartItem()
 						+e.full-price
 							| 7020 ₽
 							+e.delete(href='#'): +icon('delete') 
+
+mixin cartItem2()
+	+b.cart-item--2
+		table
+			tr
+				td
+					+e.content-wrap
+						+e.img-wrap: +img('img/cart-img-1.jpg', 'bg')
+						div
+							h6 Комбинезон синий зимний
+							+e.properties
+								| Цвет:
+								.color
+							+e.properties
+								| Размер: 94
+				td
+					+e.full-price
+						| 7020 ₽
+						+e.like(href='#'): +icon('heart') 
+			tr
+				td
+					+e.content-wrap
+						+e.img-wrap: +img('img/cart-img-1.jpg', 'bg')
+						div
+							h6 Комбинезон синий зимний
+							+e.properties
+								| Цвет:
+								.color
+							+e.properties
+								| Размер: 94
+				td 
+					+e.full-price
+						| 7020 ₽
+						+e.like(href='#'): +icon('heart') 
+
 mixin sortingRow(h2="Фото и видеоматериалы",title='Тип файла',filter)
 	+b.sorting-row
 				+b.section-title
