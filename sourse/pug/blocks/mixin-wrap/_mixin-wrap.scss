@@ -626,3 +626,11 @@
 		}
 	}
 }
+
+.orders-page {
+	.sUserContent {
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(48)};
+		}
+	}
+}

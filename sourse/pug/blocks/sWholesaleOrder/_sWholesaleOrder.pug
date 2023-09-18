@@ -80,6 +80,12 @@ mixin sWholesaleOrder2(data)
 							+e.text Можно заказать доставку до Пункта выдачи или «до дверей» курьером. Стоимость #[span от 173 рублей], срок от 2 дней.<br>Можно заказать доставку до Пункта выдачи или «до дверей» курьером. В&nbsp;некоторых пунктах выдачи невозможна оплата с&nbsp;помощью банковской карты.
 					+delivery('wallet', 'Оплата')
 						+in-c('radio', '', 'payment')
+							+e.title Банковской картой
+							+e.text После оплаты мы отправляем кассовый чек вам на электронную почту.
+						+in-c('radio', '', 'payment')
+							+e.title В пункте выдачи
+							+e.text Оплата при получении заказа на пункте выдачи. Наличным или картой.
+						+in-c('radio', '', 'payment')
 							+e.title На расчетный счет продавца
 					+e.final-price
 						.row
@@ -222,7 +228,7 @@ mixin sWholesaleOrder4(data)
 					+e.delivery-row.row
 						.col-lg
 							+delivery('delivery', 'Доставка')
-								+in-c('radio', '', 'delivery')
+								+in-c('radio', '', 'delivery2')
 									+e.title Самовывоз
 									+e.text Из г. Ярославль
 								+in-c('radio', '', 'delivery2')
