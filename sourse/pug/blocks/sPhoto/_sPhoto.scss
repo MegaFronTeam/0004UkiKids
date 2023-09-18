@@ -72,6 +72,7 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 20px;
+		max-width: 100%;
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 8px;
 		}
@@ -91,8 +92,31 @@
 			fill:$gray-600;
 		} 
 	}
+	&__item-name {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		flex-grow: 1;
+		max-width: calc(100% - 18px);
+		@include media-breakpoint-down(sm) {
+			max-width: calc(100% - 14px);
+		}
+	}
+	&__more-btn {
+		width: 18px;
+		color: #C6CEDF;
+		flex-shrink: 0;
+		@include media-breakpoint-down(sm) {
+			width: 14px;
+		}
+		.icon {
+			max-width: 100%;
+
+		}
+	}
 	&__title {
-		max-width: calc(100% - 32px);
+		flex-shrink: 0;
+		max-width: calc(100% - 50px);
 		font-size: 14px;
 		text-overflow: ellipsis;
 		white-space: nowrap;

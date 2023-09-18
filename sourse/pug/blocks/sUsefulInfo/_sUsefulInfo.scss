@@ -1,6 +1,6 @@
 // start .sUsefulInfo
 .sUsefulInfo {
-	// --sPT: #{rem()};
+	--sPT: #{rem(0)};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(24)};
 	
@@ -39,7 +39,7 @@
 	}
 	&__title {
 		line-height: 1.2;
-		color: $body-color;
+		color: $black;
 		@include mt;
 	}
 

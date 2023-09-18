@@ -102,13 +102,14 @@ mixin sCatalog(data)
 						+product-item('4','Комбинезон “МОНТИ”','7 400 р.','','tags')
 					+e.col(class= wrapClass)
 						+product-item('2','Комбинезон “МОНТИ”','2 780 р.','','')
-					+b.pagination-wrap
-						+e.display.d-none.d-sm-flex
-							+e.title Показывать на странице:
-							+btn('12','button').btn.pagination-wrap__btn--active
-							+btn('24','button').btn
-							+btn('36','button').btn
-							+btn('48','button').btn
-						+pugin
+					.col-12
+						+b.pagination-wrap
+							+e.display.d-none.d-sm-flex
+								+e.title Показывать на странице:
+								+btn('12','button').btn.pagination-wrap__btn--active
+								+btn('24','button').btn
+								+btn('36','button').btn
+								+btn('48','button').btn
+							+pugin
 
 	// end sCatalog

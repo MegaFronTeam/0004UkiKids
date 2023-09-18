@@ -1,9 +1,12 @@
 mixin file(icon, title, img)
 	.col-6.col-md-4.col-lg-3
-		+e.item(href="#")
+		+e.item
 			+e.item-top
-				+icon(`${icon}`)
-				+e.title= title
+				+e.item-name(href="#")
+					+icon(`${icon}`)
+					+e.title= title
+				+e.more-btn(href="#")
+					+icon('points')
 			+e.content
 				if img
 					+e.img-wrap

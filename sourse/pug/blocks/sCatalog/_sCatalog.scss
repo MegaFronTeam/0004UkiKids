@@ -238,6 +238,7 @@
 		}
 	}
 	&__row {
+		margin-bottom: 48px;
 		flex-grow: 1;
 	}
 	&__col{
@@ -324,6 +325,7 @@
 	&__bookmark {
 		padding: 0;
 		margin-left: auto;
+		color: $gray-600;
 		&:hover, &.active {
 			color: $red;
 			fill: $red;
@@ -347,7 +349,7 @@
 		line-clamp: 2;
 		box-orient: vertical;
 		font-size: rem(18);
-		color: $body-color;
+		color: $black;
 		&:hover {
 			color: $primary;
 		}

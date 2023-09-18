@@ -1,7 +1,7 @@
 // start .sSlider
 .sSlider {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(48)};
 	--sTPB: #{rem(24)};
 	
 	&__row{

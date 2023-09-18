@@ -63,7 +63,7 @@ mixin sSettings(data)
 					+input('', 'number', 'БИК', t, t, true)(value="044525975").is-valid
 					+input('', 'number', 'К,С', t, t, true)(value="301018101452500000975").is-valid
 			.tabs__content
-				+form-wrap
+				+form-wrap.--pass
 					+e.title Изменить пароль
 					.password-wrap
 						+input('', 'password', 'Текущий пароль', t, t, true)(value="0000000").--pas
@@ -75,5 +75,5 @@ mixin sSettings(data)
 					.password-wrap
 						+input('', 'password', 'Новый пароль', t, t, true)(value="0000000").--pas
 						.pass-button.btn
-			+e.row.row
+					+btn('Изменить пароль','button').btn.btn-accent.change-pass-btn
 	// end sSettings
